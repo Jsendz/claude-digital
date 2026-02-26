@@ -1,0 +1,303 @@
+{
+  "Header": {
+    "menu": "Menu",
+    "close": "Fermer",
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "benefits": "Avantages",
+      "work": "Projets",
+      "pricing": "Tarifs",
+      "reviews": "Avis",
+      "faqs": "FAQ",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "badge": "Disponible pour des Projets",
+    "heading1": "Branding, Sites Web",
+    "heading2": "et Marketing conçus pour transformer les visiteurs en",
+    "headingAccent": "Clients",
+    "paragraph": "Nous aidons les entreprises à gagner en confiance, à se démarquer et à générer des leads qualifiés grâce à une marque percutante, un site performant et un marketing axé sur la conversion.",
+    "cta1": "Audit de Croissance gratuit",
+    "cta2": "Voir les études de cas",
+    "trustCount": "Fait confiance par 20+ entreprises",
+    "trustSub": "Ils ont atteint leurs objectifs — vous êtes le prochain."
+  },
+  "Services": {
+    "badge": "Services",
+    "heading": "Ce Que Nous Faisons.",
+    "description": "Nous combinons stratégie, rapidité et expertise pour livrer un design exceptionnel — à chaque fois.",
+    "serviceLabel": "Service",
+    "items": [
+      {
+        "title": "Identité de Marque",
+        "description": "Élevez votre identité : positionnement affûté, visuels cohérents, impact réel.",
+        "tags": ["Direction Artistique", "Stratégie de Marque", "Création de Logo", "Systèmes de Couleurs"]
+      },
+      {
+        "title": "Design Web et Mobile",
+        "description": "Rafraîchissez ou rebrandez votre UI ; améliorez la rétention avec des flux clairs et des micro-interactions.",
+        "tags": ["UI Épurée et Moderne", "Rebranding", "Prototypage", "Design System"]
+      },
+      {
+        "title": "Marketing",
+        "description": "Des campagnes et du contenu qui attirent les bonnes personnes — et les incitent à agir.",
+        "tags": ["Dev Framer", "Intégrations", "Intégration CMS", "Animation"]
+      }
+    ]
+  },
+  "Benefits": {
+    "badge": "Avantages",
+    "heading": "Pourquoi Nous.",
+    "description": "Choisir une agence digitale ne devrait pas être un pari risqué. Nous nous concentrons sur la clarté, la performance et les résultats mesurables — pas seulement sur les livrables.",
+    "items": [
+      {
+        "title": "Stratégie avant le design",
+        "description": "Les visuels sans positionnement ne sont que de la décoration. Chaque marque, site et campagne commence par comprendre votre entreprise, votre audience et vos objectifs."
+      },
+      {
+        "title": "Pensée orientée conversion",
+        "description": "Capter l'attention est facile. L'action est difficile. Nous concevons des expériences numériques qui guident les décisions, réduisent les frictions et convertissent les visiteurs en leads."
+      },
+      {
+        "title": "Exécution de niveau senior",
+        "description": "Pas de structures gonflées. Pas de transferts interminables. Vous travaillez directement avec des spécialistes expérimentés axés sur la qualité et les résultats."
+      },
+      {
+        "title": "Conçu pour de vrais résultats commerciaux",
+        "description": "Nous ne courons pas après les métriques de vanité ni les prix de design. Notre travail est conçu pour améliorer la confiance, la différenciation et le potentiel de revenus."
+      },
+      {
+        "title": "Processus clair, sans surprises",
+        "description": "La transparence supprime l'incertitude. Vous savez toujours ce que nous faisons, pourquoi c'est important et comment cela impacte votre croissance."
+      },
+      {
+        "title": "Mentalité de performance à long terme",
+        "description": "Nous créons des actifs qui continuent de fonctionner longtemps après le lancement — des marques qui restent pertinentes, des sites qui convertissent, des systèmes qui évoluent."
+      }
+    ]
+  },
+  "Work": {
+    "badge": "Projets",
+    "heading": "Projets Sélectionnés.",
+    "description": "Un aperçu de certaines marques que nous avons aidées — et des résultats obtenus.",
+    "projects": [
+      { "label": "Refonte de Site Web" },
+      { "label": "Identité de Marque" },
+      { "label": "UI Application Mobile" },
+      { "label": "Design E-Commerce" },
+      { "label": "Design de Packaging" }
+    ]
+  },
+  "Pricing": {
+    "badge": "Tarifs",
+    "heading": "Tarification Flexible.",
+    "steps": [
+      { "title": "S'abonner", "description": "Choisissez un plan adapté à votre flux de travail" },
+      { "title": "Demander", "description": "Soumettez des tâches via votre portail de design" },
+      { "title": "Approuver ou Réviser", "description": "Recevez vos designs en 2-3 jours ouvrables" }
+    ],
+    "plans": [
+      {
+        "name": "Retainer Design",
+        "description": "Idéal pour les fondateurs qui ont besoin d'aide en design rapide et fiable.",
+        "devAddon": "Développement + 1000$",
+        "features": ["Demandes illimitées", "Une demande à la fois", "Tarif mensuel fixe", "Communication asynchrone", "Périmètre flexible", "Pause à tout moment"]
+      },
+      {
+        "name": "Projet Unique",
+        "description": "Donnez vie à votre site de rêve en quelques jours, pas des mois.",
+        "devAddon": "Développement + 5000$",
+        "features": ["Équipe dédiée d'experts", "Développement Web de bout en bout", "Calendrier et périmètre entièrement personnalisés", "Communication asynchrone", "SEO et Marketing avancés", "Mises à jour toutes les 48 heures"]
+      }
+    ],
+    "cta": "Prendre contact"
+  },
+  "Reviews": {
+    "badge": "Avis",
+    "heading": "Témoignages.",
+    "trustCount": "Fait confiance par 20+ entreprises",
+    "trustSub": "Ils ont atteint leurs objectifs — vous êtes le prochain.",
+    "contactUs": "Nous contacter",
+    "workedWith": "Nous avons travaillé avec :",
+    "testimonials": [
+      { "name": "Jared Kim", "role": "Directeur Marketing", "quote": "La qualité était inégalée. Nous avons soumis notre demande le lundi et avions des designs soignés le mercredi." },
+      { "name": "Maya Collins", "role": "Responsable Produit", "quote": "Professionnel, fiable et vraiment créatif. JH Digital a transformé toute notre présence de marque." },
+      { "name": "Jesse Leigh", "role": "PDG et Fondateur", "quote": "Ils ont compris notre vision immédiatement. La rapidité de livraison est incomparable." },
+      { "name": "Benjamin Daul", "role": "Responsable Ingénierie", "quote": "Service de design par abonnement exceptionnel. Aucun ne se compare à JH Digital pour la qualité constante." }
+    ]
+  },
+  "FAQ": {
+    "badge": "FAQ",
+    "heading": "Questions.",
+    "items": [
+      { "question": "Comment Fonctionne le Modèle d'Abonnement ?", "answer": "Vous payez un abonnement mensuel fixe et accédez à une équipe de design dédiée. Soumettez des demandes illimitées, livrées une par une. Pas de facturation horaire, pas de contrats — annulez ou mettez en pause à tout moment." },
+      { "question": "Quels Types de Tâches de Design Puis-je Demander ?", "answer": "Tout ce qui est lié au design ! De l'identité de marque au design web, en passant par les UI d'applications mobiles, les graphiques pour les réseaux sociaux, les présentations, le packaging et plus encore." },
+      { "question": "Combien de Temps pour Recevoir Mes Designs ?", "answer": "La plupart des demandes sont livrées dans les 2-3 jours ouvrables. Les projets plus complexes peuvent prendre un peu plus de temps, mais nous vous tiendrons toujours informé." },
+      { "question": "Quels Outils Utilisez-vous pour Gérer le Travail ?", "answer": "Nous utilisons un portail de design personnalisé où vous pouvez soumettre des demandes, suivre l'avancement, donner des retours et approuver les livrables — tout en un seul endroit." },
+      { "question": "Y a-t-il une Limite au Nombre de Demandes ?", "answer": "Non ! Vous pouvez soumettre autant de demandes que vous le souhaitez. Nous les traitons une par une pour garantir une qualité maximale sur chaque livrable." },
+      { "question": "Puis-je Annuler ou Mettre en Pause à Tout Moment ?", "answer": "Absolument. Il n'y a pas de contrats à long terme. Vous pouvez mettre en pause votre abonnement quand vous n'avez pas besoin de travail de design et le reprendre quand vous êtes prêt." }
+    ]
+  },
+  "Contact": {
+    "badge": "Contact",
+    "heading": "Parlons-en.",
+    "description": "Des questions ou prêt à démarrer votre projet de design ? Donnons vie à vos idées !",
+    "chatToSales": "/Chat avec les Ventes",
+    "callUs": "/Appelez-nous",
+    "formName": "Votre nom*",
+    "formNamePlaceholder": "Votre nom",
+    "formEmail": "E-mail*",
+    "formEmailPlaceholder": "Votre e-mail",
+    "formWebsite": "Site web",
+    "formWebsitePlaceholder": "Votre site web",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Votre message",
+    "formSubmit": "Prendre contact"
+  },
+  "Footer": {
+    "newsletterTitle": "Newsletter",
+    "newsletterDesc": "Rejoignez notre newsletter et restez informé des dernières tendances en design digital.",
+    "newsletterPlaceholder": "Votre e-mail",
+    "navLabel": "/Navigation",
+    "resourcesLabel": "/Ressources",
+    "socialsLabel": "/Réseaux Sociaux",
+    "nav": { "services": "Services", "benefits": "Avantages", "work": "Projets", "pricing": "Tarifs", "reviews": "Avis", "faqs": "FAQ" },
+    "resources": { "privacy": "Politique de Confidentialité", "terms": "Conditions d'Utilisation" },
+    "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
+    "copyright": "©2025 JH Digital. Tous droits réservés.",
+    "builtWith": "Construit avec Next.js & Tailwind CSS"
+  },
+  "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
+  "WebDesign": {
+    "hero": {
+      "badge": "Design Web et Développement",
+      "heading1": "Votre site devrait vous apporter des clients.",
+      "headingAccent": "Pas les faire fuir.",
+      "paragraph": "Nous concevons et développons des sites web sur mesure pour les petites entreprises — rapides, clairs et conçus pour convertir. Pas seulement pour faire beau.",
+      "cta1": "Obtenir votre Audit Web Gratuit",
+      "cta2": "Voir Nos Travaux",
+      "noPressure": "Sans pression. Sans engagement. Juste un retour honnête sur ce qui manque à votre site.",
+      "trustCount": "Approuvé par plus de 20 entreprises",
+      "trustSub": "Ils ont atteint leurs objectifs — vous êtes le prochain."
+    },
+    "problem": {
+      "badge": "Le Problème",
+      "heading": "La plupart des sites de petites entreprises vous coûtent des clients.",
+      "items": [
+        { "title": "Les premières impressions se font en 3 secondes.", "body": "Si votre site semble dépassé, lent ou confus, les visiteurs partent avant même de lire ce que vous faites. Vous ne récupérez jamais ce moment." },
+        { "title": "\"Joli\" ne suffit pas.", "body": "Un site qui ne convertit pas n'est qu'une brochure coûteuse. Vous avez besoin de clarté, de signaux de confiance et d'un chemin clair pour vous contacter." },
+        { "title": "Vous ne devriez pas avoir à gérer cela vous-même.", "body": "Vous êtes occupé à gérer votre entreprise. S'occuper d'un site DIY ou courir après des freelances prend du temps que vous n'avez pas." }
+      ]
+    },
+    "solution": {
+      "badge": "Notre Approche",
+      "heading": "Nous prenons le temps de bien faire les choses.",
+      "p1": "Pas de modèles. Pas de délais précipités. Nous prenons le temps de comprendre votre entreprise, vos clients et vos objectifs — puis nous construisons quelque chose qui sert vraiment les trois.",
+      "p2": "Vous avez un partenaire avec vous de la première conversation jusqu'au lancement et au-delà. Pas de transferts. Pas de confusion.",
+      "pillars": [
+        { "title": "Personnalisé", "body": "Chaque site est construit autour de votre entreprise spécifique — votre marque, votre audience, vos objectifs. Nous ne recyclons jamais le travail." },
+        { "title": "De bout en bout", "body": "Du premier appel jusqu'au lancement et au-delà, nous gérons tout et vous tenons informé à chaque étape." },
+        { "title": "La qualité d'abord", "body": "Nous préférons prendre un jour de plus que livrer quelque chose qui ne répond pas aux standards. Pas de raccourcis." }
+      ]
+    },
+    "deliverables": {
+      "badge": "Ce Que Vous Obtenez",
+      "heading": "Tout ce dont votre site a besoin. Rien de superflu.",
+      "subtext": "Un site complet, prêt à lancer — géré pour vous, du début à la fin.",
+      "items": [
+        "Design personnalisé autour de votre marque — pas un modèle générique",
+        "Mise en page responsive et mobile-first sur tous les appareils",
+        "Optimisé pour des temps de chargement rapides",
+        "Appels à l'action clairs pour générer des contacts et des demandes",
+        "Formulaire de contact avec intégrations de base (email, prêt pour CRM)",
+        "Fondations SEO on-page : balises meta, contenu structuré, vitesse de chargement",
+        "30 jours de support post-lancement inclus"
+      ]
+    },
+    "outcomes": {
+      "badge": "Résultats",
+      "heading": "Ce qui change quand votre site fonctionne vraiment.",
+      "items": [
+        { "title": "Plus de demandes qualifiées", "body": "Les visiteurs qui atterrissent sur un site clair et crédible sont plus susceptibles de vous contacter — et d'être le bon profil." },
+        { "title": "Plus grande confiance perçue", "body": "Votre site est souvent la première chose qu'un client potentiel voit. Apparaissez comme l'option premium sur votre marché avant même qu'ils vous appellent." },
+        { "title": "Moins de friction, plus de conversions", "body": "Quand il est facile de comprendre ce que vous faites et comment vous contacter, les gens le font. La friction tue les prospects." }
+      ],
+      "ctaTitle": "Prêt à améliorer votre site ?",
+      "ctaDesc": "Commencez par un audit gratuit — nous vous dirons exactement ce qui le freine.",
+      "ctaButton": "Obtenir votre Audit Gratuit",
+      "ctaNoCommitment": "Sans engagement."
+    },
+    "proof": {
+      "badge": "Résultats Concrets",
+      "heading": "Des entreprises qui nous ont fait confiance.",
+      "trustCount": "Approuvé par plus de 20 entreprises",
+      "trustSub": "Ils ont atteint leurs objectifs — vous êtes le prochain.",
+      "ctaButton": "Obtenir votre Audit Gratuit",
+      "testimonials": [
+        { "name": "Maya Collins", "role": "Directrice Produit", "quote": "Professionnel, fiable et vraiment créatif. JH Digital a transformé toute notre présence de marque." },
+        { "name": "Jared Kim", "role": "Directeur Marketing", "quote": "Nous avons soumis notre demande le lundi et avions des designs soignés le mercredi. La qualité était incomparable." }
+      ],
+      "caseStudyTitle": "Étude de cas bientôt disponible",
+      "caseStudyDesc": "Analyse complète du projet avec résultats"
+    },
+    "process": {
+      "badge": "Processus",
+      "heading": "Simple. Clair. Sans surprises.",
+      "subtext": "Quatre étapes de la première conversation à un site en ligne qui convertit.",
+      "steps": [
+        { "title": "Découverte", "body": "Nous commençons par un appel pour comprendre votre entreprise, votre audience et ce que vous souhaitez accomplir avec votre site. Pas de jargon, pas de remplissage." },
+        { "title": "Design", "body": "Nous créons une maquette personnalisée adaptée à votre marque. Vous voyez et approuvez le design avant qu'une seule ligne de code soit écrite." },
+        { "title": "Développement", "body": "Nous développons votre site en tenant compte des performances, du SEO et de l'expérience mobile. Vous êtes tenu au courant tout au long." },
+        { "title": "Lancement et Support", "body": "Nous lançons ensemble. Vous bénéficiez de 30 jours de support post-lancement — questions, corrections et ajustements, tout inclus." }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "heading": "Des questions qu'on nous pose souvent.",
+      "items": [
+        { "q": "Combien de temps dure généralement un projet web ?", "a": "La plupart des projets sont réalisés en 3 à 6 semaines. Les sites simples peuvent aller plus vite ; les projets avec des fonctionnalités personnalisées prennent un peu plus de temps. Nous établissons un calendrier clair dès le début et nous le respectons." },
+        { "q": "Dois-je fournir les textes et les images, ou vous nous aidez ?", "a": "Vous fournirez les informations de base sur votre entreprise — vous la connaissez mieux que quiconque. Nous vous guidons sur ce qui est nécessaire, aidons à affiner le message et pouvons vous mettre en contact avec des photographes ou rédacteurs si besoin." },
+        { "q": "Pouvez-vous refaire mon site existant plutôt que de repartir de zéro ?", "a": "Absolument. De nombreux clients viennent à nous avec un site qui ne performe pas. Nous évaluons ce qui fonctionne, ce qui ne fonctionne pas, et soit nous rafraîchissons le design, soit nous le reconstruisons — selon ce qui sert le mieux vos objectifs." },
+        { "q": "Mon site fonctionnera-t-il sur mobile et chargera-t-il rapidement ?", "a": "Toujours. Chaque site que nous construisons est mobile-first et optimisé pour les performances. Nous testons sur différents appareils et tailles d'écran avant le lancement." },
+        { "q": "Que se passe-t-il après le lancement du site ?", "a": "Chaque projet inclut 30 jours de support post-lancement — corrections, ajustements mineurs et conseils. Ensuite, nous proposons des plans de maintenance ou vous remettons tout avec une documentation complète." },
+        { "q": "En quoi est-ce différent d'un constructeur comme Squarespace ou Wix ?", "a": "Les constructeurs de modèles vous donnent un point de départ générique. Nous construisons quelque chose de spécifique à votre entreprise, votre audience et vos objectifs — un site qui convertit mieux, charge plus vite et semble appartenir au niveau premium de votre marché." }
+      ]
+    },
+    "form": {
+      "badge": "Commencer",
+      "heading": "Commencez par un audit gratuit.",
+      "description": "Pas de démarchage. Pas de pression. Nous examinerons votre site actuel (ou votre brief) et vous donnerons un retour honnête sur ce qui le freine.",
+      "checklist": [
+        "Examen gratuit et sans engagement de votre site",
+        "Retour spécifique et actionnable — pas de conseils génériques",
+        "Réponse sous 1 jour ouvrable"
+      ],
+      "contactLabel": "/Chat avec les Ventes",
+      "nameLbl": "Nom *",
+      "emailLbl": "Email *",
+      "companyLbl": "Entreprise",
+      "websiteLbl": "Site Actuel",
+      "serviceLbl": "Service Souhaité",
+      "goalLbl": "Quel est votre principal objectif dans les 90 prochains jours ?",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "vous@entreprise.com",
+      "companyPlaceholder": "Votre entreprise",
+      "websitePlaceholder": "https://votresite.com",
+      "serviceDefault": "Sélectionnez un service...",
+      "serviceNew": "Nouveau site de zéro",
+      "serviceRedesign": "Refonte du site existant",
+      "serviceLanding": "Page d'atterrissage",
+      "serviceEcommerce": "Site e-commerce",
+      "serviceNotSure": "Pas encore sûr",
+      "goalPlaceholder": "ex. Obtenir plus de demandes depuis notre site, lancer avant notre haute saison...",
+      "submitButton": "Envoyer ma Demande d'Audit",
+      "submitting": "Envoi en cours...",
+      "noCommitment": "Pas de démarchage. Pas d'engagement. Nous répondons sous 1 jour ouvrable.",
+      "successTitle": "Nous nous en occupons.",
+      "successDesc": "Merci de nous avoir contactés. Nous examinerons votre site et vous répondrons sous 1 jour ouvrable.",
+      "successReset": "Soumettre une autre demande"
+    }
+  }
+}

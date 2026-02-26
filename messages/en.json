@@ -1,0 +1,303 @@
+{
+  "Header": {
+    "menu": "Menu",
+    "close": "Close",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "benefits": "Benefits",
+      "work": "Work",
+      "pricing": "Pricing",
+      "reviews": "Reviews",
+      "faqs": "FAQs",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "badge": "Available for Projects",
+    "heading1": "Branding, Websites",
+    "heading2": "and Marketing built to turn visitors into",
+    "headingAccent": "Customers",
+    "paragraph": "We help businesses increase trust, stand out, and generate qualified leads with a sharp brand, a high-performance website, and conversion-focused marketing.",
+    "cta1": "Get a free Growth Audit",
+    "cta2": "See case studies",
+    "trustCount": "Trusted by 20+ businesses",
+    "trustSub": "They hit their targets — you're next."
+  },
+  "Services": {
+    "badge": "Services",
+    "heading": "What We Do.",
+    "description": "We combine strategy, speed, and skill to deliver exceptional design — every time.",
+    "serviceLabel": "Service",
+    "items": [
+      {
+        "title": "Brand Identity",
+        "description": "Elevate your identity: sharp positioning, cohesive visuals, real impact.",
+        "tags": ["Art Direction", "Brand Strategy", "Logo Design", "Color Systems"]
+      },
+      {
+        "title": "Web & Mobile Design",
+        "description": "Refresh or rebrand your UI; lift retention with clear flows and micro-interactions.",
+        "tags": ["Clean & Modern UI", "Rebranding", "Prototyping", "Design System"]
+      },
+      {
+        "title": "Marketing",
+        "description": "Campaigns and content that bring the right people—and move them to act.",
+        "tags": ["Framer Dev", "Integrations", "CMS Integration", "Animation"]
+      }
+    ]
+  },
+  "Benefits": {
+    "badge": "Benefits",
+    "heading": "Why Us.",
+    "description": "Choosing a digital agency shouldn't feel like a leap of faith. We focus on clarity, performance, and measurable outcomes — not just deliverables.",
+    "items": [
+      {
+        "title": "Strategy before design",
+        "description": "Great visuals without positioning are just decoration. Every brand, website, and campaign starts with understanding your business, audience, and goals."
+      },
+      {
+        "title": "Conversion-first thinking",
+        "description": "Attention is easy. Action is hard. We design digital experiences that guide decisions, reduce friction, and turn visitors into leads."
+      },
+      {
+        "title": "Senior-level execution",
+        "description": "No bloated structures. No endless hand-offs. You work directly with experienced specialists focused on quality and results."
+      },
+      {
+        "title": "Built for real business outcomes",
+        "description": "We don't chase vanity metrics or design awards. Our work is built to improve trust, differentiation, and revenue potential."
+      },
+      {
+        "title": "Clear process, no surprises",
+        "description": "Transparency removes uncertainty. You always know what we're doing, why it matters, and how it impacts your growth."
+      },
+      {
+        "title": "Long-term performance mindset",
+        "description": "We build assets that continue working long after launch — brands that stay relevant, websites that convert, systems that scale."
+      }
+    ]
+  },
+  "Work": {
+    "badge": "Work",
+    "heading": "Selected Work.",
+    "description": "A look at some of the brands we've helped — and the outcomes we've delivered.",
+    "projects": [
+      { "label": "Website Redesign" },
+      { "label": "Brand Identity" },
+      { "label": "Mobile App UI" },
+      { "label": "E-Commerce Design" },
+      { "label": "Packaging Design" }
+    ]
+  },
+  "Pricing": {
+    "badge": "Pricing",
+    "heading": "Flexible Pricing.",
+    "steps": [
+      { "title": "Subscribe", "description": "Pick a plan that fits your workflow" },
+      { "title": "Request", "description": "Submit tasks via your design portal" },
+      { "title": "Approve Or Revise", "description": "Receive designs in 2-3 business days" }
+    ],
+    "plans": [
+      {
+        "name": "Design Retainer",
+        "description": "Great for founders who need fast, reliable design help.",
+        "devAddon": "Development + $1000",
+        "features": ["Unlimited requests", "One request at a time", "Fixed monthly rate", "Async communication", "Flexible scope", "Pause anytime"]
+      },
+      {
+        "name": "Single Project",
+        "description": "Bring your dream website to life in just days, not months.",
+        "devAddon": "Development + $5000",
+        "features": ["Dedicated team of experts", "End-to-End Web Development", "Fully Custom Timeline & Scope", "Async communication", "Advanced SEO & Marketing", "Updates every 48 hours"]
+      }
+    ],
+    "cta": "Get in touch"
+  },
+  "Reviews": {
+    "badge": "Reviews",
+    "heading": "Success Stories.",
+    "trustCount": "Trusted by 20+ businesses",
+    "trustSub": "They hit their targets — you're next.",
+    "contactUs": "Contact Us",
+    "workedWith": "Worked with:",
+    "testimonials": [
+      { "name": "Jared Kim", "role": "Marketing Director", "quote": "The quality was unmatched. We submitted our request on Monday and had polished designs by Wednesday." },
+      { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+      { "name": "Jesse Leigh", "role": "CEO & Founder", "quote": "They understood our vision immediately. The turnaround speed is unlike anything we've experienced." },
+      { "name": "Benjamin Daul", "role": "Head of Engineering", "quote": "Outstanding design subscription service. None compare to JH Digital for consistent quality." }
+    ]
+  },
+  "FAQ": {
+    "badge": "FAQs",
+    "heading": "Questions.",
+    "items": [
+      { "question": "How Does The Subscription Model Work?", "answer": "You pay a fixed monthly fee and get access to a dedicated design team. Submit unlimited requests, and we'll deliver them one by one (or two at a time with the Pro plan). No hourly billing, no contracts — cancel or pause anytime." },
+      { "question": "What Kind Of Design Tasks Can I Request?", "answer": "Anything design-related! From brand identity and logo design to web design, mobile app UI, social media graphics, pitch decks, packaging, and more. If it's visual, we've got you covered." },
+      { "question": "How Fast Will I Receive My Designs?", "answer": "Most requests are delivered within 2-3 business days. More complex projects like full website designs or brand identity systems may take a bit longer, but we'll always keep you updated on timelines." },
+      { "question": "What Tools Do You Use To Manage The Work?", "answer": "We use a custom design portal where you can submit requests, track progress, provide feedback, and approve deliverables — all in one place. It's simple, organized, and async-friendly." },
+      { "question": "Is There A Limit To How Many Requests I Can Make?", "answer": "No! You can submit as many requests as you'd like. We work through them one at a time (or two with the Pro plan) to ensure top quality on every deliverable." },
+      { "question": "Can I Cancel Or Pause Anytime?", "answer": "Absolutely. There are no long-term contracts. You can pause your subscription when you don't need design work and resume when you're ready. Cancel anytime with no penalties." }
+    ]
+  },
+  "Contact": {
+    "badge": "Contact",
+    "heading": "Let's Talk.",
+    "description": "Got questions or ready to start your design project? Let's bring your ideas to life!",
+    "chatToSales": "/Chat to Sales",
+    "callUs": "/Call Us",
+    "formName": "Your name*",
+    "formNamePlaceholder": "Your name",
+    "formEmail": "E-mail*",
+    "formEmailPlaceholder": "Your Email",
+    "formWebsite": "Website",
+    "formWebsitePlaceholder": "Your Website",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Your Message",
+    "formSubmit": "Get in touch"
+  },
+  "Footer": {
+    "newsletterTitle": "Newsletter",
+    "newsletterDesc": "Join our newsletter and stay updated on the latest trends in digital design.",
+    "newsletterPlaceholder": "Your Email",
+    "navLabel": "/Navigation",
+    "resourcesLabel": "/Resources",
+    "socialsLabel": "/Socials",
+    "nav": { "services": "Services", "benefits": "Benefits", "work": "Work", "pricing": "Pricing", "reviews": "Reviews", "faqs": "FAQs" },
+    "resources": { "privacy": "Privacy Policy", "terms": "Terms of Service" },
+    "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
+    "copyright": "©2025 JH Digital. All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
+  "WebDesign": {
+    "hero": {
+      "badge": "Web Design & Development",
+      "heading1": "Your website should bring clients in.",
+      "headingAccent": "Not turn them away.",
+      "paragraph": "We design and build custom websites for small businesses — fast, clear, and built to convert. Not just to look good.",
+      "cta1": "Get Your Free Website Audit",
+      "cta2": "See Our Work",
+      "noPressure": "No pressure. No commitment. Just honest feedback on what your site is missing.",
+      "trustCount": "Trusted by 20+ businesses",
+      "trustSub": "They hit their targets — you're next."
+    },
+    "problem": {
+      "badge": "The Problem",
+      "heading": "Most small business websites are costing you clients.",
+      "items": [
+        { "title": "First impressions happen in 3 seconds.", "body": "If your site looks outdated, slow, or confusing, visitors leave before they even read what you do. You never get that moment back." },
+        { "title": "\"Nice-looking\" isn't enough.", "body": "A website that doesn't convert is just an expensive brochure. You need clarity, trust signals, and a clear path to contact." },
+        { "title": "You shouldn't have to manage this yourself.", "body": "You're busy running your business. Dealing with a DIY website or chasing freelancers takes time you don't have." }
+      ]
+    },
+    "solution": {
+      "badge": "Our Approach",
+      "heading": "We take the time to do it right.",
+      "p1": "Not templates. Not rushed timelines. We take the time to understand your business, your customers, and your goals — then build something that actually serves all three.",
+      "p2": "You get a partner who's with you from the first conversation to launch day and beyond. No hand-offs. No confusion.",
+      "pillars": [
+        { "title": "Personalized", "body": "Every site is built around your specific business — your brand, your audience, your goals. We never recycle work." },
+        { "title": "End-to-end", "body": "From the first call to launch and beyond, we handle everything and keep you informed at every step." },
+        { "title": "Quality-first", "body": "We would rather take an extra day than deliver something that doesn't meet the bar. No shortcuts." }
+      ]
+    },
+    "deliverables": {
+      "badge": "What You Get",
+      "heading": "Everything your website needs. Nothing it doesn't.",
+      "subtext": "A complete, ready-to-launch website — handled for you, start to finish.",
+      "items": [
+        "Custom design built around your brand — not a generic template",
+        "Mobile-first, fully responsive layout across all devices",
+        "Performance-optimized for fast load times",
+        "Clear calls-to-action designed to drive contact and inquiries",
+        "Contact form with basic integrations (email, CRM-ready)",
+        "On-page SEO foundations: meta tags, structured content, page speed",
+        "30 days of post-launch support included"
+      ]
+    },
+    "outcomes": {
+      "badge": "Results",
+      "heading": "What changes when your website actually works.",
+      "items": [
+        { "title": "More qualified inquiries", "body": "Visitors who land on a clear, credible site are more likely to reach out — and more likely to be the right fit." },
+        { "title": "Higher perceived trust", "body": "Your website is often the first thing a potential client sees. Look like the premium option in your market before they even call." },
+        { "title": "Less friction, more conversions", "body": "When it's easy to understand what you do and how to contact you, people do it. Friction kills leads." }
+      ],
+      "ctaTitle": "Ready to fix your website?",
+      "ctaDesc": "Start with a free audit — we'll tell you exactly what's holding it back.",
+      "ctaButton": "Get Your Free Audit",
+      "ctaNoCommitment": "No commitment required."
+    },
+    "proof": {
+      "badge": "Real Results",
+      "heading": "Businesses that trusted us.",
+      "trustCount": "Trusted by 20+ businesses",
+      "trustSub": "They hit their targets — you're next.",
+      "ctaButton": "Get Your Free Audit",
+      "testimonials": [
+        { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+        { "name": "Jared Kim", "role": "Marketing Director", "quote": "We submitted our request on Monday and had polished designs by Wednesday. The quality was unmatched." }
+      ],
+      "caseStudyTitle": "Case study coming soon",
+      "caseStudyDesc": "Full project breakdown with results"
+    },
+    "process": {
+      "badge": "Process",
+      "heading": "Simple. Clear. No surprises.",
+      "subtext": "Four steps from first conversation to a live, converting website.",
+      "steps": [
+        { "title": "Discovery", "body": "We start with a call to understand your business, your audience, and what you want your website to do. No jargon, no fluff." },
+        { "title": "Design", "body": "We create a custom mockup tailored to your brand. You see and approve the design before a single line of code is written." },
+        { "title": "Build", "body": "We develop your site with performance, SEO, and mobile experience in mind. You're kept in the loop throughout." },
+        { "title": "Launch & Support", "body": "We go live together. You get 30 days of post-launch support — questions, fixes, and adjustments, all covered." }
+      ]
+    },
+    "faq": {
+      "badge": "FAQs",
+      "heading": "Questions we get asked a lot.",
+      "items": [
+        { "q": "How long does a website project usually take?", "a": "Most projects are completed in 3–6 weeks. Simple sites can move faster; projects with custom features take a little longer. We set a clear timeline from the start and stick to it." },
+        { "q": "Do I need to provide copy and images, or do you help with that?", "a": "You'll provide the core information about your business — you know it best. We guide you through exactly what's needed, help refine the messaging, and can connect you with photographers or copywriters if needed." },
+        { "q": "Can you redesign my existing website instead of starting from scratch?", "a": "Absolutely. Many clients come to us with a site that isn't performing. We assess what's working, what isn't, and either refresh the design or rebuild it properly — whichever serves your goals best." },
+        { "q": "Will my site work on mobile and load fast?", "a": "Always. Every site we build is mobile-first and performance-optimized. We test across devices and screen sizes before launch so you can be confident it works everywhere." },
+        { "q": "What happens after the website goes live?", "a": "Every project includes 30 days of post-launch support — fixes, minor adjustments, and guidance. After that, we offer ongoing maintenance or hand you off with full documentation." },
+        { "q": "How is this different from a builder like Squarespace or Wix?", "a": "Template builders give you a generic starting point. We build something specific to your business, your audience, and your goals — a site that converts better, loads faster, and looks like it belongs in the premium tier of your market." }
+      ]
+    },
+    "form": {
+      "badge": "Get Started",
+      "heading": "Start with a free website audit.",
+      "description": "No pitch. No pressure. We'll review your current website (or brief) and give you honest feedback on what's holding it back.",
+      "checklist": [
+        "Free, no-strings review of your current site",
+        "Specific, actionable feedback — not generic advice",
+        "Response within 1 business day"
+      ],
+      "contactLabel": "/Chat to Sales",
+      "nameLbl": "Name *",
+      "emailLbl": "Email *",
+      "companyLbl": "Company",
+      "websiteLbl": "Current Website",
+      "serviceLbl": "Service Needed",
+      "goalLbl": "What's your main goal in the next 90 days?",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you@company.com",
+      "companyPlaceholder": "Your company",
+      "websitePlaceholder": "https://yoursite.com",
+      "serviceDefault": "Select a service...",
+      "serviceNew": "New website from scratch",
+      "serviceRedesign": "Redesign existing website",
+      "serviceLanding": "Landing page",
+      "serviceEcommerce": "E-commerce website",
+      "serviceNotSure": "Not sure yet",
+      "goalPlaceholder": "e.g. Get more inquiries from our website, launch before our busy season...",
+      "submitButton": "Send My Audit Request",
+      "submitting": "Sending...",
+      "noCommitment": "No pitch. No commitment. We'll reply within 1 business day.",
+      "successTitle": "We're on it.",
+      "successDesc": "Thanks for reaching out. We'll review your site and get back to you within 1 business day.",
+      "successReset": "Submit another request"
+    }
+  }
+}

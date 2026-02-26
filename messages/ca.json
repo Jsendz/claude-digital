@@ -1,0 +1,303 @@
+{
+  "Header": {
+    "menu": "Menú",
+    "close": "Tancar",
+    "nav": {
+      "home": "Inici",
+      "services": "Serveis",
+      "benefits": "Beneficis",
+      "work": "Projectes",
+      "pricing": "Preus",
+      "reviews": "Ressenyes",
+      "faqs": "FAQ",
+      "contact": "Contacte"
+    }
+  },
+  "Hero": {
+    "badge": "Disponible per a Projectes",
+    "heading1": "Marca, Webs",
+    "heading2": "i Màrqueting dissenyats per convertir visitants en",
+    "headingAccent": "Clients",
+    "paragraph": "Ajudem empreses a generar confiança, destacar i captar clients potencials amb una marca sòlida, una web d'alt rendiment i un màrqueting orientat a la conversió.",
+    "cta1": "Auditoria de Creixement gratuïta",
+    "cta2": "Veure casos d'estudi",
+    "trustCount": "Amb la confiança de més de 20 empreses",
+    "trustSub": "Ells van assolir els seus objectius — tu ets el següent."
+  },
+  "Services": {
+    "badge": "Serveis",
+    "heading": "Què Fem.",
+    "description": "Combinem estratègia, velocitat i habilitat per lliurar dissenys excepcionals — sempre.",
+    "serviceLabel": "Servei",
+    "items": [
+      {
+        "title": "Identitat de Marca",
+        "description": "Eleva la teva identitat: posicionament clar, visuals coherents, impacte real.",
+        "tags": ["Direcció d'Art", "Estratègia de Marca", "Disseny de Logo", "Sistemes de Color"]
+      },
+      {
+        "title": "Disseny Web i Mòbil",
+        "description": "Renova o fes rebranding de la teva UI; millora la retenció amb fluxos clars i microinteraccions.",
+        "tags": ["UI Neta i Moderna", "Rebranding", "Prototipat", "Sistema de Disseny"]
+      },
+      {
+        "title": "Màrqueting",
+        "description": "Campanyes i contingut que atrauen les persones correctes i les mouen a actuar.",
+        "tags": ["Dev Framer", "Integracions", "Integració CMS", "Animació"]
+      }
+    ]
+  },
+  "Benefits": {
+    "badge": "Beneficis",
+    "heading": "Per Què Nosaltres.",
+    "description": "Triar una agència digital no hauria de semblar un salt al buit. Ens centrem en la claredat, el rendiment i els resultats mesurables — no només en lliurables.",
+    "items": [
+      {
+        "title": "Estratègia abans del disseny",
+        "description": "Els visuals sense posicionament són simplement decoració. Cada marca, web i campanya comença per entendre el teu negoci, audiència i objectius."
+      },
+      {
+        "title": "Pensament orientat a la conversió",
+        "description": "Captar atenció és fàcil. L'acció és difícil. Dissenyem experiències digitals que guien decisions, redueixen friccions i converteixen visitants en clients."
+      },
+      {
+        "title": "Execució de nivell sènior",
+        "description": "Sense estructures inflades. Sense interminables transferències. Treballes directament amb especialistes experimentats centrats en la qualitat i els resultats."
+      },
+      {
+        "title": "Construït per a resultats de negoci reals",
+        "description": "No perseguim mètriques de vanitat ni premis de disseny. El nostre treball està construït per millorar la confiança, la diferenciació i el potencial d'ingressos."
+      },
+      {
+        "title": "Procés clar, sense sorpreses",
+        "description": "La transparència elimina la incertesa. Sempre saps què fem, per què importa i com impacta en el teu creixement."
+      },
+      {
+        "title": "Mentalitat de rendiment a llarg termini",
+        "description": "Creem actius que continuen funcionant molt després del llançament — marques que es mantenen rellevants, webs que converteixen, sistemes que escalen."
+      }
+    ]
+  },
+  "Work": {
+    "badge": "Projectes",
+    "heading": "Projectes Seleccionats.",
+    "description": "Una mirada a algunes de les marques que hem ajudat — i els resultats que hem aconseguit.",
+    "projects": [
+      { "label": "Redisseny de Web" },
+      { "label": "Identitat de Marca" },
+      { "label": "UI d'App Mòbil" },
+      { "label": "Disseny E-Commerce" },
+      { "label": "Disseny d'Embalatge" }
+    ]
+  },
+  "Pricing": {
+    "badge": "Preus",
+    "heading": "Preus Flexibles.",
+    "steps": [
+      { "title": "Subscriu-te", "description": "Tria un pla que s'adapti al teu flux de treball" },
+      { "title": "Sol·licita", "description": "Envia tasques a través del teu portal de disseny" },
+      { "title": "Aprova o Revisa", "description": "Rep dissenys en 2-3 dies laborables" }
+    ],
+    "plans": [
+      {
+        "name": "Retainer de Disseny",
+        "description": "Ideal per a fundadors que necessiten ajuda de disseny ràpida i fiable.",
+        "devAddon": "Desenvolupament + $1000",
+        "features": ["Sol·licituds il·limitades", "Una sol·licitud alhora", "Tarifa mensual fixa", "Comunicació asíncrona", "Abast flexible", "Pausa en qualsevol moment"]
+      },
+      {
+        "name": "Projecte Únic",
+        "description": "Dona vida al teu web dels somnis en dies, no mesos.",
+        "devAddon": "Desenvolupament + $5000",
+        "features": ["Equip dedicat d'experts", "Desenvolupament Web d'extrem a extrem", "Cronograma i abast totalment personalitzats", "Comunicació asíncrona", "SEO i Màrqueting avançats", "Actualitzacions cada 48 hores"]
+      }
+    ],
+    "cta": "Posa't en contacte"
+  },
+  "Reviews": {
+    "badge": "Ressenyes",
+    "heading": "Històries d'Èxit.",
+    "trustCount": "Amb la confiança de més de 20 empreses",
+    "trustSub": "Ells van assolir els seus objectius — tu ets el següent.",
+    "contactUs": "Contacta'ns",
+    "workedWith": "Hem treballat amb:",
+    "testimonials": [
+      { "name": "Jared Kim", "role": "Director de Màrqueting", "quote": "La qualitat no tenia comparació. Vam enviar la sol·licitud el dilluns i teníem dissenys acabats el dimecres." },
+      { "name": "Maya Collins", "role": "Cap de Producte", "quote": "Professional, fiable i seriosament creatiu. JH Digital va transformar tota la nostra presència de marca." },
+      { "name": "Jesse Leigh", "role": "CEO i Fundador", "quote": "Van entendre la nostra visió de seguida. La velocitat de lliurament és incomparable." },
+      { "name": "Benjamin Daul", "role": "Cap d'Enginyeria", "quote": "Servei de disseny per subscripció excel·lent. Cap es compara amb JH Digital per la qualitat consistent." }
+    ]
+  },
+  "FAQ": {
+    "badge": "FAQ",
+    "heading": "Preguntes.",
+    "items": [
+      { "question": "Com Funciona el Model de Subscripció?", "answer": "Pagues una quota mensual fixa i accediu a un equip de disseny dedicat. Envia sol·licituds il·limitades, lliurades una a una. Sense facturació per hores, sense contractes — cancel·la o fes una pausa quan vulguis." },
+      { "question": "Quin Tipus de Tasques de Disseny Puc Sol·licitar?", "answer": "Qualsevol cosa relacionada amb el disseny! Des d'identitat de marca i disseny de logo fins a disseny web, UI d'apps mòbils, gràfics per a xarxes socials, presentacions, embalatge i molt més." },
+      { "question": "Quan Rebré els Meus Dissenys?", "answer": "La majoria de les sol·licituds es lliuren en 2-3 dies laborables. Els projectes més complexos poden trigar una mica més, però sempre et mantindrem informat." },
+      { "question": "Quines Eines Feu Servir per Gestionar la Feina?", "answer": "Fem servir un portal de disseny personalitzat on pots enviar sol·licituds, fer el seguiment, donar retroalimentació i aprovar lliurables — tot en un sol lloc." },
+      { "question": "Hi ha un Límit en el Nombre de Sol·licituds?", "answer": "No! Pots enviar tantes sol·licituds com vulguis. Les treballem d'una en una per garantir la màxima qualitat en cada lliurable." },
+      { "question": "Puc Cancel·lar o Fer una Pausa en Qualsevol Moment?", "answer": "Absolutament. No hi ha contractes a llarg termini. Pots fer una pausa a la teva subscripció quan no necessitis feina de disseny i reprendre-la quan estiguis llest." }
+    ]
+  },
+  "Contact": {
+    "badge": "Contacte",
+    "heading": "Parlem.",
+    "description": "Tens preguntes o estàs llest per começar el teu projecte? Donem vida a les teves idees!",
+    "chatToSales": "/Xat amb Vendes",
+    "callUs": "/Truca'ns",
+    "formName": "El teu nom*",
+    "formNamePlaceholder": "El teu nom",
+    "formEmail": "Correu electrònic*",
+    "formEmailPlaceholder": "El teu correu",
+    "formWebsite": "Lloc web",
+    "formWebsitePlaceholder": "El teu lloc web",
+    "formMessage": "Missatge",
+    "formMessagePlaceholder": "El teu missatge",
+    "formSubmit": "Posa't en contacte"
+  },
+  "Footer": {
+    "newsletterTitle": "Butlletí",
+    "newsletterDesc": "Uneix-te al nostre butlletí i mantingues-te actualitzat sobre les últimes tendències en disseny digital.",
+    "newsletterPlaceholder": "El teu correu",
+    "navLabel": "/Navegació",
+    "resourcesLabel": "/Recursos",
+    "socialsLabel": "/Xarxes Socials",
+    "nav": { "services": "Serveis", "benefits": "Beneficis", "work": "Projectes", "pricing": "Preus", "reviews": "Ressenyes", "faqs": "FAQ" },
+    "resources": { "privacy": "Política de Privacitat", "terms": "Termes de Servei" },
+    "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
+    "copyright": "©2025 JH Digital. Tots els drets reservats.",
+    "builtWith": "Construït amb Next.js i Tailwind CSS"
+  },
+  "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
+  "WebDesign": {
+    "hero": {
+      "badge": "Disseny Web i Desenvolupament",
+      "heading1": "El teu web hauria de portar-te clients.",
+      "headingAccent": "No allunyar-los.",
+      "paragraph": "Dissenyem i desenvolupem webs personalitzades per a petites empreses — ràpides, clares i fetes per convertir. No només per tenir bona aparença.",
+      "cta1": "Obtén la teva Auditoria Web Gratuïta",
+      "cta2": "Veure el Nostre Treball",
+      "noPressure": "Sense pressió. Sense compromís. Només feedback honest sobre el que li falta al teu web.",
+      "trustCount": "De confiança per a més de 20 empreses",
+      "trustSub": "Van assolir els seus objectius — tu ets el següent."
+    },
+    "problem": {
+      "badge": "El Problema",
+      "heading": "La majoria de webs de petites empreses t'estan costant clients.",
+      "items": [
+        { "title": "Les primeres impressions passen en 3 segons.", "body": "Si el teu web sembla antiquat, lent o confús, els visitants marxen abans de llegir el que fas. Mai no recuperes aquell moment." },
+        { "title": "\"Maco\" no és suficient.", "body": "Un web que no converteix és només un fulletó car. Necessites claredat, senyals de confiança i un camí clar per contactar." },
+        { "title": "No hauries de gestionar-ho tu sol.", "body": "Estàs ocupat portant el teu negoci. Gestionar un web DIY o perseguir freelancers consumeix temps que no tens." }
+      ]
+    },
+    "solution": {
+      "badge": "El Nostre Enfocament",
+      "heading": "Ens prenem el temps per fer-ho bé.",
+      "p1": "Sense plantilles. Sense terminis precipitats. Ens prenem el temps per entendre el teu negoci, els teus clients i els teus objectius — i construïm alguna cosa que realment serveixi els tres.",
+      "p2": "Tens un soci amb tu des de la primera conversa fins al llançament i més enllà. Sense traspàs. Sense confusió.",
+      "pillars": [
+        { "title": "Personalitzat", "body": "Cada web es construeix al voltant del teu negoci específic — la teva marca, la teva audiència, els teus objectius. Mai reciclem la feina." },
+        { "title": "De principi a fi", "body": "Des de la primera trucada fins al llançament i més enllà, gestionem tot i et mantenim informat en cada pas." },
+        { "title": "Qualitat primer", "body": "Preferim prendre un dia més que lliurar alguna cosa que no compleixi el nivell. Sense dreceres." }
+      ]
+    },
+    "deliverables": {
+      "badge": "Què Obtens",
+      "heading": "Tot el que necessita el teu web. Res que no necessiti.",
+      "subtext": "Un web complet, llest per llançar — gestionat per a tu, de principi a fi.",
+      "items": [
+        "Disseny personalitzat al voltant de la teva marca — no una plantilla genèrica",
+        "Disseny responsive i mobile-first en tots els dispositius",
+        "Optimitzat per a temps de càrrega ràpids",
+        "Crides a l'acció clares per impulsar el contacte i les consultes",
+        "Formulari de contacte amb integracions bàsiques (email, llest per a CRM)",
+        "Fonaments SEO on-page: meta etiquetes, contingut estructurat, velocitat de càrrega",
+        "30 dies de suport post-llançament inclòs"
+      ]
+    },
+    "outcomes": {
+      "badge": "Resultats",
+      "heading": "Què canvia quan el teu web realment funciona.",
+      "items": [
+        { "title": "Més consultes qualificades", "body": "Els visitants que arriben a un web clar i creïble tenen més probabilitats de contactar — i de ser el perfil adequat." },
+        { "title": "Major confiança percebuda", "body": "El teu web sovint és el primer que veu un client potencial. Apareix com l'opció premium al teu mercat abans que et truquin." },
+        { "title": "Menys fricció, més conversions", "body": "Quan és fàcil entendre el que fas i com contactar-te, la gent ho fa. La fricció destrueix leads." }
+      ],
+      "ctaTitle": "Llest per millorar el teu web?",
+      "ctaDesc": "Comença amb una auditoria gratuïta — et direm exactament el que l'està frenant.",
+      "ctaButton": "Obtén la teva Auditoria Gratuïta",
+      "ctaNoCommitment": "Sense compromís."
+    },
+    "proof": {
+      "badge": "Resultats Reals",
+      "heading": "Empreses que van confiar en nosaltres.",
+      "trustCount": "De confiança per a més de 20 empreses",
+      "trustSub": "Van assolir els seus objectius — tu ets el següent.",
+      "ctaButton": "Obtén la teva Auditoria Gratuïta",
+      "testimonials": [
+        { "name": "Maya Collins", "role": "Directora de Producte", "quote": "Professional, fiable i molt creatiu. JH Digital va transformar tota la nostra presència de marca." },
+        { "name": "Jared Kim", "role": "Director de Màrqueting", "quote": "Vam enviar la sol·licitud el dilluns i el dimecres teníem dissenys impecables. La qualitat va ser incomparable." }
+      ],
+      "caseStudyTitle": "Cas d'estudi properament",
+      "caseStudyDesc": "Anàlisi completa del projecte amb resultats"
+    },
+    "process": {
+      "badge": "Procés",
+      "heading": "Simple. Clar. Sense sorpreses.",
+      "subtext": "Quatre passos des de la primera conversa fins a un web actiu i amb conversions.",
+      "steps": [
+        { "title": "Descobriment", "body": "Comencem amb una trucada per entendre el teu negoci, la teva audiència i el que vols que faci el teu web. Sense tecnicismes, sense relleno." },
+        { "title": "Disseny", "body": "Creem una maqueta personalitzada adaptada a la teva marca. Veus i aproves el disseny abans que s'escrigui una sola línia de codi." },
+        { "title": "Desenvolupament", "body": "Desenvolupem el teu web tenint en compte el rendiment, el SEO i l'experiència mòbil. Et mantenim informat en tot moment." },
+        { "title": "Llançament i Suport", "body": "Llancem junts. Tens 30 dies de suport post-llançament — preguntes, correccions i ajustaments, tot inclòs." }
+      ]
+    },
+    "faq": {
+      "badge": "Preguntes",
+      "heading": "Preguntes que ens fan sovint.",
+      "items": [
+        { "q": "Quant de temps sol durar un projecte web?", "a": "La majoria dels projectes es completen en 3-6 setmanes. Els webs senzills van més ràpid; els projectes amb funcions personalitzades triguen una mica més. Establim un termini clar des del principi i el complim." },
+        { "q": "He de proporcionar els textos i les imatges, o m'ajudeu?", "a": "Tu proporcionaràs la informació bàsica sobre el teu negoci — tu el coneixes millor. Et guiem sobre el que es necessita exactament, ajudem a perfeccionar el missatge i podem connectar-te amb fotògrafs o redactors si cal." },
+        { "q": "Podeu redissenyar el meu web actual en lloc de començar des de zero?", "a": "Absolutament. Molts clients venen a nosaltres amb un web que no funciona bé. Avaluem el que funciona, el que no, i o bé refresquem el disseny o el reconstruïm correctament — el que millor serveixi als teus objectius." },
+        { "q": "Funcionarà el meu web en mòbil i carregarà ràpid?", "a": "Sempre. Cada web que construïm és mobile-first i està optimitzat per al rendiment. Provem en dispositius i mides de pantalla abans del llançament." },
+        { "q": "Què passa després que el web es llança?", "a": "Cada projecte inclou 30 dies de suport post-llançament — correccions, petits ajustaments i orientació. Després, oferim plans de manteniment o et lliurem tot amb documentació completa." },
+        { "q": "En què es diferencia això d'un constructor com Squarespace o Wix?", "a": "Els constructors de plantilles et donen un punt de partida genèric. Construïm alguna cosa específic per al teu negoci, la teva audiència i els teus objectius — un web que converteix millor, carrega més ràpid i sembla pertànyer al nivell premium del teu mercat." }
+      ]
+    },
+    "form": {
+      "badge": "Començar",
+      "heading": "Comença amb una auditoria gratuïta.",
+      "description": "Sense vendes. Sense pressió. Revisarem el teu web actual (o el teu brief) i et donarem feedback honest sobre el que l'està frenant.",
+      "checklist": [
+        "Revisió gratuïta i sense compromisos del teu web",
+        "Feedback específic i accionable — no consells genèrics",
+        "Resposta en 1 dia hàbil"
+      ],
+      "contactLabel": "/Xat amb Vendes",
+      "nameLbl": "Nom *",
+      "emailLbl": "Email *",
+      "companyLbl": "Empresa",
+      "websiteLbl": "Web Actual",
+      "serviceLbl": "Servei Necessari",
+      "goalLbl": "Quin és el teu principal objectiu en els propers 90 dies?",
+      "namePlaceholder": "El teu nom",
+      "emailPlaceholder": "tu@empresa.com",
+      "companyPlaceholder": "La teva empresa",
+      "websitePlaceholder": "https://elteuweb.com",
+      "serviceDefault": "Selecciona un servei...",
+      "serviceNew": "Nou web des de zero",
+      "serviceRedesign": "Redisseny del web existent",
+      "serviceLanding": "Pàgina d'aterratge",
+      "serviceEcommerce": "Web e-commerce",
+      "serviceNotSure": "Encara no estic segur",
+      "goalPlaceholder": "p.ex. Aconseguir més consultes des del nostre web, llançar abans de la nostra temporada alta...",
+      "submitButton": "Enviar la Meva Sol·licitud d'Auditoria",
+      "submitting": "Enviant...",
+      "noCommitment": "Sense vendes. Sense compromís. Et respondrem en 1 dia hàbil.",
+      "successTitle": "Ja ho tenim.",
+      "successDesc": "Gràcies per contactar-nos. Revisarem el teu web i et respondrem en 1 dia hàbil.",
+      "successReset": "Enviar una altra sol·licitud"
+    }
+  }
+}
