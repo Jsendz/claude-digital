@@ -12,7 +12,7 @@ export default async function Hero() {
             {t("badge")}
           </span>
 
-          <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.05] tracking-tight text-foreground">
+          <h1 className="text-5xl md:text-6xl lg:text-[3.5rem] font-bold leading-[1.05] tracking-tight text-foreground">
             {t("heading1")}
             <br />
             {t("heading2")}
