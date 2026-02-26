@@ -132,18 +132,18 @@
     "badge": "FAQs",
     "heading": "Questions.",
     "items": [
-      { "question": "How Does The Subscription Model Work?", "answer": "You pay a fixed monthly fee and get access to a dedicated design team. Submit unlimited requests, and we'll deliver them one by one (or two at a time with the Pro plan). No hourly billing, no contracts — cancel or pause anytime." },
-      { "question": "What Kind Of Design Tasks Can I Request?", "answer": "Anything design-related! From brand identity and logo design to web design, mobile app UI, social media graphics, pitch decks, packaging, and more. If it's visual, we've got you covered." },
-      { "question": "How Fast Will I Receive My Designs?", "answer": "Most requests are delivered within 2-3 business days. More complex projects like full website designs or brand identity systems may take a bit longer, but we'll always keep you updated on timelines." },
-      { "question": "What Tools Do You Use To Manage The Work?", "answer": "We use a custom design portal where you can submit requests, track progress, provide feedback, and approve deliverables — all in one place. It's simple, organized, and async-friendly." },
-      { "question": "Is There A Limit To How Many Requests I Can Make?", "answer": "No! You can submit as many requests as you'd like. We work through them one at a time (or two with the Pro plan) to ensure top quality on every deliverable." },
-      { "question": "Can I Cancel Or Pause Anytime?", "answer": "Absolutely. There are no long-term contracts. You can pause your subscription when you don't need design work and resume when you're ready. Cancel anytime with no penalties." }
+      { "question": "What's the difference between a logo and a brand identity?", "answer": "A logo is a single mark. A brand identity is the full system — logo, color palette, typography, tone of voice, and visual guidelines — that makes your business instantly recognizable across every touchpoint. We build the full system, not just the icon." },
+      { "question": "How do I know if my website is actually losing me clients?", "answer": "Common signs: high bounce rate, very few contact form submissions, visitors who don't scroll past the homepage, or feedback like 'I couldn't figure out what you do.' If your site doesn't clearly communicate your offer and make it easy to get in touch, it's costing you." },
+      { "question": "Do I need a new brand before investing in marketing?", "answer": "Not always — but weak branding makes marketing less effective. Ads and campaigns drive traffic to your site. If that site doesn't build trust or convert, you're burning budget. We often recommend fixing the foundation first so every marketing dollar works harder." },
+      { "question": "What marketing channels do you work with?", "answer": "We focus on channels that drive real leads: SEO (organic search), Google Ads (paid search), social media ads (Meta, LinkedIn), and email marketing. We'll recommend the right combination for your business — not a one-size-fits-all approach." },
+      { "question": "How quickly can you build a website?", "answer": "Most projects are complete in 3–6 weeks. Simple sites can move faster; more complex builds with custom features take longer. We set a clear timeline before we start and stick to it — no vague 'it depends.'" },
+      { "question": "Can you help if I already have a website or brand but they're not working?", "answer": "Absolutely. Most of our clients come with something that exists but isn't performing. We assess what's salvageable and what needs to change, then build a clear plan — whether that's a light refresh or a full rebuild." }
     ]
   },
   "Contact": {
     "badge": "Contact",
     "heading": "Let's Talk.",
-    "description": "Got questions or ready to start your design project? Let's bring your ideas to life!",
+    "description": "Got questions or ready to start your project? Let's bring your ideas to life.",
     "chatToSales": "/Chat to Sales",
     "callUs": "/Call Us",
     "formName": "Your name*",
@@ -154,7 +154,12 @@
     "formWebsitePlaceholder": "Your Website",
     "formMessage": "Message",
     "formMessagePlaceholder": "Your Message",
-    "formSubmit": "Get in touch"
+    "formSubmit": "Get in touch",
+    "formSending": "Sending...",
+    "formSuccessTitle": "Message sent!",
+    "formSuccessDesc": "Thanks for reaching out. We'll get back to you within 1 business day.",
+    "formSuccessReset": "Send another message",
+    "formError": "Something went wrong. Please try again or email us directly."
   },
   "Footer": {
     "newsletterTitle": "Newsletter",

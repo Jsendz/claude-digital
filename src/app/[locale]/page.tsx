@@ -8,7 +8,7 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Pricing from "@/components/Pricing";
+
 
 export default async function Home({
   params,
@@ -26,7 +26,6 @@ export default async function Home({
         <Services />
         <Benefits />
         <Work />
-        <Pricing />
         <Reviews />
         <FAQ />
         <Contact />

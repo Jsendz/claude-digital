@@ -132,18 +132,18 @@
     "badge": "FAQ",
     "heading": "Preguntes.",
     "items": [
-      { "question": "Com Funciona el Model de Subscripció?", "answer": "Pagues una quota mensual fixa i accediu a un equip de disseny dedicat. Envia sol·licituds il·limitades, lliurades una a una. Sense facturació per hores, sense contractes — cancel·la o fes una pausa quan vulguis." },
-      { "question": "Quin Tipus de Tasques de Disseny Puc Sol·licitar?", "answer": "Qualsevol cosa relacionada amb el disseny! Des d'identitat de marca i disseny de logo fins a disseny web, UI d'apps mòbils, gràfics per a xarxes socials, presentacions, embalatge i molt més." },
-      { "question": "Quan Rebré els Meus Dissenys?", "answer": "La majoria de les sol·licituds es lliuren en 2-3 dies laborables. Els projectes més complexos poden trigar una mica més, però sempre et mantindrem informat." },
-      { "question": "Quines Eines Feu Servir per Gestionar la Feina?", "answer": "Fem servir un portal de disseny personalitzat on pots enviar sol·licituds, fer el seguiment, donar retroalimentació i aprovar lliurables — tot en un sol lloc." },
-      { "question": "Hi ha un Límit en el Nombre de Sol·licituds?", "answer": "No! Pots enviar tantes sol·licituds com vulguis. Les treballem d'una en una per garantir la màxima qualitat en cada lliurable." },
-      { "question": "Puc Cancel·lar o Fer una Pausa en Qualsevol Moment?", "answer": "Absolutament. No hi ha contractes a llarg termini. Pots fer una pausa a la teva subscripció quan no necessitis feina de disseny i reprendre-la quan estiguis llest." }
+      { "question": "Quina és la diferència entre un logo i una identitat de marca?", "answer": "Un logo és un únic símbol. Una identitat de marca és el sistema complet — logo, paleta de colors, tipografia, to de veu i guies visuals — que fa que la teva empresa sigui reconeixible en tots els punts de contacte. Nosaltres construïm el sistema complet, no només la icona." },
+      { "question": "Com sé si el meu web m'està fent perdre clients?", "answer": "Senyals comuns: alta taxa de rebot, molt poques enviaments de formulari de contacte, visitants que no passen de la pàgina d'inici, o comentaris com 'no vaig entendre el que feu.' Si el teu web no comunica clarament el que ofereixes i facilita el contacte, t'està costant clients." },
+      { "question": "Necessito una nova marca abans d'invertir en màrqueting?", "answer": "No sempre — però una marca feble fa el màrqueting menys efectiu. Els anuncis i campanyes porten trànsit al teu web. Si aquest web no genera confiança ni converteix, estàs cremant pressupost. Sovint recomanem arreglar els fonaments primer perquè cada euro de màrqueting rendeixi més." },
+      { "question": "Amb quins canals de màrqueting treballeu?", "answer": "Ens centrem en els canals que generen leads reals: SEO (cerca orgànica), Google Ads (cerca de pagament), anuncis a xarxes socials (Meta, LinkedIn) i email màrqueting. Recomanem la combinació adequada per al teu negoci — no un enfocament únic per a tots." },
+      { "question": "Quant de temps triguen a crear un web?", "answer": "La majoria dels projectes estan llestos en 3-6 setmanes. Els webs senzills poden anar més ràpid; les construccions més complexes amb funcions personalitzades triguen més. Establim un termini clar abans de començar i el complim — sense vagues 'depèn'." },
+      { "question": "Podeu ajudar si ja tinc un web o marca però no funcionen?", "answer": "Absolutament. La majoria dels nostres clients venen a nosaltres amb alguna cosa que existeix però no rendeix. Avaluem el que és recuperable i el que necessita canviar, i construïm un pla clar — ja sigui una renovació lleugera o una reconstrucció completa." }
     ]
   },
   "Contact": {
     "badge": "Contacte",
     "heading": "Parlem.",
-    "description": "Tens preguntes o estàs llest per começar el teu projecte? Donem vida a les teves idees!",
+    "description": "Tens preguntes o estàs llest per començar el teu projecte? Donem vida a les teves idees.",
     "chatToSales": "/Xat amb Vendes",
     "callUs": "/Truca'ns",
     "formName": "El teu nom*",
@@ -154,7 +154,12 @@
     "formWebsitePlaceholder": "El teu lloc web",
     "formMessage": "Missatge",
     "formMessagePlaceholder": "El teu missatge",
-    "formSubmit": "Posa't en contacte"
+    "formSubmit": "Posa't en contacte",
+    "formSending": "Enviant...",
+    "formSuccessTitle": "Missatge enviat!",
+    "formSuccessDesc": "Gràcies per contactar-nos. Et respondrem en 1 dia hàbil.",
+    "formSuccessReset": "Enviar un altre missatge",
+    "formError": "Alguna cosa ha anat malament. Si us plau, torna-ho a intentar o escriu-nos directament."
   },
   "Footer": {
     "newsletterTitle": "Butlletí",

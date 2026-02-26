@@ -132,18 +132,18 @@
     "badge": "FAQ",
     "heading": "Questions.",
     "items": [
-      { "question": "Comment Fonctionne le Modèle d'Abonnement ?", "answer": "Vous payez un abonnement mensuel fixe et accédez à une équipe de design dédiée. Soumettez des demandes illimitées, livrées une par une. Pas de facturation horaire, pas de contrats — annulez ou mettez en pause à tout moment." },
-      { "question": "Quels Types de Tâches de Design Puis-je Demander ?", "answer": "Tout ce qui est lié au design ! De l'identité de marque au design web, en passant par les UI d'applications mobiles, les graphiques pour les réseaux sociaux, les présentations, le packaging et plus encore." },
-      { "question": "Combien de Temps pour Recevoir Mes Designs ?", "answer": "La plupart des demandes sont livrées dans les 2-3 jours ouvrables. Les projets plus complexes peuvent prendre un peu plus de temps, mais nous vous tiendrons toujours informé." },
-      { "question": "Quels Outils Utilisez-vous pour Gérer le Travail ?", "answer": "Nous utilisons un portail de design personnalisé où vous pouvez soumettre des demandes, suivre l'avancement, donner des retours et approuver les livrables — tout en un seul endroit." },
-      { "question": "Y a-t-il une Limite au Nombre de Demandes ?", "answer": "Non ! Vous pouvez soumettre autant de demandes que vous le souhaitez. Nous les traitons une par une pour garantir une qualité maximale sur chaque livrable." },
-      { "question": "Puis-je Annuler ou Mettre en Pause à Tout Moment ?", "answer": "Absolument. Il n'y a pas de contrats à long terme. Vous pouvez mettre en pause votre abonnement quand vous n'avez pas besoin de travail de design et le reprendre quand vous êtes prêt." }
+      { "question": "Quelle est la différence entre un logo et une identité de marque ?", "answer": "Un logo est un simple signe. Une identité de marque est le système complet — logo, palette de couleurs, typographie, ton de voix et directives visuelles — qui rend votre entreprise instantanément reconnaissable sur chaque point de contact. Nous construisons le système complet, pas seulement l'icône." },
+      { "question": "Comment savoir si mon site me fait perdre des clients ?", "answer": "Signes courants : taux de rebond élevé, très peu de soumissions de formulaire de contact, visiteurs qui ne font pas défiler au-delà de la page d'accueil, ou retours comme 'je n'arrivais pas à comprendre ce que vous faites.' Si votre site ne communique pas clairement votre offre, il vous coûte des clients." },
+      { "question": "Ai-je besoin d'une nouvelle marque avant d'investir dans le marketing ?", "answer": "Pas toujours — mais un branding faible rend le marketing moins efficace. Les publicités et campagnes amènent du trafic sur votre site. Si ce site ne génère pas de confiance et ne convertit pas, vous brûlez votre budget. Nous recommandons souvent de corriger les fondations d'abord pour que chaque euro de marketing soit plus rentable." },
+      { "question": "Avec quels canaux marketing travaillez-vous ?", "answer": "Nous nous concentrons sur les canaux qui génèrent de vrais leads : SEO (recherche organique), Google Ads (recherche payante), publicités sur les réseaux sociaux (Meta, LinkedIn) et email marketing. Nous recommandons la bonne combinaison pour votre entreprise — pas une approche universelle." },
+      { "question": "En combien de temps pouvez-vous créer un site web ?", "answer": "La plupart des projets sont terminés en 3 à 6 semaines. Les sites simples peuvent aller plus vite ; les constructions plus complexes avec des fonctionnalités sur mesure prennent plus de temps. Nous fixons un calendrier clair avant de commencer et nous le respectons — sans vague 'ça dépend.'" },
+      { "question": "Pouvez-vous aider si j'ai déjà un site ou une marque mais qu'ils ne fonctionnent pas ?", "answer": "Absolument. La plupart de nos clients viennent avec quelque chose qui existe mais ne performe pas. Nous évaluons ce qui est récupérable et ce qui doit changer, puis nous construisons un plan clair — qu'il s'agisse d'une légère refonte ou d'une reconstruction complète." }
     ]
   },
   "Contact": {
     "badge": "Contact",
     "heading": "Parlons-en.",
-    "description": "Des questions ou prêt à démarrer votre projet de design ? Donnons vie à vos idées !",
+    "description": "Des questions ou prêt à démarrer votre projet ? Donnons vie à vos idées.",
     "chatToSales": "/Chat avec les Ventes",
     "callUs": "/Appelez-nous",
     "formName": "Votre nom*",
@@ -154,7 +154,12 @@
     "formWebsitePlaceholder": "Votre site web",
     "formMessage": "Message",
     "formMessagePlaceholder": "Votre message",
-    "formSubmit": "Prendre contact"
+    "formSubmit": "Prendre contact",
+    "formSending": "Envoi en cours...",
+    "formSuccessTitle": "Message envoyé !",
+    "formSuccessDesc": "Merci de nous avoir contactés. Nous vous répondrons dans 1 jour ouvrable.",
+    "formSuccessReset": "Envoyer un autre message",
+    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement."
   },
   "Footer": {
     "newsletterTitle": "Newsletter",

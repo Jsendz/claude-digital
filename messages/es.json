@@ -132,18 +132,18 @@
     "badge": "Preguntas",
     "heading": "Preguntas.",
     "items": [
-      { "question": "¿Cómo Funciona el Modelo de Suscripción?", "answer": "Pagas una tarifa mensual fija y obtienes acceso a un equipo de diseño dedicado. Envía solicitudes ilimitadas, y las entregamos una a una. Sin facturación por hora, sin contratos — cancela o pausa cuando quieras." },
-      { "question": "¿Qué Tipo de Tareas de Diseño Puedo Solicitar?", "answer": "¡Cualquier cosa relacionada con el diseño! Desde identidad de marca y diseño de logo hasta diseño web, UI de apps móviles, gráficos para redes sociales, presentaciones, packaging y más." },
-      { "question": "¿Cuánto Tardaré en Recibir Mis Diseños?", "answer": "La mayoría de las solicitudes se entregan en 2-3 días hábiles. Los proyectos más complejos pueden tardar un poco más, pero siempre te mantendremos informado." },
-      { "question": "¿Qué Herramientas Usan para Gestionar el Trabajo?", "answer": "Usamos un portal de diseño personalizado donde puedes enviar solicitudes, seguir el progreso, dar retroalimentación y aprobar entregables — todo en un solo lugar." },
-      { "question": "¿Hay un Límite en el Número de Solicitudes?", "answer": "¡No! Puedes enviar todas las solicitudes que quieras. Las trabajamos de una en una para garantizar la máxima calidad en cada entregable." },
-      { "question": "¿Puedo Cancelar o Pausar en Cualquier Momento?", "answer": "Absolutamente. No hay contratos a largo plazo. Puedes pausar tu suscripción cuando no necesites trabajo de diseño y reanudarla cuando estés listo." }
+      { "question": "¿Cuál es la diferencia entre un logo y una identidad de marca?", "answer": "Un logo es un único símbolo. Una identidad de marca es el sistema completo — logo, paleta de colores, tipografía, tono de voz y guías visuales — que hace que tu empresa sea reconocible en todos los puntos de contacto. Nosotros construimos el sistema completo, no solo el icono." },
+      { "question": "¿Cómo sé si mi web me está haciendo perder clientes?", "answer": "Señales comunes: alta tasa de rebote, muy pocos envíos de formulario de contacto, visitantes que no pasan de la página de inicio, o comentarios como 'no entendí qué hacéis.' Si tu web no comunica claramente lo que ofreces y facilita el contacto, te está costando clientes." },
+      { "question": "¿Necesito una marca nueva antes de invertir en marketing?", "answer": "No siempre — pero una marca débil hace el marketing menos efectivo. Los anuncios y campañas llevan tráfico a tu web. Si esa web no genera confianza ni convierte, estás quemando presupuesto. A menudo recomendamos arreglar los cimientos primero para que cada euro de marketing rinda más." },
+      { "question": "¿Con qué canales de marketing trabajáis?", "answer": "Nos enfocamos en los canales que generan leads reales: SEO (búsqueda orgánica), Google Ads (búsqueda de pago), anuncios en redes sociales (Meta, LinkedIn) y email marketing. Recomendamos la combinación adecuada para tu negocio — no un enfoque único para todos." },
+      { "question": "¿Cuánto tiempo tardáis en crear una web?", "answer": "La mayoría de los proyectos están listos en 3-6 semanas. Las webs sencillas pueden ir más rápido; las construcciones más complejas con funciones personalizadas tardan más. Establecemos un plazo claro antes de empezar y lo cumplimos — sin vagas 'depende'." },
+      { "question": "¿Podéis ayudar si ya tengo una web o marca pero no funcionan?", "answer": "Absolutamente. La mayoría de nuestros clientes llegan a nosotros con algo que existe pero no rinde. Evaluamos qué es recuperable y qué necesita cambiar, luego construimos un plan claro — ya sea una renovación ligera o una reconstrucción completa." }
     ]
   },
   "Contact": {
     "badge": "Contacto",
     "heading": "Hablemos.",
-    "description": "¿Tienes preguntas o estás listo para comenzar tu proyecto? ¡Demos vida a tus ideas!",
+    "description": "¿Tienes preguntas o estás listo para comenzar tu proyecto? Demos vida a tus ideas.",
     "chatToSales": "/Chat con Ventas",
     "callUs": "/Llámanos",
     "formName": "Tu nombre*",
@@ -154,7 +154,12 @@
     "formWebsitePlaceholder": "Tu sitio web",
     "formMessage": "Mensaje",
     "formMessagePlaceholder": "Tu mensaje",
-    "formSubmit": "Ponte en contacto"
+    "formSubmit": "Ponte en contacto",
+    "formSending": "Enviando...",
+    "formSuccessTitle": "¡Mensaje enviado!",
+    "formSuccessDesc": "Gracias por contactarnos. Te responderemos en 1 día hábil.",
+    "formSuccessReset": "Enviar otro mensaje",
+    "formError": "Algo salió mal. Por favor inténtalo de nuevo o escríbenos directamente."
   },
   "Footer": {
     "newsletterTitle": "Boletín",
