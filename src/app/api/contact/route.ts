@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     const toEmail = process.env.CONTACT_TO_EMAIL ?? "info@jhdigitalservices.com";
 
-    await resend.emails.send({
+    const { data, error: sendError } = await resend.emails.send({
       from: "JH Digital Contact Form <onboarding@resend.dev>",
       to: toEmail,
       replyTo: email,
@@ -36,12 +36,16 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    if (sendError) {
+      console.error("Resend error:", sendError);
+      return NextResponse.json({ error: sendError.message }, { status: 500 });
+    }
+
+    console.log("Email sent, id:", data?.id);
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Contact form error:", error);
-    return NextResponse.json(
-      { error: "Failed to send message." },
-      { status: 500 }
-    );
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Contact form error:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
