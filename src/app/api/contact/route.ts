@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const toEmail = process.env.CONTACT_TO_EMAIL ?? "info@jhdigitalservices.com";
 
     const { data, error: sendError } = await resend.emails.send({
-      from: "JH Digital Contact Form <onboarding@resend.dev>",
+      from: "JH Digital <noreply@jhdigitalservices.com>",
       to: toEmail,
       replyTo: email,
       subject: `New contact from ${name}`,
