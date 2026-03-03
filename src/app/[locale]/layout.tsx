@@ -94,6 +94,13 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <script
+          id="vtag-ai-js"
+          async
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="DsLeeJ2HIppzeyHX"
+          data-version="062024"
+        />
       </head>
       <body
         className={`${expletusSans.variable} ${montserrat.variable} antialiased`}
