@@ -108,7 +108,7 @@ export default function Contact() {
                 <p className="text-xs text-muted uppercase tracking-wider mb-1">
                   {t("callUs")}
                 </p>
-                <p className="font-semibold text-sm">+1-555-123-4567</p>
+                <p className="font-semibold text-sm">+376 612 400</p>
               </div>
             </div>
           </div>
