@@ -98,7 +98,7 @@ export default async function Services() {
               <div className="relative z-10 w-full rounded-xl overflow-hidden">
                 <img
                   src={service.image}
-                  alt=""
+                  alt={service.title}
                   className="w-full object-cover h-44 rounded-xl transition-transform duration-500 group-hover:scale-105"
                 />
               </div>

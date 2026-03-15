@@ -40,7 +40,7 @@ export default function Header() {
       >
         <div className="flex flex-row justify-around">
         <a href={`/${locale}`} className="text-xl font-bold text-foreground relative z-60 mr-6">
-          <img src="/images/logojh2.png" alt="" className="h-12" />
+          <img src="/images/logojh2.png" alt="JH Digital" className="h-12" />
         </a>
 
           <LanguageSwitcher />
