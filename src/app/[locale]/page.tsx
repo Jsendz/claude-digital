@@ -29,10 +29,9 @@ export async function generateMetadata({
     keywords: t("keywords"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries([
-        ...locales.map((l) => [l, `${BASE_URL}/${l}`]),
-        ["x-default", `${BASE_URL}/en`],
-      ]),
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${BASE_URL}/${l}`])
+      ),
     },
     openGraph: {
       title: t("title"),

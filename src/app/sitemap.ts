@@ -8,6 +8,9 @@ const pages = [
   { path: "/web-design", priority: 0.9, changeFrequency: "monthly" as const },
 ];
 
+// English gets a 0.05 boost in priority since it's the default locale
+const localePriority: Record<string, number> = { en: 0.05, es: 0, fr: 0, ca: 0 };
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
@@ -17,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE_URL}/${locale}${page.path}`,
         lastModified: new Date(),
         changeFrequency: page.changeFrequency,
-        priority: page.priority,
+        priority: Math.min(1.0, page.priority + localePriority[locale]),
       });
     }
   }
