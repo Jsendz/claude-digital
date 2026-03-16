@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 export default async function Hero() {
@@ -73,24 +74,24 @@ export default async function Hero() {
         {/* Right Image Grid */}
         <div className="grid grid-cols-2 gap-3 pt-12 lg:-mt-4 pb-8">
           <div className="rounded-2xl overflow-hidden h-64 relative">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web design on laptop" className="w-full h-full object-cover" />
+            <Image src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web design on laptop" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             <div className="absolute bottom-3 left-3 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
           </div>
           <div className="rounded-2xl overflow-hidden h-64 relative">
-            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="UI/UX design interface" className="w-full h-full object-cover" />
+            <Image src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="UI/UX design interface" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             <div className="absolute bottom-3 left-3 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
           </div>
-          <div className="rounded-2xl overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Creative design workspace" className="w-full h-full object-cover" />
+          <div className="rounded-2xl overflow-hidden h-64 relative">
+            <Image src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Creative design workspace" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
           </div>
-          <div className="rounded-2xl overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Web analytics dashboard" className="w-full h-full object-cover" />
+          <div className="rounded-2xl overflow-hidden h-64 relative">
+            <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Web analytics dashboard" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
           </div>
-          <div className="rounded-2xl overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80" alt="Brand identity design" className="w-full h-full object-cover" />
+          <div className="rounded-2xl overflow-hidden h-64 relative">
+            <Image src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80" alt="Brand identity design" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
           </div>
-          <div className="rounded-2xl overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Branding materials layout" className="w-full h-full object-cover" />
+          <div className="rounded-2xl overflow-hidden h-64 relative">
+            <Image src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Branding materials layout" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
           </div>
         </div>
       </div>

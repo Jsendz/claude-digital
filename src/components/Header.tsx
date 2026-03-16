@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -40,7 +41,7 @@ export default function Header() {
       >
         <div className="flex flex-row justify-around">
         <a href={`/${locale}`} className="text-xl font-bold text-foreground relative z-60 mr-6">
-          <img src="/images/logojh2.png" alt="JH Digital" className="h-12" />
+          <Image src="/images/logojh2.png" alt="JH Digital" width={120} height={48} className="h-12 w-auto" />
         </a>
 
           <LanguageSwitcher />
