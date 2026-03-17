@@ -40,7 +40,7 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-row justify-around">
-        <a href={`/${locale}`} className="text-xl font-bold text-foreground relative z-60 mr-6">
+        <a href={locale === "en" ? "/" : `/${locale}`} className="text-xl font-bold text-foreground relative z-60 mr-6">
           <Image src="/images/logojh2.png" alt="JH Digital" width={120} height={48} className="h-12 w-auto" />
         </a>
 

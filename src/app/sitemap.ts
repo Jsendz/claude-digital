@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const page of pages) {
     for (const locale of locales) {
       entries.push({
-        url: `${BASE_URL}/${locale}${page.path}`,
+        url: locale === "en" ? `${BASE_URL}${page.path}` : `${BASE_URL}/${locale}${page.path}`,
         lastModified: new Date(),
         changeFrequency: page.changeFrequency,
         priority: Math.min(1.0, page.priority + localePriority[locale]),

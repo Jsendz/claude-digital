@@ -15,7 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta.webDesign" });
 
-  const url = `${BASE_URL}/${locale}/web-design`;
+  const url = locale === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${locale}/web-design`;
 
   return {
     title: t("title"),
@@ -24,7 +24,7 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${BASE_URL}/${l}/web-design`])
+        locales.map((l) => [l, l === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${l}/web-design`])
       ),
     },
     openGraph: {
