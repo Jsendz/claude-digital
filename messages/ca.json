@@ -171,7 +171,7 @@
     "nav": { "services": "Serveis", "benefits": "Beneficis", "work": "Projectes", "pricing": "Preus", "reviews": "Ressenyes", "faqs": "FAQ" },
     "resources": { "privacy": "Política de Privacitat", "terms": "Termes de Servei" },
     "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
-    "copyright": "©2025 JH Digital. Tots els drets reservats.",
+    "copyright": "©2026 JH Digital. Tots els drets reservats.",
     "builtWith": "Construït amb Next.js i Tailwind CSS"
   },
   "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
@@ -182,7 +182,7 @@
       "keywords": "agència de branding, disseny web, màrqueting digital, identitat de marca, desenvolupament de webs, SEO, màrqueting per a petites empreses"
     },
     "webDesign": {
-      "title": "Disseny Web per a Petites Empreses — JH Digital",
+      "title": "Disseny Web per a Petites Empreses",
       "description": "Webs personalitzades per a petites empreses, optimitzades per convertir visites en clients. Ràpides, mobile-first i dissenyades per generar leads.",
       "keywords": "disseny web petita empresa, desenvolupament web personalitzat, web responsive, disseny web orientat a conversió, auditoria web, disseny pàgina d'aterratge"
     }

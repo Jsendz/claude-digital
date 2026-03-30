@@ -74,7 +74,7 @@ export default async function Hero() {
         {/* Right Image Grid */}
         <div className="grid grid-cols-2 gap-3 pt-12 lg:-mt-4 pb-8">
           <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web design on laptop" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            <Image src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web design on laptop" fill priority className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             <div className="absolute bottom-3 left-3 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
           </div>
           <div className="rounded-2xl overflow-hidden h-64 relative">

@@ -23,9 +23,15 @@ export async function generateMetadata({
     keywords: t("keywords"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, l === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${l}/web-design`])
-      ),
+      languages: {
+        "x-default": `${BASE_URL}/web-design`,
+        ...Object.fromEntries(
+          locales.map((l) => [
+            l,
+            l === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${l}/web-design`,
+          ])
+        ),
+      },
     },
     openGraph: {
       title: t("title"),
@@ -50,6 +56,10 @@ export default async function WebDesignPage({
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "Meta.webDesign" });
+  const tFaq = await getTranslations({ locale, namespace: "WebDesign.faq" });
+
+  const canonicalUrl =
+    locale === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${locale}/web-design`;
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -61,9 +71,24 @@ export default async function WebDesignPage({
       url: BASE_URL,
     },
     description: t("description"),
-    url: `${BASE_URL}/${locale}/web-design`,
+    url: canonicalUrl,
     areaServed: "Worldwide",
     serviceType: "Web Design",
+  };
+
+  const faqItems = [0, 1, 2, 3, 4, 5].map((i) => ({
+    "@type": "Question",
+    name: tFaq(`items.${i}.q`),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: tFaq(`items.${i}.a`),
+    },
+  }));
+
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems,
   };
 
   return (
@@ -71,6 +96,10 @@ export default async function WebDesignPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <Header />
       <main>

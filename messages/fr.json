@@ -171,7 +171,7 @@
     "nav": { "services": "Services", "benefits": "Avantages", "work": "Projets", "pricing": "Tarifs", "reviews": "Avis", "faqs": "FAQ" },
     "resources": { "privacy": "Politique de Confidentialité", "terms": "Conditions d'Utilisation" },
     "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
-    "copyright": "©2025 JH Digital. Tous droits réservés.",
+    "copyright": "©2026 JH Digital. Tous droits réservés.",
     "builtWith": "Construit avec Next.js & Tailwind CSS"
   },
   "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
@@ -182,7 +182,7 @@
       "keywords": "agence branding, design web, marketing digital, identité de marque, développement site web, SEO, marketing petites entreprises"
     },
     "webDesign": {
-      "title": "Design Web pour Petites Entreprises — JH Digital",
+      "title": "Design Web pour Petites Entreprises",
       "description": "Sites web sur mesure pour petites entreprises, optimisés pour convertir les visiteurs en clients. Rapides, mobile-first et pensés pour générer des leads.",
       "keywords": "design web petite entreprise, développement web sur mesure, site responsive, design web axé conversion, audit web, design page d'atterrissage"
     }

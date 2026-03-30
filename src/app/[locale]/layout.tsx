@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Expletus_Sans, Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import Script from "next/script";
 import "../globals.css";
 
 const BASE_URL = "https://jhdigitalservices.com";
@@ -64,16 +65,47 @@ const organizationSchema = {
   "@type": "Organization",
   name: "JH Digital",
   url: BASE_URL,
-  logo: `${BASE_URL}/images/logojh2.png`,
+  description:
+    "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE_URL}/images/logojh2.png`,
+  },
   contactPoint: {
     "@type": "ContactPoint",
     email: "info@jhdigitalservices.com",
     contactType: "customer service",
   },
-  sameAs: [
-    "https://twitter.com/jhdigital",
-    "https://www.linkedin.com/company/jhdigital",
-  ],
+  sameAs: ["https://twitter.com/jhdigital"],
+};
+
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "JH Digital",
+  url: BASE_URL,
+  description:
+    "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE_URL}/images/logojh2.png`,
+  },
+  email: "info@jhdigitalservices.com",
+  sameAs: ["https://twitter.com/jhdigital"],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: "4",
+  },
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "JH Digital",
+  url: BASE_URL,
 };
 
 export default async function LocaleLayout({
@@ -95,11 +127,12 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <script
-          id="vtag-ai-js"
-          async
-          src="https://r2.leadsy.ai/tag.js"
-          data-pid="DsLeeJ2HIppzeyHX"
-          data-version="062024"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body
@@ -108,6 +141,13 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Script
+          id="vtag-ai-js"
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="DsLeeJ2HIppzeyHX"
+          data-version="062024"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

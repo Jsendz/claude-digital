@@ -171,7 +171,7 @@
     "nav": { "services": "Services", "benefits": "Benefits", "work": "Work", "pricing": "Pricing", "reviews": "Reviews", "faqs": "FAQs" },
     "resources": { "privacy": "Privacy Policy", "terms": "Terms of Service" },
     "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
-    "copyright": "©2025 JH Digital. All rights reserved.",
+    "copyright": "©2026 JH Digital. All rights reserved.",
     "builtWith": "Built with Next.js & Tailwind CSS"
   },
   "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
@@ -182,7 +182,7 @@
       "keywords": "branding agency, web design, digital marketing, brand identity, website development, SEO, small business marketing"
     },
     "webDesign": {
-      "title": "Web Design & Development for Small Businesses — JH Digital",
+      "title": "Web Design & Development for Small Businesses",
       "description": "Custom websites for small businesses that convert visitors into clients. Fast, mobile-first, and built to generate leads. Get a free website audit.",
       "keywords": "web design small business, custom website development, responsive website, conversion-focused web design, website audit, landing page design"
     }
