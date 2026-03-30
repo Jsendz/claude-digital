@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  verification: {
+    google: "AmrRoJmkNSS0edy_O35h1OeXJsp_lG5zzUV4Eu87BFs",
+  },
 };
 
 export function generateStaticParams() {
