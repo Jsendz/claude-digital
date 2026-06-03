@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Expletus_Sans, Montserrat } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { Expletus_Sans, Montserrat, Instrument_Serif, JetBrains_Mono, Inter } from "next/font/google";
+import { setRequestLocale } from "next-intl/server";
 import Script from "next/script";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getHeaderContent, getFooterContent } from "@/sanity/lib/queries";
 import "../globals.css";
 
 const BASE_URL = "https://jhdigitalservices.com";
@@ -19,6 +21,25 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
@@ -30,37 +51,19 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "JH Digital",
     type: "website",
-    images: [
-      {
-        url: "/images/logojh2.png",
-        width: 300,
-        height: 300,
-        alt: "JH Digital",
-      },
-    ],
+    images: [{ url: "/images/favi.png", width: 300, height: 300, alt: "JH Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@jhdigital",
-    images: ["/images/logojh2.png"],
+    images: ["/images/favi.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
-  verification: {
-    google: "AmrRoJmkNSS0edy_O35h1OeXJsp_lG5zzUV4Eu87BFs",
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  verification: { google: "AmrRoJmkNSS0edy_O35h1OeXJsp_lG5zzUV4Eu87BFs" },
 };
 
 export function generateStaticParams() {
-  return [
-    { locale: "en" },
-    { locale: "es" },
-    { locale: "fr" },
-    { locale: "ca" },
-  ];
+  return [{ locale: "en" }, { locale: "es" }, { locale: "fr" }, { locale: "ca" }];
 }
 
 const organizationSchema = {
@@ -68,17 +71,9 @@ const organizationSchema = {
   "@type": "Organization",
   name: "JH Digital",
   url: BASE_URL,
-  description:
-    "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
-  logo: {
-    "@type": "ImageObject",
-    url: `${BASE_URL}/images/logojh2.png`,
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "info@jhdigitalservices.com",
-    contactType: "customer service",
-  },
+  description: "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
+  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/favi.png` },
+  contactPoint: { "@type": "ContactPoint", email: "info@jhdigitalservices.com", contactType: "customer service" },
   sameAs: ["https://twitter.com/jhdigital"],
 };
 
@@ -87,29 +82,14 @@ const professionalServiceSchema = {
   "@type": "ProfessionalService",
   name: "JH Digital",
   url: BASE_URL,
-  description:
-    "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
-  logo: {
-    "@type": "ImageObject",
-    url: `${BASE_URL}/images/logojh2.png`,
-  },
+  description: "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
+  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/favi.png` },
   email: "info@jhdigitalservices.com",
   sameAs: ["https://twitter.com/jhdigital"],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    bestRating: "5",
-    worstRating: "1",
-    reviewCount: "4",
-  },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", reviewCount: "4" },
 };
 
-const webSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "JH Digital",
-  url: BASE_URL,
-};
+const webSiteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "JH Digital", url: BASE_URL };
 
 export default async function LocaleLayout({
   children,
@@ -120,30 +100,23 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const messages = await getMessages();
+
+  const [headerContent, footerContent] = await Promise.all([
+    getHeaderContent(locale),
+    getFooterContent(locale),
+  ]);
 
   return (
     <html lang={locale}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       </head>
-      <body
-        className={`${expletusSans.variable} ${montserrat.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+      <body className={`${expletusSans.variable} ${montserrat.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${inter.variable} antialiased`}>
+        <Header content={headerContent} locale={locale} />
+        {children}
+        <Footer locale={locale} content={footerContent} />
         <Script
           id="vtag-ai-js"
           src="https://r2.leadsy.ai/tag.js"

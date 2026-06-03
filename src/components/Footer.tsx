@@ -1,99 +1,99 @@
-"use client";
+import FooterClock from "./FooterClock";
 
-import { useTranslations } from "next-intl";
+type FooterT = {
+  description: string;
+  colStudio: string; colConnect: string; colVisit: string;
+  navAbout: string; navServices: string; navWork: string; navJournal: string;
+  copyright: string; open: string; closed: string;
+  legal1: string; legal2: string; legal3: string;
+};
 
-export default function Footer() {
-  const t = useTranslations("Footer");
+const T: Record<string, FooterT> = {
+  en: {
+    description: "An independent design studio bringing brands out of the shadow and into the spotlight.",
+    colStudio: "Studio", colConnect: "Connect", colVisit: "Visit",
+    navAbout: "About", navServices: "Services", navWork: "Work", navJournal: "Journal",
+    copyright: "© 2026 Lumiq Studio · All rights reserved",
+    open: "Open", closed: "Closed",
+    legal1: "Privacy", legal2: "Terms", legal3: "Cookies",
+  },
+  es: {
+    description: "Un estudio de diseño independiente que saca a las marcas de la sombra y las pone en el centro.",
+    colStudio: "Estudio", colConnect: "Conecta", colVisit: "Visita",
+    navAbout: "Sobre nosotros", navServices: "Servicios", navWork: "Proyectos", navJournal: "Blog",
+    copyright: "© 2026 Lumiq Studio · Todos los derechos reservados",
+    open: "Abierto", closed: "Cerrado",
+    legal1: "Privacidad", legal2: "Condiciones", legal3: "Cookies",
+  },
+  fr: {
+    description: "Un studio de design indépendant qui sort les marques de l'ombre pour les mettre en lumière.",
+    colStudio: "Studio", colConnect: "Contact", colVisit: "Adresse",
+    navAbout: "À propos", navServices: "Services", navWork: "Projets", navJournal: "Journal",
+    copyright: "© 2026 Lumiq Studio · Tous droits réservés",
+    open: "Ouvert", closed: "Fermé",
+    legal1: "Confidentialité", legal2: "Mentions légales", legal3: "Cookies",
+  },
+  ca: {
+    description: "Un estudi de disseny independent que treu les marques de l'ombra i les posa en el focus.",
+    colStudio: "Estudi", colConnect: "Connecta", colVisit: "Visita",
+    navAbout: "Sobre nosaltres", navServices: "Serveis", navWork: "Projectes", navJournal: "Blog",
+    copyright: "© 2026 Lumiq Studio · Tots els drets reservats",
+    open: "Obert", closed: "Tancat",
+    legal1: "Privacitat", legal2: "Condicions", legal3: "Galetes",
+  },
+};
 
-  const navigation = [
-    { label: t("nav.services"), href: "#services" },
-    { label: t("nav.benefits"), href: "#benefits" },
-    { label: t("nav.work"), href: "#work" },
-    { label: t("nav.pricing"), href: "#pricing" },
-    { label: t("nav.reviews"), href: "#reviews" },
-    { label: t("nav.faqs"), href: "#faqs" },
-  ];
-
-  const resources = [
-    { label: t("resources.privacy"), href: "#" },
-    { label: t("resources.terms"), href: "#" },
-  ];
-
-  const socials = [
-    { label: t("socials.twitter"), href: "#" },
-    { label: t("socials.linkedin"), href: "#" },
-    { label: t("socials.youtube"), href: "#" },
-  ];
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Footer({ locale, content: _content }: { locale?: string; content?: any }) {
+  const t = T[locale ?? "en"] ?? T.en;
 
   return (
-    <footer className="bg-foreground text-white px-6 md:px-12 lg:px-16 py-16">
-      <div className="max-w-335 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-bold mb-3">{t("newsletterTitle")}</h3>
-            <p className="text-gray-400 text-sm mb-6">{t("newsletterDesc")}</p>
-            <div className="flex items-center bg-white/10 rounded-full pr-1 pl-4">
-              <input
-                type="email"
-                placeholder={t("newsletterPlaceholder")}
-                className="bg-transparent text-white text-sm placeholder:text-gray-500 flex-1 py-3 focus:outline-none"
-              />
-              <button className="w-10 h-10 rounded-full bg-accent flex items-center justify-center hover:bg-accent-hover transition-colors shrink-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+    <footer className="ft-footer">
+      <div className="ft-inner">
+        <div className="ft-grid">
+          <div className="ft-brand">
+            <img src="/images/logo-lumiq.svg" alt="Lumiq Studio" className="ft-logo" />
+            <p>{t.description}</p>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">{t("navLabel")}</p>
-            <ul className="space-y-2.5">
-              {navigation.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+          <div className="ft-col">
+            <h4>{t.colStudio}</h4>
+            <ul>
+              <li><a href="#">{t.navAbout}</a></li>
+              <li><a href="#services">{t.navServices}</a></li>
+              <li><a href="#work">{t.navWork}</a></li>
+              <li><a href="#">{t.navJournal}</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">{t("resourcesLabel")}</p>
-            <ul className="space-y-2.5">
-              {resources.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+          <div className="ft-col">
+            <h4>{t.colConnect}</h4>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Are.na</a></li>
+              <li><a href="mailto:hello@lumiq.studio">hello@lumiq.studio</a></li>
             </ul>
           </div>
 
-          {/* Socials */}
-          <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">{t("socialsLabel")}</p>
-            <ul className="space-y-2.5">
-              {socials.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+          <div className="ft-col">
+            <h4>{t.colVisit}</h4>
+            <ul>
+              <li><span>Calle Serrano 41</span></li>
+              <li><span>28001 Madrid</span></li>
+              <li><span>Spain</span></li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">{t("copyright")}</p>
-          <p className="text-xs text-gray-500">{t("builtWith")}</p>
+        <div className="ft-bottom">
+          <span className="ft-bottom-text">{t.copyright}</span>
+          <FooterClock openLabel={t.open} closedLabel={t.closed} />
+          <div className="ft-legal">
+            <a href="#">{t.legal1}</a>
+            <a href="#">{t.legal2}</a>
+            <a href="#">{t.legal3}</a>
+          </div>
         </div>
       </div>
     </footer>

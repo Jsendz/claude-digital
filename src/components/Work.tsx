@@ -1,59 +1,78 @@
-import { getTranslations } from "next-intl/server";
+type WorkHeader = {
+  eyebrow: string; eyebrowSub: string;
+  titleBefore: string; titleEm: string; titleAfter: string;
+  metaBold: string; metaText: string;
+};
 
-const projectImages = [
-  "/images/jh.png",
-  "/images/ecco.png",
-  "/images/tsh.png",
-  "/images/jhmock.png",
-  "/images/eccomock.png",
+const HEADERS: Record<string, WorkHeader> = {
+  en: {
+    eyebrow: "04 · WORK", eyebrowSub: "Selected projects",
+    titleBefore: "Recent ", titleEm: "work,", titleAfter: "from across the world.",
+    metaBold: "24 projects shipped", metaText: "in the last 18 months. A handful below.",
+  },
+  es: {
+    eyebrow: "04 · PROYECTOS", eyebrowSub: "Proyectos seleccionados",
+    titleBefore: "Trabajo ", titleEm: "reciente,", titleAfter: "de todo el mundo.",
+    metaBold: "24 proyectos entregados", metaText: "en los últimos 18 meses. Aquí, algunos.",
+  },
+  fr: {
+    eyebrow: "04 · TRAVAUX", eyebrowSub: "Projets sélectionnés",
+    titleBefore: "Travaux ", titleEm: "récents,", titleAfter: "du monde entier.",
+    metaBold: "24 projets livrés", metaText: "ces 18 derniers mois. En voici quelques-uns.",
+  },
+  ca: {
+    eyebrow: "04 · TREBALL", eyebrowSub: "Projectes seleccionats",
+    titleBefore: "Feina ", titleEm: "recent,", titleAfter: "d'arreu del món.",
+    metaBold: "24 projectes lliurats", metaText: "els últims 18 mesos. Aquí, uns quants.",
+  },
+};
+
+const TILES = [
+  { tileClass: "pf-t1",       bgClass: "pf-a", label: "2026 · BRAND IDENTITY",  nameParts: ["Solenne ",  "candles"] },
+  { tileClass: "pf-t2 light", bgClass: "pf-c", label: "2025 · WEB DESIGN",       nameParts: ["Northwind ", "app"] },
+  { tileClass: "pf-t3",       bgClass: "pf-b", label: "2025 · CAMPAIGN",          nameParts: ["Atelier ",  "Vermeer"] },
+  { tileClass: "pf-t4",       bgClass: "pf-d", label: "2024 · IDENTITY · WEB",    nameParts: ["Halo ",     "credit"] },
+  { tileClass: "pf-t5",       bgClass: "pf-e", label: "2024 · PACKAGING",         nameParts: ["Maison ",   "Faure"] },
 ];
 
-export default async function Work() {
-  const t = await getTranslations("Work");
-
-  const projects = projectImages.map((image, i) => ({
-    image,
-    label: t(`projects.${i}.label`),
-  }));
+export default async function Work({ locale }: { locale: string }) {
+  const h = HEADERS[locale] ?? HEADERS.en;
 
   return (
-    <section id="work" className="px-6 md:px-12 lg:px-16 py-24">
-      <div className="max-w-[1340px] mx-auto">
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
-          <div>
-            <span className="section-badge">{t("badge")}</span>
-            <h2 className="text-5xl md:text-6xl font-bold mt-6">
-              {t("heading")}
+    <section className="pf-section">
+      <div className="glow tl very-faint" />
+      <div className="pf-inner">
+        <header className="sec-head">
+          <div className="sec-head-left">
+            <div className="eyebrow">
+              <span className="led" />
+              <span>{h.eyebrow}</span>
+              <span className="esep">/</span>
+              <span>{h.eyebrowSub}</span>
+            </div>
+            <h2 className="sec-title">
+              {h.titleBefore}<span className="em">{h.titleEm}</span>
+              <br />{h.titleAfter}
             </h2>
           </div>
-          <p className="text-muted max-w-sm text-lg">{t("description")}</p>
-        </div>
+          <p className="head-meta">
+            <span className="v">{h.metaBold}</span>{" "}{h.metaText}
+          </p>
+        </header>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative rounded-2xl overflow-hidden h-72 md:h-96 cursor-pointer"
-            >
-              <img
-                src={project.image}
-                alt={project.label}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                <span className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
-                  {project.label}
-                </span>
-                <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
+        <div className="pf-grid">
+          {TILES.map((tile, i) => (
+            <a key={i} href="#" className={`pf-tile ${tile.tileClass}`}>
+              <div className={`pf-bg ${tile.bgClass}`} />
+              <span className="pf-arrow">↗</span>
+              <div className="pf-meta">
+                <span className="pf-label">{tile.label}</span>
+                <span className="pf-name">
+                  {tile.nameParts[0]}
+                  <span className="it">{tile.nameParts[1]}</span>
                 </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -1,99 +1,128 @@
-import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getHeroContent } from "@/sanity/lib/queries";
 
-export default async function Hero() {
-  const t = await getTranslations("Hero");
+const TICKER_ITEMS = [
+  "Brand Identity", "Web Design", "Art Direction", "Motion",
+  "Naming", "Packaging", "Type", "Strategy", "Editorial",
+];
+
+const MOTES = [
+  { left: 52, top: 8,  dur: 8.2,  delay: -3.1,  size: 1.8 },
+  { left: 56, top: 22, dur: 6.7,  delay: -7.4,  size: 1.2 },
+  { left: 61, top: 15, dur: 9.1,  delay: -1.8,  size: 2.1 },
+  { left: 49, top: 35, dur: 7.3,  delay: -5.2,  size: 1.5 },
+  { left: 65, top: 42, dur: 8.8,  delay: -9.6,  size: 2.4 },
+  { left: 58, top: 5,  dur: 6.4,  delay: -2.3,  size: 1.1 },
+  { left: 63, top: 28, dur: 10.2, delay: -6.7,  size: 1.9 },
+  { left: 54, top: 48, dur: 7.9,  delay: -4.1,  size: 1.6 },
+  { left: 69, top: 18, dur: 8.5,  delay: -8.3,  size: 2.2 },
+  { left: 51, top: 55, dur: 6.1,  delay: -0.9,  size: 1.3 },
+  { left: 67, top: 38, dur: 9.7,  delay: -3.8,  size: 1.7 },
+];
+
+export default async function Hero({ locale }: { locale: string }) {
+  const content = await getHeroContent(locale);
+
+  const badge         = content?.badge         ?? "Branding & Web Design";
+  const heading1      = content?.heading1      ?? "Bringing brands";
+  const heading2      = content?.heading2      ?? "from dark";
+  const headingAccent = content?.headingAccent ?? "into light.";
+  const paragraph     = content?.paragraph     ?? "An independent studio building identities and digital experiences for ambitious teams — bringing brands out of the shadow and into the spotlight.";
+  const cta1          = content?.cta1          ?? "Start a project";
+  const cta2          = content?.cta2          ?? "See our work";
 
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 md:px-12 lg:px-16">
-      <div className="max-w-[1340px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-6 items-start">
-        {/* Left Content */}
-        <div className="flex flex-col justify-center pt-32 lg:pt-40 pb-16">
-          <span className="section-badge w-fit mb-8">
-            {t("badge")}
-          </span>
+    <section className="hs">
+      {/* ── Atmospheric layers ───────────────────────── */}
+      <div className="hs-bg"      aria-hidden="true" />
+      <div className="hs-tint"   aria-hidden="true" />
+      <div className="hs-grain"  aria-hidden="true" />
+      <div className="hs-floor"  aria-hidden="true" />
+      <div className="hs-horizon" aria-hidden="true" />
 
-          <h1 className="text-5xl md:text-6xl lg:text-[3.5rem] font-bold leading-[1.05] tracking-tight text-foreground">
-            {t("heading1")}
-            <br />
-            {t("heading2")}
-            <br />
-            {" "}
-            <span className="text-accent italic">{t("headingAccent")}</span>
-          </h1>
+     
+      {/* ── Dust motes ───────────────────────────────── */}
+      <div className="hs-motes" aria-hidden="true">
+        {MOTES.map((m, i) => (
+          <span
+            key={i}
+            className="hs-mote"
+            style={{
+              left: `${m.left}vw`,
+              top:  `${m.top}vh`,
+              width:  `${m.size}px`,
+              height: `${m.size}px`,
+              animationDuration: `${m.dur}s`,
+              animationDelay:    `${m.delay}s`,
+            }}
+          />
+        ))}
+      </div>
 
-          <p className="mt-6 text-muted text-lg max-w-md">
-            {t("paragraph")}
-          </p>
+      {/* ── Main frame ───────────────────────────────── */}
+      <div className="hs-frame">
 
-          <div className="flex flex-wrap gap-3 mt-8">
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 bg-accent text-white px-7 py-3.5 rounded-full font-medium text-sm hover:bg-accent-hover transition-colors"
-            >
-              {t("cta1")}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-foreground text-white px-7 py-3.5 rounded-full font-medium text-sm hover:bg-[#0a3d1a] transition-colors"
-            >
-              {t("cta2")}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+        {/* Hero body */}
+        <div className="hs-body">
+          <div className="hs-left">
+
+            {/* Kicker */}
+            <div className="hs-kicker" role="doc-subtitle">
+              <span className="hs-kicker-led" aria-hidden="true" />
+              <span>{badge}</span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="hs-display">
+              {heading1}
+              <br />
+              <span className="hs-dim">{heading2}</span>
+              <br />
+              <span className="hs-em">{headingAccent}</span>
+            </h1>
+
+            {/* Sub */}
+            <p className="hs-sub">{paragraph}</p>
+
+            {/* CTAs */}
+            <div className="hs-cta-row">
+              <a href="#contact" className="hs-btn-primary">
+                {cta1}
+                <span className="hs-btn-arr" aria-hidden="true">→</span>
+              </a>
+              <a href="#work" className="hs-btn-ghost">
+                <span className="hs-btn-play" aria-hidden="true">▶</span>
+                {cta2}
+              </a>
+            </div>
+
           </div>
+        </div>
 
-          {/* Trust bar */}
-          <div className="flex items-center gap-4 mt-12">
-            <div className="flex -space-x-3">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full border-2 border-background bg-linear-to-br from-gray-300 to-gray-500 overflow-hidden"
-                />
+        {/* Bottom row */}
+        <div className="hs-bottom">
+          <div className="hs-ticker-wrap">
+            <div className="hs-ticker">
+              {[0, 1].map((g) => (
+                <div key={g} className="hs-ticker-group">
+                  {TICKER_ITEMS.map((s) => (
+                    <span key={`${g}-${s}`}>
+                      {s}
+                      <span className="hs-ticker-dot" aria-hidden="true"> ✦ </span>
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
-            <div>
-              <div className="flex gap-0.5 text-accent text-sm">
-                {"★★★★★".split("").map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
-              <p className="text-sm font-semibold">{t("trustCount")}</p>
-              <p className="text-xs text-muted uppercase tracking-wider">
-                {t("trustSub")}
-              </p>
+          </div>
+          <div className="hs-meta">
+            
+            <div className="hs-meta-scroll" aria-hidden="true">
+              <span>SCROLL</span>
+              <span className="hs-meta-scroll-line" />
             </div>
           </div>
         </div>
 
-        {/* Right Image Grid */}
-        <div className="grid grid-cols-2 gap-3 pt-12 lg:-mt-4 pb-8">
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web design on laptop" fill priority className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-            <div className="absolute bottom-3 left-3 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
-          </div>
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="UI/UX design interface" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-            <div className="absolute bottom-3 left-3 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
-          </div>
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Creative design workspace" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-          </div>
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Web analytics dashboard" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-          </div>
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80" alt="Brand identity design" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-          </div>
-          <div className="rounded-2xl overflow-hidden h-64 relative">
-            <Image src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80" alt="Branding materials layout" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
-          </div>
-        </div>
       </div>
     </section>
   );

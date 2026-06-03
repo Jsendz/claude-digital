@@ -1,0 +1,23 @@
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Joshua\Desktop\JH MARKETING\pnpm-lock.yaml as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Joshua\Desktop\JH MARKETING\codecopy2\jh-digital\package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.103:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 2.4s
+ GET /es/en 404 in 3.1s (compile: 2.9s, render: 245ms)
+ GET / 200 in 7.3s (compile: 3.6s, generate-params: 1658ms, render: 3.7s)
+ GET /en 200 in 323ms (compile: 25ms, generate-params: 17ms, render: 298ms)
+ GET /es 200 in 274ms (compile: 25ms, generate-params: 18ms, render: 248ms)
+ GET /fr 200 in 227ms (compile: 18ms, generate-params: 13ms, render: 210ms)
+ GET /ca 200 in 231ms (compile: 5ms, generate-params: 39µs, render: 225ms)
+ GET /en/web-design 200 in 1913ms (compile: 1470ms, generate-params: 802ms, render: 443ms)
+ GET /en 200 in 281ms (compile: 16ms, generate-params: 12ms, render: 265ms)
+[?25h

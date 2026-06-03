@@ -1,31 +1,36 @@
-import { getTranslations } from "next-intl/server";
+import { getReviewsContent } from "@/sanity/lib/queries";
 
 const logos = ["Amara", "Atica", "Aven", "CodeLab", "Hexa", "Ideaa", "Light AI"];
 
-export default async function Reviews() {
-  const t = await getTranslations("Reviews");
+const fallbackTestimonials = [
+  { name: "Jared Kim", role: "Marketing Director", quote: "The quality was unmatched. We submitted our request on Monday and had polished designs by Wednesday." },
+  { name: "Maya Collins", role: "Head of Product", quote: "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+  { name: "Jesse Leigh", role: "CEO & Founder", quote: "They understood our vision immediately. The turnaround speed is unlike anything we've experienced." },
+  { name: "Benjamin Daul", role: "Head of Engineering", quote: "Outstanding design subscription service. None compare to JH Digital for consistent quality." },
+];
 
-  const testimonials = [0, 1, 2, 3].map((i) => ({
-    name: t(`testimonials.${i}.name`),
-    role: t(`testimonials.${i}.role`),
-    rating: 5.0,
-    quote: t(`testimonials.${i}.quote`),
-  }));
+export default async function Reviews({ locale }: { locale: string }) {
+  const content = await getReviewsContent(locale);
+
+  const badge = content?.badge ?? "Reviews";
+  const heading = content?.heading ?? "Success Stories.";
+  const trustCount = content?.trustCount ?? "Trusted by 20+ businesses";
+  const trustSub = content?.trustSub ?? "They hit their targets — you're next.";
+  const contactUs = content?.contactUs ?? "Contact Us";
+  const workedWith = content?.workedWith ?? "Worked with:";
+  const testimonials = content?.testimonials && content.testimonials.length > 0
+    ? content.testimonials
+    : fallbackTestimonials;
 
   return (
     <section id="reviews" className="px-6 md:px-12 lg:px-16 py-24">
       <div className="max-w-[1340px] mx-auto">
-        {/* Header */}
         <div className="mb-16">
-          <span className="section-badge">{t("badge")}</span>
-          <h2 className="text-5xl md:text-6xl font-bold mt-6 text-muted">
-            {t("heading")}
-          </h2>
+          <span className="section-badge">{badge}</span>
+          <h2 className="text-5xl md:text-6xl font-bold mt-6 text-muted">{heading}</h2>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {/* Trust card */}
           <div className="bg-foreground text-white rounded-2xl p-8 flex flex-col justify-end">
             <div className="flex -space-x-3 mb-4">
               {[0, 1, 2].map((i) => (
@@ -35,14 +40,13 @@ export default async function Reviews() {
             <div className="flex gap-0.5 text-accent text-lg mb-2">
               {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
             </div>
-            <p className="font-semibold">{t("trustCount")}</p>
-            <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">{t("trustSub")}</p>
+            <p className="font-semibold">{trustCount}</p>
+            <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">{trustSub}</p>
             <a href="#contact" className="mt-6 block text-center py-3 rounded-full border border-white/20 text-sm font-medium hover:bg-white/10 transition-colors">
-              {t("contactUs")}
+              {contactUs}
             </a>
           </div>
 
-          {/* Testimonial cards */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-5">
             {testimonials.map((item) => (
               <div key={item.name} className="bg-white rounded-2xl p-6">
@@ -54,7 +58,7 @@ export default async function Reviews() {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm font-bold">{item.rating}</span>
+                  <span className="text-sm font-bold">5.0</span>
                   <span className="text-accent text-sm">★★★★★</span>
                   <span className="text-xs text-muted uppercase tracking-wider">Rating</span>
                 </div>
@@ -64,10 +68,9 @@ export default async function Reviews() {
           </div>
         </div>
 
-        {/* Logo marquee */}
         <div className="mt-16 overflow-hidden">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-sm font-medium text-muted whitespace-nowrap">{t("workedWith")}</span>
+            <span className="text-sm font-medium text-muted whitespace-nowrap">{workedWith}</span>
           </div>
           <div className="relative overflow-hidden">
             <div className="flex animate-marquee gap-16 items-center">

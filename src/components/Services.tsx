@@ -1,111 +1,134 @@
-import { getTranslations } from "next-intl/server";
+import { getServicesContent } from "@/sanity/lib/queries";
 
-const BrandingIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-    <path d="M2 17l10 5 10-5" />
-    <path d="M2 12l10 5 10-5" />
-  </svg>
-);
+const CATEGORIES = ["Identity", "Digital", "Growth"];
 
-const WebDesignIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="3" width="20" height="14" rx="2" />
-    <path d="M8 21h8M12 17v4" />
-    <path d="M7 8l3 3-3 3" />
-    <path d="M13 14h4" />
-  </svg>
-);
+const FALLBACK_TAGS = [
+  ["Naming", "Logo", "Mark", "Type", "Guidelines", "Tone of voice"],
+  ["UX · UI", "Prototyping", "Webflow", "CMS"],
+  ["Campaigns", "Content", "Social", "Paid", "SEO"],
+];
 
-const MarketingIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-  </svg>
-);
+// plain: prefix text (non-italic), italic: the emphasis word
+const FALLBACK_TITLES: { plain: string; italic: string }[] = [
+  { plain: "",     italic: "Branding"  },
+  { plain: "Web ", italic: "design"    },
+  { plain: "",     italic: "Marketing" },
+];
 
-const serviceIcons = [<BrandingIcon key="branding" />, <WebDesignIcon key="web" />, <MarketingIcon key="marketing" />];
-const serviceImages = ["/images/branding2.webp", "/images/iphone.jpg", "/images/branding2.webp"];
+const FALLBACK_DESCRIPTIONS = [
+  "Names, marks, type, and a full visual language built to age well. We design identities as systems — so every touchpoint stays on key as the brand scales.",
+  "Considered, fast, accessible sites. From single-page launches to full design systems and CMS integrations — built to convert and last.",
+  "Campaigns, content, and performance work that gets your brand in front of the right audience — and keeps it there.",
+];
 
-export default async function Services() {
-  const t = await getTranslations("Services");
+export default async function Services({ locale }: { locale: string }) {
+  const content = await getServicesContent(locale);
+  const badge = content?.badge ?? "Services";
 
-  const services = [0, 1, 2].map((i) => ({
-    icon: serviceIcons[i],
-    image: serviceImages[i],
-    title: t(`items.${i}.title`),
-    description: t(`items.${i}.description`),
-    tags: [0, 1, 2, 3].map((j) => t(`items.${i}.tags.${j}`)),
-  }));
+  const services = content?.items?.length
+    ? content.items.map((item, i) => ({
+        num: `0${i + 1}`,
+        category: CATEGORIES[i] ?? CATEGORIES[0],
+        title: FALLBACK_TITLES[i] ?? { plain: "", italic: item.title },
+        description: item.description,
+        tags: item.tags?.length ? item.tags : (FALLBACK_TAGS[i] ?? []),
+        dark: i === 1,
+      }))
+    : FALLBACK_TITLES.map((title, i) => ({
+        num: `0${i + 1}`,
+        category: CATEGORIES[i],
+        title,
+        description: FALLBACK_DESCRIPTIONS[i],
+        tags: FALLBACK_TAGS[i],
+        dark: i === 1,
+      }));
 
   return (
-    <section id="services" className="px-6 md:px-12 lg:px-16 py-24">
-      <div className="max-w-[1340px] mx-auto">
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
-          <div>
-            <span className="section-badge">{t("badge")}</span>
-            <h2 className="text-5xl md:text-6xl font-bold mt-6">
-              {t("heading")}
+    <div className="svc-wrap" id="services">
+      <section className="svc-section">
+
+        {/* ── Header ─────────────────────────────────────── */}
+        <header className="svc-head">
+          <div className="svc-head-left">
+
+            {/* Eyebrow pill */}
+            <div className="svc-eyebrow" role="doc-subtitle">
+              <span className="svc-led" aria-hidden="true" />
+              <span>02 · {badge}</span>
+              <span className="svc-sep" aria-hidden="true">/</span>
+              <span>What we do</span>
+            </div>
+
+            {/* Title */}
+            <h2 className="svc-title">
+              Crafted for brands
+              <br />
+              that want to be{" "}
+              <em className="svc-title-em">seen.</em>
             </h2>
           </div>
-          <p className="text-muted max-w-sm text-lg">{t("description")}</p>
-        </div>
 
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Meta — hidden below 541px via CSS */}
+          <p className="svc-meta">
+            <strong>Three disciplines.</strong>
+            <br />
+            One studio, one team.
+            <br />
+            End-to-end engagements from strategy to launch.
+          </p>
+        </header>
+
+        {/* ── Cards grid ─────────────────────────────────── */}
+        <div className="svc-grid">
           {services.map((service, i) => (
-            <div
-              key={service.title}
-              className="relative rounded-2xl p-3 flex flex-col gap-3 overflow-hidden border border-white/6 hover:shadow-2xl hover:shadow-green-900/20 transition-all duration-300"
+            <article
+              key={i}
+              className={`svc-card${service.dark ? " svc-card--green" : ""}`}
             >
-              {/* Background image */}
-              <img
-                src="/images/service-bg.png"
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-              />
+              {/* Corner warm-light beam */}
+              <span className="svc-beam" aria-hidden="true" />
 
-              {/* Content panel */}
-              <div className="relative z-10 flex flex-col gap-5 rounded-xl p-5 bg-[#f0f0f0]">
-                {/* Top row: icon + service badge */}
-                <div className="flex items-start justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-foreground text-accent flex items-center justify-center">
-                    {service.icon}
-                  </div>
-                  <span className="text-xs font-semibold tracking-wider text-foreground/50 border border-foreground/10 bg-foreground/5 px-3 py-1 rounded-lg">
-                    {t("serviceLabel")} {i + 1}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold">{service.title}</h3>
-
-                <p className="text-muted text-sm leading-relaxed">{service.description}</p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-medium text-foreground/60 border border-foreground/10 px-3 py-1.5 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              {/* Card header: num / category + arrow */}
+              <div className="svc-card-head">
+                <span className="svc-num">
+                  {service.num} / {service.category}
+                </span>
+                <span className="svc-arrow" aria-hidden="true">↗</span>
               </div>
 
-              {/* Preview image */}
-              <div className="relative z-10 w-full rounded-xl overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full object-cover h-44 rounded-xl transition-transform duration-500 group-hover:scale-105"
-                />
+              {/* Service name */}
+              <h3 className="svc-name">
+                {service.title.plain && (
+                  <span>{service.title.plain}</span>
+                )}
+                <em className="svc-name-it">{service.title.italic}</em>
+              </h3>
+
+              {/* Description */}
+              <p className="svc-copy">{service.description}</p>
+
+              {/* Tags */}
+              <div className="svc-foot">
+                {service.tags.map((tag, j) => (
+                  <span key={j} className="svc-chip">{tag}</span>
+                ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
-    </section>
+
+        {/* ── Footer strip ───────────────────────────────── */}
+        <div className="svc-footstrip">
+          <p className="svc-footcaption">
+            Need a custom engagement? / Hybrid teams welcome.
+          </p>
+          <a href="#contact" className="svc-more">
+            View capabilities deck
+            <span className="svc-arr" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </section>
+    </div>
   );
 }
