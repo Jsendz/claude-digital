@@ -1908,7 +1908,7 @@ details.faq-item[open] .faq-toggle {
 @media (min-width: 1200px) { .prob-section { padding: 140px 72px 168px; } }
 
 /* ── Header block ────────────────────────────────────── */
-.prob-head { max-width: 880px; margin-bottom: 64px; }
+.prob-head {  margin-bottom: 64px; }
 
 /* ── Eyebrow pill ────────────────────────────────────── */
 .prob-eyebrow {
