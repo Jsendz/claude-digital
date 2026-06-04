@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type WorkHeader = {
   eyebrow: string; eyebrowSub: string;
   titleBefore: string; titleEm: string; titleAfter: string;
@@ -28,11 +30,11 @@ const HEADERS: Record<string, WorkHeader> = {
 };
 
 const TILES = [
-  { tileClass: "pf-t1",       bgClass: "pf-a", label: "2026 · BRAND IDENTITY",  nameParts: ["Solenne ",  "candles"] },
-  { tileClass: "pf-t2 light", bgClass: "pf-c", label: "2025 · WEB DESIGN",       nameParts: ["Northwind ", "app"] },
-  { tileClass: "pf-t3",       bgClass: "pf-b", label: "2025 · CAMPAIGN",          nameParts: ["Atelier ",  "Vermeer"] },
-  { tileClass: "pf-t4",       bgClass: "pf-d", label: "2024 · IDENTITY · WEB",    nameParts: ["Halo ",     "credit"] },
-  { tileClass: "pf-t5",       bgClass: "pf-e", label: "2024 · PACKAGING",         nameParts: ["Maison ",   "Faure"] },
+  { tileClass: "pf-t1",       bgClass: "pf-a", image:"/images/tamy.webp", label: "2026 · BRAND IDENTITY",  nameParts: ["Solenne ",  "candles"] },
+  { tileClass: "pf-t2 light", bgClass: "pf-c", image:"", label: "2025 · WEB DESIGN",       nameParts: ["Northwind ", "app"] },
+  { tileClass: "pf-t3",       bgClass: "pf-b", image:"", label: "2025 · CAMPAIGN",          nameParts: ["Atelier ",  "Vermeer"] },
+  { tileClass: "pf-t4",       bgClass: "pf-d", image:"", label: "2024 · IDENTITY · WEB",    nameParts: ["Halo ",     "credit"] },
+  { tileClass: "pf-t5",       bgClass: "pf-e", image:"", label: "2024 · PACKAGING",         nameParts: ["Maison ",   "Faure"] },
 ];
 
 export default async function Work({ locale }: { locale: string }) {
@@ -63,16 +65,20 @@ export default async function Work({ locale }: { locale: string }) {
         <div className="pf-grid">
           {TILES.map((tile, i) => (
             <a key={i} href="#" className={`pf-tile ${tile.tileClass}`}>
-              <div className={`pf-bg ${tile.bgClass}`} />
-              <span className="pf-arrow">↗</span>
-              <div className="pf-meta">
-                <span className="pf-label">{tile.label}</span>
-                <span className="pf-name">
-                  {tile.nameParts[0]}
-                  <span className="it">{tile.nameParts[1]}</span>
-                </span>
-              </div>
-            </a>
+  <div className={`pf-bg ${tile.bgClass}`}>
+    {tile.image && (
+      <Image
+        src={tile.image}
+        alt={tile.nameParts.join("")}
+        fill
+        style={{ objectFit: "cover" }}
+        sizes="(max-width: 720px) 100vw, 50vw"
+      />
+    )}
+  </div>
+  <span className="pf-arrow">↗</span>
+  <div className="pf-meta">...</div>
+</a>
           ))}
         </div>
       </div>
