@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { getHeaderContent, getFooterContent } from "@/sanity/lib/queries";
 import "../globals.css";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 
 const expletusSans = Expletus_Sans({
   variable: "--font-heading",
@@ -43,8 +43,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "JH Digital — Branding, Web Design & Marketing",
-    template: "%s | JH Digital",
+    template: "%s | Lumiq Studios",
+    default: "Lumiq Studios — Branding & Web Design Studio",
   },
   description:
     "We help businesses increase trust, stand out, and generate qualified leads with a sharp brand, a high-performance website, and conversion-focused marketing.",
@@ -69,27 +69,27 @@ export function generateStaticParams() {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "JH Digital",
+  name: "Lumiq Studios",
   url: BASE_URL,
-  description: "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
-  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/favi.png` },
-  contactPoint: { "@type": "ContactPoint", email: "info@jhdigitalservices.com", contactType: "customer service" },
+  description: "Lumiq Studios is an independent studio building brand identities, web design, and marketing for ambitious teams.",
+  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo-lumiq.svg` },
+  contactPoint: { "@type": "ContactPoint", email: "hello@lumiq.studio", contactType: "customer service" },
   sameAs: ["https://twitter.com/jhdigital"],
 };
 
 const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "JH Digital",
+  name: "Lumiq Studios",
   url: BASE_URL,
-  description: "JH Digital is a digital agency specialising in branding, web design, and marketing services for businesses.",
-  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/favi.png` },
-  email: "info@jhdigitalservices.com",
+  description: "Lumiq Studios is an independent studio building brand identities, web design, and marketing for ambitious teams.",
+  logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo-lumiq.svg` },
+  email: "hello@lumiq.studio",
   sameAs: ["https://twitter.com/jhdigital"],
   aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", reviewCount: "4" },
 };
 
-const webSiteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "JH Digital", url: BASE_URL };
+const webSiteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "Lumiq Studios", url: BASE_URL };
 
 export default async function LocaleLayout({
   children,

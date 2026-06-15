@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LumiqLandingPage from "@/components/LumiqLandingPage";
+import { generateMeta } from "@/lib/generateMeta";
+import type { Locale } from "@/i18n/routing";
 
 const BASE_URL = "https://jhdigitalservices.com";
-const locales = ["en", "es", "fr", "ca"] as const;
 
 export async function generateMetadata({
   params,
@@ -11,33 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const url = locale === "en" ? `${BASE_URL}/lumiq` : `${BASE_URL}/${locale}/lumiq`;
-
-  return {
-    title: "Lumiq — Find out, in 60 seconds, why your website is invisible",
-    description:
-      "Free website visibility diagnostic. 20 questions. A score out of 100. A grade A–F. Plain-English recommendations for small businesses.",
-    keywords: "website visibility score, website audit, small business SEO, free website diagnostic",
-    alternates: {
-      canonical: url,
-      languages: {
-        "x-default": `${BASE_URL}/lumiq`,
-        ...Object.fromEntries(
-          locales.map((l) => [l, l === "en" ? `${BASE_URL}/lumiq` : `${BASE_URL}/${l}/lumiq`])
-        ),
-      },
-    },
-    openGraph: {
-      title: "Lumiq — Free Website Visibility Score",
-      description: "Find out, in 60 seconds, why your website is invisible. Free. No login.",
-      url,
-      locale,
-    },
-    twitter: {
-      title: "Lumiq — Free Website Visibility Score",
-      description: "Find out, in 60 seconds, why your website is invisible. Free. No login.",
-    },
-  };
+  return generateMeta(locale as Locale, "score");
 }
 
 export default async function LumiqPage({

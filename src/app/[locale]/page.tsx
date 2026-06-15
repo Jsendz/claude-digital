@@ -10,9 +10,10 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import { getFAQContent, getMetaContent } from "@/sanity/lib/queries";
+import { generateMeta } from "@/lib/generateMeta";
+import type { Locale } from "@/i18n/routing";
 
 const BASE_URL = "https://jhdigitalservices.com";
-const locales = ["en", "es", "fr", "ca"] as const;
 
 export async function generateMetadata({
   params,
@@ -20,27 +21,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = await getMetaContent("home", locale);
-
-  const title = meta?.title ?? "JH Digital — Branding, Web Design & Marketing";
-  const description = meta?.description ?? "We help businesses stand out, build trust, and generate leads.";
-  const keywords = meta?.keywords ?? "";
-  const url = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
-
-  return {
-    title,
-    description,
-    keywords,
-    alternates: {
-      canonical: url,
-      languages: {
-        "x-default": BASE_URL,
-        ...Object.fromEntries(locales.map((l) => [l, l === "en" ? BASE_URL : `${BASE_URL}/${l}`])),
-      },
-    },
-    openGraph: { title, description, url, locale, alternateLocale: locales.filter((l) => l !== locale) },
-    twitter: { title, description },
-  };
+  return generateMeta(locale as Locale, "home");
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {

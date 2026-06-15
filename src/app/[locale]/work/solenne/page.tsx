@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import SolenneCaseStudy from "@/components/SolenneCaseStudy";
 import CTA from "@/components/CTA";
+import { generateMeta } from "@/lib/generateMeta";
+import type { Locale } from "@/i18n/routing";
 
 const BASE_URL = "https://jhdigitalservices.com";
 const locales = ["en", "es", "fr", "ca"] as const;
@@ -12,43 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const url =
-    locale === "en"
-      ? `${BASE_URL}/work/solenne`
-      : `${BASE_URL}/${locale}/work/solenne`;
-
-  return {
-    title: "Solenne candles — Case Study",
-    description:
-      "Brand identity, packaging, and web for Solenne, a new candle house out of Madrid. A focused ten-week sprint that shipped six SKUs, a Webflow site, and an editorial campaign.",
-    keywords: "brand identity, packaging design, candle brand, Solenne, case study",
-    alternates: {
-      canonical: url,
-      languages: {
-        "x-default": `${BASE_URL}/work/solenne`,
-        ...Object.fromEntries(
-          locales.map((l) => [
-            l,
-            l === "en"
-              ? `${BASE_URL}/work/solenne`
-              : `${BASE_URL}/${l}/work/solenne`,
-          ])
-        ),
-      },
-    },
-    openGraph: {
-      title: "Solenne candles — Case Study",
-      description:
-        "Brand identity, packaging, and web for Solenne, a new candle house out of Madrid.",
-      url,
-      locale,
-    },
-    twitter: {
-      title: "Solenne candles — Case Study",
-      description:
-        "Brand identity, packaging, and web for Solenne, a new candle house out of Madrid.",
-    },
-  };
+  return generateMeta(locale as Locale, "work");
 }
 
 export function generateStaticParams() {

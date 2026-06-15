@@ -1,51 +1,91 @@
-import { Resend } from "resend";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
+import { Resend } from 'resend';
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
   try {
-    const { name, email, website, message } = await req.json();
+    const { nombre, email, websiteUrl } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!nombre || !email) {
       return NextResponse.json(
-        { error: "Name, email, and message are required." },
+        { error: 'Faltan campos obligatorios' },
         { status: 400 }
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
+    // 1. Save to Supabase
+    const { error: dbError } = await supabase
+      .from('audit_requests')
+      .insert([{ nombre, email, website_url: websiteUrl || null }]);
+
+    if (dbError) {
+      console.error('Supabase error:', dbError);
+      return NextResponse.json(
+        { error: 'Error al guardar' },
+        { status: 500 }
+      );
     }
 
-    const toEmail = process.env.CONTACT_TO_EMAIL ?? "info@jhdigitalservices.com";
-
-    const { data, error: sendError } = await resend.emails.send({
-      from: "JH Digital <noreply@jhdigitalservices.com>",
-      to: toEmail,
-      replyTo: email,
-      subject: `New contact from ${name}`,
+    // 2. Notify you
+    await resend.emails.send({
+      from: 'Lumiq <onboarding@resend.dev>',
+      to: 'TU_EMAIL@lumiq.com', // <-- replace with your real email
+      subject: `Nueva solicitud de auditoría — ${nombre}`,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${website ? `<p><strong>Website:</strong> ${website}</p>` : ""}
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #16232A;">Nueva solicitud de Spotlight Audit</h2>
+          <p><strong>Nombre:</strong> ${nombre}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Web:</strong> ${websiteUrl || 'No tiene web todavía'}</p>
+          <hr/>
+          <p style="color: #666; font-size: 12px;">
+            Recuerda grabar el Loom en las próximas 48h y responder a ${email}
+          </p>
+        </div>
       `,
     });
 
-    if (sendError) {
-      console.error("Resend error:", sendError);
-      return NextResponse.json({ error: sendError.message }, { status: 500 });
-    }
+    // 3. Confirmation to the lead
+    await resend.emails.send({
+      from: 'Lumiq <onboarding@resend.dev>',
+      to: email,
+      subject: 'Hemos recibido tu solicitud — Lumiq',
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #16232A;">Hola ${nombre},</h2>
+          <p>Gracias por tu solicitud.</p>
+          <p>Voy a revisar tu web personalmente y te enviaré un vídeo con los puntos 
+          clave que estén frenando tu visibilidad online — en menos de 48 horas.</p>
+          <p>Mientras tanto, si quieres adelantar una llamada puedes reservar aquí:</p>
+          <p>
+            <a href="TU_LINK_CAL" 
+               style="background: #FF5B04; color: white; padding: 12px 24px; 
+                      text-decoration: none; border-radius: 6px; display: inline-block;">
+              Reservar llamada →
+            </a>
+          </p>
+          <p style="color: #666; margin-top: 32px;">
+            Hablamos pronto,<br/>
+            <strong>Lumiq</strong>
+          </p>
+        </div>
+      `,
+    });
 
-    console.log("Email sent, id:", data?.id);
     return NextResponse.json({ success: true });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error("Contact form error:", message);
-    return NextResponse.json({ error: message }, { status: 500 });
+
+  } catch (err) {
+    console.error('API error:', err);
+    return NextResponse.json(
+      { error: 'Error interno' },
+      { status: 500 }
+    );
   }
 }

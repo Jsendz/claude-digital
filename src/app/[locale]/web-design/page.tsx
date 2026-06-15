@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import WebDesignServicePage from "@/components/WebDesignServicePage";
 import { getWebDesignContent, resolveWebDesignContent, getMetaContent } from "@/sanity/lib/queries";
+import { generateMeta } from "@/lib/generateMeta";
+import type { Locale } from "@/i18n/routing";
 
 const BASE_URL = "https://jhdigitalservices.com";
-const locales = ["en", "es", "fr", "ca"] as const;
 
 // ─── Fallback content (used when Sanity is not yet configured) ────────────────
 import enMessages from "../../../../messages/en.json";
@@ -33,25 +34,7 @@ function getFallbackContent(locale: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = await getMetaContent("webDesign", locale);
-
-  const title = meta?.title ?? "Web Design & Development for Small Businesses";
-  const description = meta?.description ?? "Custom websites for small businesses that convert visitors into clients.";
-  const keywords = meta?.keywords ?? "";
-  const url = locale === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${locale}/web-design`;
-
-  return {
-    title, description, keywords,
-    alternates: {
-      canonical: url,
-      languages: {
-        "x-default": `${BASE_URL}/web-design`,
-        ...Object.fromEntries(locales.map((l) => [l, l === "en" ? `${BASE_URL}/web-design` : `${BASE_URL}/${l}/web-design`])),
-      },
-    },
-    openGraph: { title, description, url, locale, alternateLocale: locales.filter((l) => l !== locale) },
-    twitter: { title, description },
-  };
+  return generateMeta(locale as Locale, "services");
 }
 
 export default async function WebDesignPage({ params }: { params: Promise<{ locale: string }> }) {

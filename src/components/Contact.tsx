@@ -149,7 +149,7 @@ export default function Contact({ locale }: { locale: string }) {
             </div>
           </div>
 
-          <ContactForm labels={t.labels} />
+          <ContactForm labels={t.labels} locale={locale} />
         </div>
       </div>
     </section>

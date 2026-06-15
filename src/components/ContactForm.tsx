@@ -15,7 +15,7 @@ export type ContactLabels = {
 
 type FormState = { name: string; email: string; company: string; service: string; budget: string; message: string };
 
-export default function ContactForm({ labels }: { labels: ContactLabels }) {
+export default function ContactForm({ labels, locale }: { labels: ContactLabels; locale?: string }) {
   const [form, setForm] = useState<FormState>({
     name: "", email: "", company: "", service: "", budget: labels.budgetOptions[1] ?? "", message: "",
   });
@@ -39,7 +39,7 @@ export default function ContactForm({ labels }: { labels: ContactLabels }) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, locale }),
       });
       if (res.ok) { setStatus("success"); setForm({ name: "", email: "", company: "", service: "", budget: labels.budgetOptions[1] ?? "", message: "" }); setErrors({}); }
       else { setStatus("error"); }

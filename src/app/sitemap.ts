@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 const locales = ["en", "es", "fr", "ca"] as const;
 
 const pages = [
   { path: "", priority: 1.0, changeFrequency: "weekly" as const },
   { path: "/web-design", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/lumiq", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/work/solenne", priority: 0.6, changeFrequency: "monthly" as const },
 ];
 
 // English gets a 0.05 boost in priority since it's the default locale
