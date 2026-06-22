@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #E4EEF0;
+  --color-background: #ffffff;
   --color-foreground: #16232A;
   --color-accent: #FF5B04;
   --color-accent-hover: #e64f00;
@@ -643,7 +643,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--sand);
+  background: #ffffff;
   padding: var(--pad-y) var(--pad-x);
 }
 
@@ -1156,7 +1156,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--pad-y) var(--pad-x);
-  background: var(--sand);
+  background: #ffffff;
 }
 .why-inner { position: relative; z-index: 1; }
 
@@ -1243,7 +1243,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--pad-y) var(--pad-x);
-  background: var(--sand);
+  background: #ffffff;
 }
 .pf-inner { position: relative; z-index: 1; }
 
@@ -1365,7 +1365,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--pad-y) var(--pad-x);
-  background: var(--sand);
+  background: #ffffff;
 }
 .faq-inner { position: relative; z-index: 1; }
 .faq-wrap { max-width: 1100px; border-top: 1px solid var(--line); }
@@ -1439,7 +1439,7 @@ details.faq-item[open] .faq-toggle {
    ═══════════════════════════════════════════════════════ */
 .cta-section {
   padding: var(--pad-y) var(--pad-x);
-  background: var(--sand);
+  background: #ffffff;
 }
 .cta-block {
   background: var(--orange);
@@ -1563,7 +1563,7 @@ details.faq-item[open] .faq-toggle {
   position: relative;
   overflow: hidden;
   padding: var(--pad-y) var(--pad-x);
-  background: var(--sand);
+  background: #ffffff;
 }
 .ct-inner { position: relative; z-index: 1; }
 
@@ -1751,6 +1751,7 @@ details.faq-item[open] .faq-toggle {
 .ft-word .it {
   font-family: var(--font-serif, Georgia, serif);
   font-style: italic;
+  font-weight: 400;
   color: var(--hot-cream);
 }
 .ft-logo { height: 28px; width: auto; display: block; margin-bottom: 4px; }
@@ -2134,7 +2135,7 @@ details.faq-item[open] .faq-toggle {
 
 .vs-wrap {
   position: relative;
-  background: #E4EEF0;
+  background: #ffffff;
   overflow: hidden;
 }
 
@@ -2671,6 +2672,7 @@ details.faq-item[open] .faq-toggle {
 .lp-root h2 .it,
 .lp-root h3 .it {
   font-family: var(--font-serif, Georgia, serif);
+  font-weight: 400;
 }
 
 /* ── Scroll reveal ────────────────────────────────────── */

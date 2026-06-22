@@ -316,5 +316,106 @@
       "successDesc": "Thanks for reaching out. We'll review your site and get back to you within 1 business day.",
       "successReset": "Submit another request"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "What we offer",
+      "h1_before": "Find out exactly why your website is",
+      "h1_accent": "invisible.",
+      "lede": "Tell us about your site. We'll personally review it and send you honest feedback on what's working, what's not, and what to fix first — within 24 hours.",
+      "tags": ["Free", "Personal review", "No login needed", "24-hour turnaround"],
+      "cta_primary": "Request your free audit",
+      "cta_secondary": "See how it works",
+      "trust_rating": "4.9/5",
+      "trust_label": "1,000+ businesses reviewed"
+    },
+    "logoStrip": {
+      "label": "Trusted by businesses in",
+      "sectors": ["Retail", "Hospitality", "Legal", "Health", "Real Estate"]
+    },
+    "features": {
+      "eyebrow": "What you get",
+      "h2_before": "Your website, reviewed and",
+      "h2_accent": "explained.",
+      "lede": "We personally go through your website and send you honest, direct feedback on what's working, what's costing you, and what to fix first."
+    },
+    "whyItWorks": {
+      "eyebrow": "Why it works",
+      "h2_before": "Honest by design.",
+      "h2_accent": "Personal by default.",
+      "cards": [
+        { "icon": "👁", "title": "A real person reviews your site", "body": "Not an algorithm. Not a checklist tool. Someone who does this professionally goes through your website and tells you what they see." },
+        { "icon": "🎯", "title": "Built around your specific site", "body": "The feedback is based on your actual website — not a generic template. What you get is relevant to your business, your audience, and your goals." },
+        { "icon": "💬", "title": "No fluff in the feedback", "body": "Every word earns its place. If it doesn't help you act, it's not in there." },
+        { "icon": "⚡", "title": "Action over insight", "body": "The review exists to create motion. Clear on what to fix, and in what order — not a lecture on why things matter." },
+        { "icon": "📧", "title": "Straight to your inbox", "body": "We send your feedback within 24 hours. No spam, no drip sequences you didn't ask for." },
+        { "icon": "🔁", "title": "The same lens we use on paid projects", "body": "This is the exact review process we run before taking on any new client. You get the same quality of thinking — free." }
+      ]
+    },
+    "steps": {
+      "eyebrow": "How it works",
+      "h2_before": "Three simple",
+      "h2_accent": "steps.",
+      "lede": "No quiz. No score. Just tell us about your site and we'll take it from there.",
+      "items": [
+        { "n": "Step 1", "icon": "✏", "title": "Fill in the form", "body": "Your name, email, website URL, and optionally what's frustrating you most about your current online presence. Takes about 2 minutes." },
+        { "n": "Step 2", "icon": "👁", "title": "We review your site", "body": "We go through your website the way a potential customer would — looking at what makes them stay, leave, trust you, or walk away." },
+        { "n": "Step 3", "icon": "📩", "title": "You get honest feedback within 24 hours", "body": "A direct, personal review of your specific site sent to your inbox. Not a generic checklist — feedback that actually applies to your business." }
+      ]
+    },
+    "useCases": {
+      "eyebrow": "Who it's for",
+      "h2_before": "One review.",
+      "h2_accent": "Every kind of business.",
+      "tabs": [
+        { "id": "services", "label": "Service businesses" },
+        { "id": "local", "label": "Local shops" },
+        { "id": "ecom", "label": "E-commerce" },
+        { "id": "creators", "label": "Creators" },
+        { "id": "agency", "label": "Agencies" }
+      ],
+      "panes": [
+        { "id": "services", "tag": "Service businesses", "heading_before": "Stop losing leads to rivals with a", "heading_accent": "better online presence", "body": "Plumbers, lawyers, cleaners — your clients look you up before they call. We'll tell you exactly why they're choosing the competition, and what to fix first.", "chips": ["Findability", "Trust signals", "Contact clarity"], "warmChips": ["Personal feedback"] },
+        { "id": "local", "tag": "Local shops", "heading_before": "Turn foot traffic into", "heading_accent": "online discovery", "body": "People search before they walk in. We check whether your online presence matches the quality of your store — and where it falls short.", "chips": ["Google presence", "Local visibility", "Speed"], "warmChips": ["Free review"] },
+        { "id": "ecom", "tag": "E-commerce", "heading_before": "Find out why your store", "heading_accent": "isn't converting", "body": "Traffic without sales is a signal problem. We look at trust gaps, friction points, and conversion killers that are quietly costing you revenue.", "chips": ["Conversion", "Trust", "First impression"], "warmChips": ["No login needed"] },
+        { "id": "creators", "tag": "Creators & freelancers", "heading_before": "Your portfolio is your", "heading_accent": "first impression", "body": "Clients vet you before they email. We'll tell you whether your site passes the trust bar — or quietly loses you work.", "chips": ["First impression", "Trust", "Mobile"], "warmChips": ["Results in 24h"] },
+        { "id": "agency", "tag": "For consultants & agencies", "heading_before": "Win clients with a", "heading_accent": "diagnostic they can't ignore", "body": "Use the free audit as a conversation starter. Share a client's feedback before the pitch — it's the most compelling opener you'll ever send.", "chips": ["Lead gen", "Client reports", "Prospecting"], "warmChips": ["Earn a call"] }
+      ]
+    },
+    "form": {
+      "eyebrow": "Get your free audit",
+      "h2": "Tell us about your website",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name", "required": true },
+        "email": { "label": "Email", "placeholder": "your@email.com", "required": true },
+        "url": { "label": "Website URL", "placeholder": "https://yoursite.com", "required": true },
+        "frustration": { "label": "What's your biggest frustration with your current online presence?", "placeholder": "Optional — but the more you tell us, the more useful the feedback", "required": false }
+      },
+      "submit": "Send my website →",
+      "success": "We've received your site. You'll hear from us within 24 hours.",
+      "error": "Something went wrong. Please try again or email us at hello@lumiq.studio",
+      "microcopy": "We reply within 24 hours. No spam, no sales pressure."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "h2_before": "Is it really",
+      "h2_accent": "free?",
+      "items": [
+        { "q": "Is this really free?", "a": "Yes. No card, no hidden catch. We review your site and send you honest feedback. What you do with it is up to you." },
+        { "q": "What do you actually look at?", "a": "We look at your site the same way a potential customer would — your first impression, how easy it is to understand what you do, whether you build trust, and whether there's a clear path to contact you." },
+        { "q": "How long does the review take?", "a": "We aim to get your feedback to you within 24 hours of receiving your form." },
+        { "q": "What if I don't have a website yet?", "a": "Tell us that in the form. We can still give you useful direction based on your current online presence and what you're trying to achieve." },
+        { "q": "What do you do with my email?", "a": "We use it to send you your feedback and, if it's relevant, a short follow-up. You can ask us to stop any time." },
+        { "q": "Can I request a review for a client's website?", "a": "Absolutely. Many consultants use this as a prospecting tool — review a potential client's site and share the feedback to open the conversation." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Get started",
+      "h2_before": "Find out where",
+      "h2_accent": "you stand.",
+      "lede": "Two minutes to fill in. Free. A real, personal look at what's holding your website back.",
+      "cta": "Request your free audit →",
+      "microcopy": "No card · No spam · We reply within 24 hours"
+    }
   }
 }

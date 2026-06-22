@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { AuditModalTrigger } from "@/components/AuditModalTrigger";
 
 /* ─── SVG helpers ────────────────────────────────────── */
 const ArrowRight = () => (
@@ -8,7 +10,6 @@ const ArrowRight = () => (
     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
-
 
 const StarIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
@@ -24,101 +25,61 @@ function SH({ children, className = "" }: { children: React.ReactNode; className
 /* ─── Types ───────────────────────────────────────────── */
 type TabId = "services" | "local" | "ecom" | "creators" | "agency";
 
-const UC_TABS: { id: TabId; label: string }[] = [
-  { id: "services", label: "Service businesses" },
-  { id: "local", label: "Local shops" },
-  { id: "ecom", label: "E-commerce" },
-  { id: "creators", label: "Creators" },
-  { id: "agency", label: "Agencies" },
-];
-
-const UC_PANES: {
+type UcPane = {
   id: TabId;
   tag: string;
-  heading: React.ReactNode;
+  heading_before: string;
+  heading_accent: string;
   body: string;
   chips: string[];
   warmChips: string[];
-}[] = [
-  {
-    id: "services",
-    tag: "Service businesses",
-    heading: <>Stop losing leads to rivals with a <span className="it">better Google presence</span></>,
-    body: "Plumbers, lawyers, cleaners — your clients Google you first. Your score tells you exactly why they're choosing the competition, and what to fix first.",
-    chips: ["Findability", "Trust signals", "Reviews"],
-    warmChips: ["Instant results"],
-  },
-  {
-    id: "local",
-    tag: "Local shops",
-    heading: <>Turn foot traffic into <span className="it">online discovery</span></>,
-    body: "People search before they walk in. Your Visibility Score checks whether your online presence matches the quality of your store — and where it falls short.",
-    chips: ["Google Maps", "Local SEO", "Speed"],
-    warmChips: ["Free diagnostic"],
-  },
-  {
-    id: "ecom",
-    tag: "E-commerce",
-    heading: <>Find out why your store <span className="it">isn't converting</span></>,
-    body: "Traffic without sales is a signal problem. The test surfaces trust gaps, speed issues, and conversion killers in under 60 seconds.",
-    chips: ["Conversion", "Trust", "Performance"],
-    warmChips: ["No login needed"],
-  },
-  {
-    id: "creators",
-    tag: "Creators & freelancers",
-    heading: <>Your portfolio is your <span className="it">first impression</span></>,
-    body: "Clients vet you before they email. Your score shows whether your site passes the trust bar — or quietly loses you work.",
-    chips: ["First impression", "Trust", "Mobile"],
-    warmChips: ["Results in 60s"],
-  },
-  {
-    id: "agency",
-    tag: "For consultants & agencies",
-    heading: <>Win clients with a <span className="it">diagnostic they can't ignore</span></>,
-    body: "Use the Visibility Score as a conversation starter. Share a client's score before the pitch — it's the most compelling opener you'll ever send.",
-    chips: ["Lead gen", "Client reports", "White-label"],
-    warmChips: ["Earn a call"],
-  },
-];
+};
 
-const FAQS: { q: string; a: string }[] = [
-  {
-    q: "Is the Visibility Score really free?",
-    a: "Yes — the score, the breakdown, and the letter grade are completely free. You get them the moment you finish the 20 questions. The follow-up PDF report and strategy calls are paid extras, but you're never required to buy anything.",
-  },
-  {
-    q: "How long does the test take?",
-    a: "Under 60 seconds for most people. There are 20 multiple-choice questions. No jargon, no trick questions — just honest answers about your current online presence.",
-  },
-  {
-    q: "Do I need to know anything technical?",
-    a: "Not at all. The questions are written in plain English and cover things you already know about your business — not your server settings. If you know you have a website, you can take this test.",
-  },
-  {
-    q: "What happens after I get my score?",
-    a: "You'll see your score out of 100, a breakdown across the four pillars (Findability, Trust, Conversion, Speed), and a letter grade with tier label. You can then choose to get the full PDF report and, if you want, book a strategy session.",
-  },
-  {
-    q: "Can I take the test for a client's website?",
-    a: "Absolutely. Many consultants and agencies use Lumiq as a prospecting tool — run the test for a potential client, share the score, and use it to open the conversation. It's the most compelling cold opener we've seen.",
-  },
-  {
-    q: "What is the 'done-for-you' plan?",
-    a: "It's a hands-on engagement where our team implements the recommendations from your report. You get a dedicated strategist, priority support, and a full execution plan — not just advice. Pricing starts at $1,490.",
-  },
-];
+type WhyCard = {
+  icon: string;
+  title: string;
+  body: string;
+};
+
+type StepItem = {
+  n: string;
+  icon: string;
+  title: string;
+  body: string;
+};
+
+type FaqItem = {
+  q: string;
+  a: string;
+};
+
+type UcTab = {
+  id: TabId;
+  label: string;
+};
 
 /* ─── Main component ─────────────────────────────────── */
 export default function LumiqLandingPage() {
+  const t = useTranslations("landing");
+
   const [activeTab, setActiveTab] = useState<TabId>("services");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [ringVisible, setRingVisible] = useState(false);
+
   const ringRef = useRef<HTMLDivElement>(null);
   const ringNumRef = useRef<HTMLSpanElement>(null);
   const faqRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  /* Score ring intersection observer */
+  /* ── Translated arrays ─────────────────────────────── */
+  const heroTags     = t.raw("hero.tags")          as string[];
+  const sectors      = t.raw("logoStrip.sectors")  as string[];
+  const whyCards     = t.raw("whyItWorks.cards")   as WhyCard[];
+  const stepItems    = t.raw("steps.items")        as StepItem[];
+  const ucTabs       = t.raw("useCases.tabs")      as UcTab[];
+  const ucPanes      = t.raw("useCases.panes")     as UcPane[];
+  const faqItems     = t.raw("faq.items")          as FaqItem[];
+
+  /* ── Score ring intersection observer ─────────────── */
   useEffect(() => {
     const el = ringRef.current;
     if (!el) return;
@@ -130,7 +91,7 @@ export default function LumiqLandingPage() {
     return () => observer.disconnect();
   }, []);
 
-  /* Count-up animation */
+  /* ── Count-up animation ────────────────────────────── */
   useEffect(() => {
     if (!ringVisible) return;
     const el = ringNumRef.current;
@@ -149,7 +110,7 @@ export default function LumiqLandingPage() {
     return () => cancelAnimationFrame(frame);
   }, [ringVisible]);
 
-  /* Scroll reveal */
+  /* ── Scroll reveal ─────────────────────────────────── */
   useEffect(() => {
     const els = document.querySelectorAll(".lp-root [data-reveal]");
     const observer = new IntersectionObserver(
@@ -167,13 +128,12 @@ export default function LumiqLandingPage() {
     return () => observer.disconnect();
   }, []);
 
-  /* FAQ toggle */
+  /* ── FAQ toggle ────────────────────────────────────── */
   const toggleFaq = (i: number) => {
-    const next = openFaq === i ? null : i;
-    setOpenFaq(next);
+    setOpenFaq(openFaq === i ? null : i);
   };
 
-  /* FAQ max-height animation */
+  /* ── FAQ max-height animation ──────────────────────── */
   useEffect(() => {
     faqRefs.current.forEach((ref, i) => {
       if (!ref) return;
@@ -183,7 +143,7 @@ export default function LumiqLandingPage() {
     });
   }, [openFaq]);
 
-  /* Ring SVG */
+  /* ── Ring SVG ──────────────────────────────────────── */
   const r = 42;
   const circ = 2 * Math.PI * r;
   const ringOffset = ringVisible ? circ * (1 - 78 / 100) : circ;
@@ -198,31 +158,29 @@ export default function LumiqLandingPage() {
         <div className="lp-hero-inner">
           <div className="lp-eyebrow">
             <span className="lp-dot" />
-            What we offer
+            {t("hero.eyebrow")}
           </div>
 
           <h1>
-            Find out, in 60 seconds, why your website is{" "}
-            <span className="it accent">invisible.</span>
+            {t("hero.h1_before")}{" "}
+            <span className="it accent">{t("hero.h1_accent")}</span>
           </h1>
 
-          <p className="lp-hero-lede">
-            20 questions. A score out of 100. A grade, A through F. And a clear, personalised explanation of exactly what's dragging your website down — and how to fix it.
-          </p>
+          <p className="lp-hero-lede">{t("hero.lede")}</p>
 
           <div className="lp-hero-tags">
-            {["Free", "60 seconds", "No login needed", "Instant results"].map((t) => (
-              <span key={t} className="lp-tag">{t}</span>
+            {heroTags.map((tag) => (
+              <span key={tag} className="lp-tag">{tag}</span>
             ))}
           </div>
 
           <div className="lp-hero-btns">
-            <a href="#test" className="lp-btn lp-btn-primary lg">
-              Start the test
+            <AuditModalTrigger className="lp-btn lp-btn-primary lg">
+              {t("hero.cta_primary")}
               <span className="lp-arr"><ArrowRight /></span>
-            </a>
-            <a href="#features" className="lp-btn lp-btn-light">
-              See a sample report
+            </AuditModalTrigger>
+            <a href="#how" className="lp-btn lp-btn-light">
+              {t("hero.cta_secondary")}
               <span className="lp-arr"><ArrowRight /></span>
             </a>
           </div>
@@ -231,11 +189,11 @@ export default function LumiqLandingPage() {
             <div className="lp-trust-stars">
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
-            <strong>4.9/5</strong>
+            <strong>{t("hero.trust_rating")}</strong>
             <div className="lp-trust-avs">
               {[...Array(4)].map((_, i) => <div key={i} className="av" />)}
             </div>
-            <span>1,000+ businesses scored</span>
+            <span>{t("hero.trust_label")}</span>
           </div>
         </div>
 
@@ -243,18 +201,18 @@ export default function LumiqLandingPage() {
         <div className="lp-hero-right">
           <img
             src="/images/hero-lumiq.png"
-            alt="Lumiq visibility score report"
+            alt="Lumiq free website audit"
             className="lp-hero-img"
           />
         </div>
 
       </section>
 
-      {/* Logo strip */}
+      {/* ── Logo strip ─────────────────────────────────── */}
       <div className="lp-logo-strip">
-        <p className="lp-logo-strip-label">Trusted by businesses in</p>
+        <p className="lp-logo-strip-label">{t("logoStrip.label")}</p>
         <div className="lp-logo-grid">
-          {["Retail", "Hospitality", "Legal", "Health", "Real Estate"].map((name) => (
+          {sectors.map((name) => (
             <div key={name} className="lp-logo-item">{name}</div>
           ))}
         </div>
@@ -264,12 +222,16 @@ export default function LumiqLandingPage() {
       <section className="lp-features" id="features">
         <div className="lp-wrap">
           <div className="lp-features-head" data-reveal>
-            <div className="lp-eyebrow"><span className="lp-dot" />What you get</div>
+            <div className="lp-eyebrow">
+              <span className="lp-dot" />
+              {t("features.eyebrow")}
+            </div>
             <SH>
-              Your business, <span className="it">scored</span> and explained.
+              {t("features.h2_before")}{" "}
+              <span className="it">{t("features.h2_accent")}</span>
             </SH>
             <p className="lp-hero-lede" style={{ margin: "16px auto 0", maxWidth: "52ch" }}>
-              In 60 seconds, Lumiq gives you a score out of 100, a grade A–F, and a plain-English breakdown of exactly what's holding your website back.
+              {t("features.lede")}
             </p>
           </div>
 
@@ -282,7 +244,7 @@ export default function LumiqLandingPage() {
               </div>
               <img
                 src="/images/lumiq-dashboard.png"
-                alt="Lumiq SEO metrics dashboard"
+                alt="Lumiq audit preview"
                 className="lp-dash-img"
               />
             </div>
@@ -290,22 +252,21 @@ export default function LumiqLandingPage() {
         </div>
       </section>
 
-      {/* ══ 04 WHY IT WORKS ══════════════════════════════ */}
+      {/* ══ 03 WHY IT WORKS ══════════════════════════════ */}
       <section className="lp-why">
         <div className="lp-wrap">
           <div data-reveal>
-            <div className="lp-eyebrow"><span className="lp-dot" />Why it works</div>
-            <h2>Unique by design. <span className="it">Honest</span> by default.</h2>
+            <div className="lp-eyebrow">
+              <span className="lp-dot" />
+              {t("whyItWorks.eyebrow")}
+            </div>
+            <h2>
+              {t("whyItWorks.h2_before")}{" "}
+              <span className="it">{t("whyItWorks.h2_accent")}</span>
+            </h2>
           </div>
           <div className="lp-uf-grid">
-            {[
-              { icon: "⏱", title: "Under 90 seconds", body: "The fastest honest website diagnostic on the market. Finish before your coffee gets cold." },
-              { icon: "🏗", title: "Built for 1000s", body: "Calibrated against over a thousand small business websites across 40+ industries." },
-              { icon: "💬", title: "No fluff in the report", body: "Every word earns its place. If it doesn't help you act, it's not in there." },
-              { icon: "⚡", title: "Action-over-insight", body: "The score exists to create motion. Every section ends with a next step, not a lecture." },
-              { icon: "📧", title: "One email. That's it.", body: "We send the report. We don't drip you with content you didn't ask for." },
-              { icon: "🔁", title: "The same diagnostics we use", body: "The four pillars are the exact framework our team uses on paid client audits — condensed into 20 questions." },
-            ].map(({ icon, title, body }) => (
+            {whyCards.map(({ icon, title, body }) => (
               <div key={title} className="lp-uf-card" data-reveal>
                 <div className="lp-icon-chip lg" style={{ fontSize: 18 }}>{icon}</div>
                 <p className="lp-uf-card-title">{title}</p>
@@ -316,23 +277,24 @@ export default function LumiqLandingPage() {
         </div>
       </section>
 
-      {/* ══ 06 SIMPLE STEPS ══════════════════════════════ */}
+      {/* ══ 04 HOW IT WORKS ══════════════════════════════ */}
       <section className="lp-steps" id="how">
         <div className="lp-wrap">
           <div data-reveal>
-            <div className="lp-eyebrow"><span className="lp-dot" />How it works</div>
-            <h2>Simple steps to <span className="it">get started.</span></h2>
+            <div className="lp-eyebrow">
+              <span className="lp-dot" />
+              {t("steps.eyebrow")}
+            </div>
+            <h2>
+              {t("steps.h2_before")}{" "}
+              <span className="it">{t("steps.h2_accent")}</span>
+            </h2>
             <p className="lp-hero-lede" style={{ margin: "0 auto", maxWidth: "48ch" }}>
-              You don't need to be a tech person. You need 60 seconds and an honest eye for your own website.
+              {t("steps.lede")}
             </p>
           </div>
           <div className="lp-steps-grid" style={{ marginTop: 48 }}>
-            {[
-              { n: "Step 1", icon: "▶", title: "Start the test", body: "Click 'Start the test.' You'll see the first of 20 questions immediately. No sign-up required." },
-              { n: "Step 2", icon: "✓", title: "Answer 20 questions", body: "Each question has 2–4 choices. Pick the one that best describes your current situation. Be honest — it's anonymous." },
-              { n: "Step 3", icon: "◉", title: "See your score", body: "Get your score out of 100, your grade, and a four-pillar breakdown the moment you finish." },
-              { n: "Step 4", icon: "📄", title: "Get your report", body: "Enter your email for the full PDF. Eight pages of personalised recommendations sent within minutes." },
-            ].map(({ n, icon, title, body }) => (
+            {stepItems.map(({ n, icon, title, body }) => (
               <div key={n} className="lp-step-card" data-reveal>
                 <div className="lp-step-card-head">
                   <span className="lp-step-n">{n}</span>
@@ -346,16 +308,22 @@ export default function LumiqLandingPage() {
         </div>
       </section>
 
-      {/* ══ 07 USE CASES ═════════════════════════════════ */}
+      {/* ══ 05 USE CASES ═════════════════════════════════ */}
       <section className="lp-uc">
         <div className="lp-wrap">
           <div data-reveal>
-            <div className="lp-eyebrow"><span className="lp-dot" />Who it's for</div>
-            <h2>One test. <span className="it">Every</span> kind of small business.</h2>
+            <div className="lp-eyebrow">
+              <span className="lp-dot" />
+              {t("useCases.eyebrow")}
+            </div>
+            <h2>
+              {t("useCases.h2_before")}{" "}
+              <span className="it">{t("useCases.h2_accent")}</span>
+            </h2>
           </div>
 
-          <div className="lp-uc-tabs" role="tablist" aria-label="Business type">
-            {UC_TABS.map(({ id, label }) => (
+          <div className="lp-uc-tabs" role="tablist" aria-label={t("useCases.eyebrow")}>
+            {ucTabs.map(({ id, label }) => (
               <button
                 key={id}
                 className="lp-uc-tab"
@@ -369,14 +337,17 @@ export default function LumiqLandingPage() {
           </div>
 
           <div className="lp-uc-stage">
-            {UC_PANES.map(({ id, tag, heading, body, chips, warmChips }) => (
+            {ucPanes.map(({ id, tag, heading_before, heading_accent, body, chips, warmChips }) => (
               <div
                 key={id}
                 className={`lp-uc-pane${activeTab === id ? " active" : ""}`}
                 role="tabpanel"
               >
                 <span className="lp-uc-tag">{tag}</span>
-                <h3>{heading}</h3>
+                <h3>
+                  {heading_before}{" "}
+                  <span className="it">{heading_accent}</span>
+                </h3>
                 <p className="lp-uc-body">{body}</p>
                 <div className="lp-uc-chips">
                   {warmChips.map((c) => <span key={c} className="lp-chip warm">{c}</span>)}
@@ -388,15 +359,21 @@ export default function LumiqLandingPage() {
         </div>
       </section>
 
-      {/* ══ 09 FAQ ═══════════════════════════════════════ */}
+      {/* ══ 07 FAQ ═══════════════════════════════════════ */}
       <section className="lp-faq-section" id="faq">
         <div className="lp-faq-inner">
           <div data-reveal>
-            <div className="lp-eyebrow"><span className="lp-dot" />Questions</div>
-            <h2>Is it really, <span className="it">free?</span></h2>
+            <div className="lp-eyebrow">
+              <span className="lp-dot" />
+              {t("faq.eyebrow")}
+            </div>
+            <h2>
+              {t("faq.h2_before")}{" "}
+              <span className="it">{t("faq.h2_accent")}</span>
+            </h2>
           </div>
           <div className="lp-faq-list">
-            {FAQS.map(({ q, a }, i) => (
+            {faqItems.map(({ q, a }, i) => (
               <div
                 key={i}
                 ref={(el) => { faqRefs.current[i] = el; }}
@@ -420,19 +397,23 @@ export default function LumiqLandingPage() {
         </div>
       </section>
 
-      {/* ══ 10 FINAL CTA ═════════════════════════════════ */}
-      <section className="lp-final" id="test">
+      {/* ══ 08 FINAL CTA ═════════════════════════════════ */}
+      <section className="lp-final" id="cta">
         <div className="lp-final-inner">
-          <div className="lp-eyebrow lp-dark"><span className="lp-dot" />Take the test</div>
-          <h2>Before you <span className="it">click.</span></h2>
-          <p className="lp-final-lede">
-            In the next 60 seconds you&apos;ll know exactly why your website isn&apos;t bringing in the business you deserve — and what to do about it. The score is free. The clarity is priceless.
-          </p>
-          <a href="#top" className="lp-btn lp-btn-primary lg">
-            Start the free test
+          <div className="lp-eyebrow lp-dark">
+            <span className="lp-dot" />
+            {t("finalCta.eyebrow")}
+          </div>
+          <h2>
+            {t("finalCta.h2_before")}{" "}
+            <span className="it">{t("finalCta.h2_accent")}</span>
+          </h2>
+          <p className="lp-final-lede">{t("finalCta.lede")}</p>
+          <AuditModalTrigger className="lp-btn lp-btn-primary lg">
+            {t("finalCta.cta")}
             <span className="lp-arr"><ArrowRight /></span>
-          </a>
-          <p className="lp-final-micro">No credit card · No login · Results in 60 seconds</p>
+          </AuditModalTrigger>
+          <p className="lp-final-micro">{t("finalCta.microcopy")}</p>
         </div>
       </section>
 

@@ -316,5 +316,106 @@
       "successDesc": "Gràcies per contactar-nos. Revisarem el teu web i et respondrem en 1 dia hàbil.",
       "successReset": "Enviar una altra sol·licitud"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "El que oferim",
+      "h1_before": "Descobreix exactament per què el teu web és",
+      "h1_accent": "invisible.",
+      "lede": "Explica'ns el teu web. El revisem personalment i t'enviem feedback honest sobre què funciona, què no, i què arreglar primer — en 24 hores.",
+      "tags": ["Gratuït", "Revisió personal", "Sense registre", "Resposta en 24h"],
+      "cta_primary": "Sol·licita la teva auditoria gratuïta",
+      "cta_secondary": "Veure com funciona",
+      "trust_rating": "4.9/5",
+      "trust_label": "Més de 1.000 negocis revisats"
+    },
+    "logoStrip": {
+      "label": "Amb la confiança de negocis a",
+      "sectors": ["Comerç", "Hostaleria", "Jurídic", "Salut", "Immobiliària"]
+    },
+    "features": {
+      "eyebrow": "Què reps",
+      "h2_before": "El teu web, revisat i",
+      "h2_accent": "explicat.",
+      "lede": "Revisem el teu web personalment i t'enviem feedback directe i honest sobre què funciona, què et costa clients, i què arreglar primer."
+    },
+    "whyItWorks": {
+      "eyebrow": "Per què funciona",
+      "h2_before": "Honest per disseny.",
+      "h2_accent": "Personal per defecte.",
+      "cards": [
+        { "icon": "👁", "title": "Una persona real revisa el teu web", "body": "No un algoritme. No una eina automàtica. Algú que fa això professionalment revisa el teu web i et diu el que veu." },
+        { "icon": "🎯", "title": "Fet per al teu web específic", "body": "El feedback es basa en el teu web real, no en una plantilla genèrica. El que reps és rellevant per al teu negoci, la teva audiència i els teus objectius." },
+        { "icon": "💬", "title": "Sense farciment al feedback", "body": "Cada paraula guanya el seu lloc. Si no t'ajuda a actuar, no hi és." },
+        { "icon": "⚡", "title": "Acció per sobre de la teoria", "body": "La revisió existeix per crear moviment. Clar sobre què arreglar i en quin ordre — no una conferència sobre per què importa." },
+        { "icon": "📧", "title": "Directament a la teva safata d'entrada", "body": "T'enviem el teu feedback en 24 hores. Sense correu brossa, sense seqüències d'email que no has demanat." },
+        { "icon": "🔁", "title": "La mateixa mirada que fem servir en projectes de pagament", "body": "Aquest és exactament el procés de revisió que fem servir abans d'acceptar qualsevol client nou. Obtens la mateixa qualitat d'anàlisi — gratuïtament." }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Com funciona",
+      "h2_before": "Tres passos",
+      "h2_accent": "senzills.",
+      "lede": "Sense test. Sense puntuació. Explica'ns el teu web i nosaltres ens encarreguem de la resta.",
+      "items": [
+        { "n": "Pas 1", "icon": "✏", "title": "Omple el formulari", "body": "El teu nom, email, URL del teu web i, si vols, què és el que més et frustra de la teva presència online actual. Triga uns 2 minuts." },
+        { "n": "Pas 2", "icon": "👁", "title": "Revisem el teu web", "body": "Recorrem el teu web com ho faria un client potencial — fixant-nos en què el fa quedar-se, marxar, confiar en tu o anar-se'n." },
+        { "n": "Pas 3", "icon": "📩", "title": "Reps feedback honest en 24 hores", "body": "Una revisió directa i personal del teu web específic al teu correu. No una llista genèrica — feedback que s'aplica de veritat al teu negoci." }
+      ]
+    },
+    "useCases": {
+      "eyebrow": "Per a qui és",
+      "h2_before": "Una revisió.",
+      "h2_accent": "Tot tipus de negocis.",
+      "tabs": [
+        { "id": "services", "label": "Negocis de serveis" },
+        { "id": "local", "label": "Botigues locals" },
+        { "id": "ecom", "label": "E-commerce" },
+        { "id": "creators", "label": "Creadors" },
+        { "id": "agency", "label": "Agències" }
+      ],
+      "panes": [
+        { "id": "services", "tag": "Negocis de serveis", "heading_before": "Deixa de perdre clients davant rivals amb", "heading_accent": "millor presència online", "body": "Lampistes, advocats, netejadors — els teus clients et busquen abans de trucar. Et direm exactament per què estan triant la competència i què arreglar primer.", "chips": ["Trobabilitat", "Senyals de confiança", "Contacte clar"], "warmChips": ["Feedback personal"] },
+        { "id": "local", "tag": "Botigues locals", "heading_before": "Converteix el tràfic presencial en", "heading_accent": "descoberta online", "body": "La gent busca abans d'entrar. Revisem si la teva presència online està a l'altura de la qualitat de la teva botiga — i on es queda curta.", "chips": ["Presència a Google", "SEO local", "Velocitat"], "warmChips": ["Revisió gratuïta"] },
+        { "id": "ecom", "tag": "E-commerce", "heading_before": "Descobreix per què la teva botiga", "heading_accent": "no està convertint", "body": "Tràfic sense vendes és un problema de senyals. Identifiquem les friccions, els problemes de confiança i els errors de conversió que et costen ingressos.", "chips": ["Conversió", "Confiança", "Primera impressió"], "warmChips": ["Sense registre"] },
+        { "id": "creators", "tag": "Creadors i freelancers", "heading_before": "El teu portfolio és la teva", "heading_accent": "primera impressió", "body": "Els clients t'avaluen abans d'escriure't. Et direm si el teu web supera el llindar de confiança — o si t'està costant feina en silenci.", "chips": ["Primera impressió", "Confiança", "Mòbil"], "warmChips": ["Resultats en 24h"] },
+        { "id": "agency", "tag": "Per a consultors i agències", "heading_before": "Guanya clients amb un", "heading_accent": "diagnòstic que no poden ignorar", "body": "Fes servir l'auditoria gratuïta com a punt de partida. Comparteix l'anàlisi d'un client potencial abans del pitch — és el millor opener que enviàs mai.", "chips": ["Captació de leads", "Informes de client", "Prospecció"], "warmChips": ["Obre una conversa"] }
+      ]
+    },
+    "form": {
+      "eyebrow": "Obtén la teva auditoria gratuïta",
+      "h2": "Explica'ns el teu web",
+      "fields": {
+        "name": { "label": "Nom", "placeholder": "El teu nom", "required": true },
+        "email": { "label": "Email", "placeholder": "tu@email.com", "required": true },
+        "url": { "label": "URL del teu web", "placeholder": "https://elteuweb.com", "required": true },
+        "frustration": { "label": "Quina és la teva major frustració amb la teva presència online actual?", "placeholder": "Opcional — però com més ens expliquis, més útil serà el feedback", "required": false }
+      },
+      "submit": "Enviar el meu web →",
+      "success": "Hem rebut el teu web. Et respondrem en 24 hores.",
+      "error": "Alguna cosa ha fallat. Torna-ho a intentar o escriu-nos a hello@lumiq.studio",
+      "microcopy": "Responem en 24 hores. Sense correu brossa, sense pressió de venda."
+    },
+    "faq": {
+      "eyebrow": "Preguntes",
+      "h2_before": "És realment",
+      "h2_accent": "gratuït?",
+      "items": [
+        { "q": "És realment gratuït?", "a": "Sí. Sense targeta, sense trampa amagada. Revisem el teu web i t'enviem feedback honest. El que facis amb ell depèn de tu." },
+        { "q": "Què mireu exactament?", "a": "Revisem el teu web com ho faria un client potencial — la primera impressió, si queda clar què fas, si generes confiança i si hi ha un camí clar per contactar-te." },
+        { "q": "Quant triga la revisió?", "a": "Intentem enviar-te el feedback en 24 hores des que rebem el teu formulari." },
+        { "q": "I si encara no tinc web?", "a": "Explica-ho al formulari. Igualment podem donar-te orientació útil basada en la teva presència online actual i el que vols aconseguir." },
+        { "q": "Què feu amb el meu email?", "a": "L'usem per enviar-te el teu feedback i, si és rellevant, un seguiment breu. Pots demanar-nos que parem quan vulguis." },
+        { "q": "Puc demanar una revisió per al web d'un client?", "a": "Per descomptat. Molts consultors ho fan servir com a eina de prospecció — revisa el web d'un client potencial i comparteix l'anàlisi per obrir la conversa." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Comença ara",
+      "h2_before": "Descobreix on",
+      "h2_accent": "estàs.",
+      "lede": "Dos minuts per omplir. Gratuït. Una mirada real i personal al que frena el teu web.",
+      "cta": "Sol·licita la teva auditoria gratuïta →",
+      "microcopy": "Sense targeta · Sense correu brossa · Responem en 24 hores"
+    }
   }
 }

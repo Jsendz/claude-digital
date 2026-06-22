@@ -316,5 +316,106 @@
       "successDesc": "Merci de nous avoir contactés. Nous examinerons votre site et vous répondrons sous 1 jour ouvrable.",
       "successReset": "Soumettre une autre demande"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Ce que nous proposons",
+      "h1_before": "Découvrez exactement pourquoi votre site est",
+      "h1_accent": "invisible.",
+      "lede": "Parlez-nous de votre site. Nous le passons en revue personnellement et vous envoyons un feedback honnête sur ce qui fonctionne, ce qui ne fonctionne pas, et quoi corriger en premier — sous 24 heures.",
+      "tags": ["Gratuit", "Avis personnel", "Sans inscription", "Réponse en 24h"],
+      "cta_primary": "Demandez votre audit gratuit",
+      "cta_secondary": "Voir comment ça marche",
+      "trust_rating": "4.9/5",
+      "trust_label": "Plus de 1 000 entreprises auditées"
+    },
+    "logoStrip": {
+      "label": "Utilisé par des entreprises dans",
+      "sectors": ["Commerce", "Hôtellerie", "Juridique", "Santé", "Immobilier"]
+    },
+    "features": {
+      "eyebrow": "Ce que vous recevez",
+      "h2_before": "Votre site, analysé et",
+      "h2_accent": "expliqué.",
+      "lede": "Nous examinons votre site personnellement et vous envoyons un feedback direct et honnête sur ce qui fonctionne, ce qui vous coûte des clients, et quoi corriger en premier."
+    },
+    "whyItWorks": {
+      "eyebrow": "Pourquoi ça marche",
+      "h2_before": "Honnête par conception.",
+      "h2_accent": "Personnel par défaut.",
+      "cards": [
+        { "icon": "👁", "title": "Une vraie personne analyse votre site", "body": "Pas un algorithme. Pas un outil automatique. Quelqu'un qui fait cela professionnellement examine votre site et vous dit ce qu'il voit." },
+        { "icon": "🎯", "title": "Conçu pour votre site spécifique", "body": "Le feedback est basé sur votre site réel, pas sur un modèle générique. Ce que vous recevez est pertinent pour votre activité, votre audience et vos objectifs." },
+        { "icon": "💬", "title": "Pas de remplissage dans le feedback", "body": "Chaque mot gagne sa place. Si ça ne vous aide pas à agir, ce n'est pas là." },
+        { "icon": "⚡", "title": "L'action avant la théorie", "body": "L'audit existe pour créer du mouvement. Clair sur quoi corriger et dans quel ordre — pas une conférence sur pourquoi c'est important." },
+        { "icon": "📧", "title": "Directement dans votre boîte mail", "body": "Nous vous envoyons votre feedback sous 24 heures. Pas de spam, pas de séquences email non sollicitées." },
+        { "icon": "🔁", "title": "La même analyse que nos projets payants", "body": "C'est exactement le processus que nous utilisons avant d'accepter un nouveau client. Vous obtenez la même qualité d'analyse — gratuitement." }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Comment ça marche",
+      "h2_before": "Trois étapes",
+      "h2_accent": "simples.",
+      "lede": "Pas de quiz. Pas de score. Parlez-nous de votre site et nous nous occupons du reste.",
+      "items": [
+        { "n": "Étape 1", "icon": "✏", "title": "Remplissez le formulaire", "body": "Votre nom, email, URL de votre site et, si vous le souhaitez, ce qui vous frustre le plus dans votre présence en ligne actuelle. Environ 2 minutes." },
+        { "n": "Étape 2", "icon": "👁", "title": "Nous analysons votre site", "body": "Nous parcourons votre site comme le ferait un client potentiel — en observant ce qui le fait rester, partir, vous faire confiance ou s'en aller." },
+        { "n": "Étape 3", "icon": "📩", "title": "Vous recevez un feedback honnête sous 24 heures", "body": "Une analyse directe et personnelle de votre site envoyée dans votre boîte mail. Pas une checklist générique — un feedback qui s'applique vraiment à votre activité." }
+      ]
+    },
+    "useCases": {
+      "eyebrow": "Pour qui",
+      "h2_before": "Un audit.",
+      "h2_accent": "Toutes les entreprises.",
+      "tabs": [
+        { "id": "services", "label": "Services" },
+        { "id": "local", "label": "Commerces locaux" },
+        { "id": "ecom", "label": "E-commerce" },
+        { "id": "creators", "label": "Créateurs" },
+        { "id": "agency", "label": "Agences" }
+      ],
+      "panes": [
+        { "id": "services", "tag": "Entreprises de services", "heading_before": "Arrêtez de perdre des clients face à des concurrents avec", "heading_accent": "une meilleure présence en ligne", "body": "Plombiers, avocats, prestataires — vos clients vous cherchent avant d'appeler. Nous vous dirons exactement pourquoi ils choisissent la concurrence et quoi corriger en premier.", "chips": ["Visibilité", "Signaux de confiance", "Contact clair"], "warmChips": ["Feedback personnel"] },
+        { "id": "local", "tag": "Commerces locaux", "heading_before": "Transformez le trafic physique en", "heading_accent": "découverte en ligne", "body": "Les gens cherchent avant d'entrer. Nous vérifions si votre présence en ligne est à la hauteur de la qualité de votre commerce — et où elle fait défaut.", "chips": ["Présence Google", "SEO local", "Vitesse"], "warmChips": ["Audit gratuit"] },
+        { "id": "ecom", "tag": "E-commerce", "heading_before": "Découvrez pourquoi votre boutique", "heading_accent": "ne convertit pas", "body": "Du trafic sans ventes est un problème de signaux. Nous identifions les frictions, les problèmes de confiance et les freins à la conversion qui vous coûtent des revenus.", "chips": ["Conversion", "Confiance", "Première impression"], "warmChips": ["Sans inscription"] },
+        { "id": "creators", "tag": "Créateurs et freelances", "heading_before": "Votre portfolio est votre", "heading_accent": "première impression", "body": "Les clients vous évaluent avant d'écrire. Nous vous dirons si votre site passe la barre de confiance — ou s'il vous fait perdre des missions en silence.", "chips": ["Première impression", "Confiance", "Mobile"], "warmChips": ["Résultats en 24h"] },
+        { "id": "agency", "tag": "Pour consultants et agences", "heading_before": "Gagnez des clients avec un", "heading_accent": "diagnostic qu'ils ne peuvent pas ignorer", "body": "Utilisez l'audit gratuit comme point de départ. Partagez l'analyse d'un prospect avant le pitch — c'est le meilleur opener que vous enverrez jamais.", "chips": ["Génération de leads", "Rapports clients", "Prospection"], "warmChips": ["Ouvrez la conversation"] }
+      ]
+    },
+    "form": {
+      "eyebrow": "Obtenez votre audit gratuit",
+      "h2": "Parlez-nous de votre site",
+      "fields": {
+        "name": { "label": "Nom", "placeholder": "Votre nom", "required": true },
+        "email": { "label": "Email", "placeholder": "votre@email.com", "required": true },
+        "url": { "label": "URL de votre site", "placeholder": "https://votresite.com", "required": true },
+        "frustration": { "label": "Quelle est votre plus grande frustration avec votre présence en ligne actuelle ?", "placeholder": "Optionnel — mais plus vous nous en dites, plus le feedback sera utile", "required": false }
+      },
+      "submit": "Envoyer mon site →",
+      "success": "Nous avons bien reçu votre site. Vous aurez de nos nouvelles sous 24 heures.",
+      "error": "Une erreur s'est produite. Réessayez ou écrivez-nous à hello@lumiq.studio",
+      "microcopy": "Nous répondons sous 24 heures. Pas de spam, pas de pression commerciale."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "h2_before": "Est-ce vraiment",
+      "h2_accent": "gratuit ?",
+      "items": [
+        { "q": "Est-ce vraiment gratuit ?", "a": "Oui. Pas de carte, pas de piège caché. Nous analysons votre site et vous envoyons un feedback honnête. Ce que vous en faites vous appartient." },
+        { "q": "Qu'est-ce que vous regardez exactement ?", "a": "Nous analysons votre site comme le ferait un client potentiel — la première impression, si on comprend clairement ce que vous faites, si vous inspirez confiance et s'il y a un chemin clair pour vous contacter." },
+        { "q": "Combien de temps prend l'analyse ?", "a": "Nous visons à vous envoyer votre feedback sous 24 heures après réception de votre formulaire." },
+        { "q": "Et si je n'ai pas encore de site ?", "a": "Dites-le nous dans le formulaire. Nous pouvons tout de même vous donner des conseils utiles basés sur votre présence en ligne actuelle et vos objectifs." },
+        { "q": "Que faites-vous de mon email ?", "a": "Nous l'utilisons pour vous envoyer votre feedback et, si c'est pertinent, un court suivi. Vous pouvez nous demander d'arrêter à tout moment." },
+        { "q": "Puis-je demander un audit pour le site d'un client ?", "a": "Absolument. Beaucoup de consultants l'utilisent comme outil de prospection — analysez le site d'un prospect et partagez le feedback pour ouvrir la conversation." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Commencer",
+      "h2_before": "Découvrez où",
+      "h2_accent": "vous en êtes.",
+      "lede": "Deux minutes à remplir. Gratuit. Un regard réel et personnel sur ce qui freine votre site.",
+      "cta": "Demandez votre audit gratuit →",
+      "microcopy": "Pas de carte · Pas de spam · Réponse sous 24 heures"
+    }
   }
 }

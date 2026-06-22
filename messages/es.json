@@ -316,5 +316,106 @@
       "successDesc": "Gracias por contactarnos. Revisaremos tu web y te responderemos en 1 día hábil.",
       "successReset": "Enviar otra solicitud"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Lo que ofrecemos",
+      "h1_before": "Descubre exactamente por qué tu web es",
+      "h1_accent": "invisible.",
+      "lede": "Cuéntanos sobre tu web. La revisamos personalmente y te enviamos feedback honesto sobre qué funciona, qué no, y qué arreglar primero — en 24 horas.",
+      "tags": ["Gratis", "Revisión personal", "Sin registro", "Respuesta en 24h"],
+      "cta_primary": "Solicita tu auditoría gratuita",
+      "cta_secondary": "Ver cómo funciona",
+      "trust_rating": "4.9/5",
+      "trust_label": "Más de 1.000 negocios revisados"
+    },
+    "logoStrip": {
+      "label": "Con la confianza de negocios en",
+      "sectors": ["Retail", "Hostelería", "Legal", "Salud", "Inmobiliaria"]
+    },
+    "features": {
+      "eyebrow": "Qué recibes",
+      "h2_before": "Tu web, revisada y",
+      "h2_accent": "explicada.",
+      "lede": "Revisamos tu web personalmente y te enviamos feedback directo y honesto sobre qué funciona, qué te está costando clientes, y qué arreglar primero."
+    },
+    "whyItWorks": {
+      "eyebrow": "Por qué funciona",
+      "h2_before": "Honesto por diseño.",
+      "h2_accent": "Personal por defecto.",
+      "cards": [
+        { "icon": "👁", "title": "Una persona real revisa tu web", "body": "No un algoritmo. No una herramienta automática. Alguien que hace esto profesionalmente revisa tu web y te dice lo que ve." },
+        { "icon": "🎯", "title": "Hecho para tu web específica", "body": "El feedback está basado en tu web real, no en una plantilla genérica. Lo que recibes es relevante para tu negocio, tu audiencia y tus objetivos." },
+        { "icon": "💬", "title": "Sin relleno en el feedback", "body": "Cada palabra gana su lugar. Si no te ayuda a actuar, no está." },
+        { "icon": "⚡", "title": "Acción por encima de teoría", "body": "La revisión existe para crear movimiento. Claro en qué arreglar y en qué orden — no una conferencia sobre por qué importa." },
+        { "icon": "📧", "title": "Directo a tu bandeja de entrada", "body": "Te enviamos tu feedback en 24 horas. Sin spam, sin secuencias de email que no pediste." },
+        { "icon": "🔁", "title": "La misma mirada que usamos en proyectos de pago", "body": "Este es exactamente el proceso de revisión que hacemos antes de aceptar cualquier cliente nuevo. Obtienes la misma calidad de análisis — gratis." }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Cómo funciona",
+      "h2_before": "Tres pasos",
+      "h2_accent": "sencillos.",
+      "lede": "Sin test. Sin puntuación. Cuéntanos sobre tu web y nosotros nos encargamos del resto.",
+      "items": [
+        { "n": "Paso 1", "icon": "✏", "title": "Rellena el formulario", "body": "Tu nombre, email, URL de tu web y, si quieres, qué es lo que más te frustra de tu presencia online actual. Tarda unos 2 minutos." },
+        { "n": "Paso 2", "icon": "👁", "title": "Revisamos tu web", "body": "Recorremos tu web como lo haría un cliente potencial — fijándonos en qué le hace quedarse, irse, confiar en ti o marcharse." },
+        { "n": "Paso 3", "icon": "📩", "title": "Recibes feedback honesto en 24 horas", "body": "Una revisión directa y personal de tu web específica en tu correo. No una checklist genérica — feedback que aplica de verdad a tu negocio." }
+      ]
+    },
+    "useCases": {
+      "eyebrow": "Para quién es",
+      "h2_before": "Una revisión.",
+      "h2_accent": "Todo tipo de negocios.",
+      "tabs": [
+        { "id": "services", "label": "Negocios de servicios" },
+        { "id": "local", "label": "Tiendas locales" },
+        { "id": "ecom", "label": "E-commerce" },
+        { "id": "creators", "label": "Creadores" },
+        { "id": "agency", "label": "Agencias" }
+      ],
+      "panes": [
+        { "id": "services", "tag": "Negocios de servicios", "heading_before": "Deja de perder clientes ante rivales con", "heading_accent": "mejor presencia online", "body": "Fontaneros, abogados, limpiadores — tus clientes te buscan antes de llamar. Te diremos exactamente por qué están eligiendo a la competencia y qué arreglar primero.", "chips": ["Encontrabilidad", "Señales de confianza", "Contacto claro"], "warmChips": ["Feedback personal"] },
+        { "id": "local", "tag": "Tiendas locales", "heading_before": "Convierte el tráfico presencial en", "heading_accent": "descubrimiento online", "body": "La gente busca antes de entrar. Revisamos si tu presencia online está a la altura de la calidad de tu tienda — y dónde se queda corta.", "chips": ["Presencia en Google", "Visibilidad local", "Velocidad"], "warmChips": ["Revisión gratuita"] },
+        { "id": "ecom", "tag": "E-commerce", "heading_before": "Descubre por qué tu tienda", "heading_accent": "no está convirtiendo", "body": "Tráfico sin ventas es un problema de señales. Identificamos las fricciones, los problemas de confianza y los errores de conversión que te están costando ingresos.", "chips": ["Conversión", "Confianza", "Primera impresión"], "warmChips": ["Sin registro"] },
+        { "id": "creators", "tag": "Creadores y freelancers", "heading_before": "Tu portfolio es tu", "heading_accent": "primera impresión", "body": "Los clientes te evalúan antes de escribirte. Te diremos si tu web supera el listón de la confianza — o si te está costando trabajo en silencio.", "chips": ["Primera impresión", "Confianza", "Móvil"], "warmChips": ["Resultados en 24h"] },
+        { "id": "agency", "tag": "Para consultores y agencias", "heading_before": "Gana clientes con un", "heading_accent": "diagnóstico que no pueden ignorar", "body": "Usa la auditoría gratuita como punto de partida. Comparte el análisis de un cliente potencial antes del pitch — es el mejor opener que puedes enviar.", "chips": ["Captación de leads", "Informes de cliente", "Prospección"], "warmChips": ["Abre una conversación"] }
+      ]
+    },
+    "form": {
+      "eyebrow": "Obtén tu auditoría gratuita",
+      "h2": "Cuéntanos sobre tu web",
+      "fields": {
+        "name": { "label": "Nombre", "placeholder": "Tu nombre", "required": true },
+        "email": { "label": "Email", "placeholder": "tu@email.com", "required": true },
+        "url": { "label": "URL de tu web", "placeholder": "https://tuweb.com", "required": true },
+        "frustration": { "label": "¿Cuál es tu mayor frustración con tu presencia online actual?", "placeholder": "Opcional — pero cuanto más nos cuentes, más útil será el feedback", "required": false }
+      },
+      "submit": "Enviar mi web →",
+      "success": "Hemos recibido tu web. Te responderemos en 24 horas.",
+      "error": "Algo ha fallado. Inténtalo de nuevo o escríbenos a hello@lumiq.studio",
+      "microcopy": "Respondemos en 24 horas. Sin spam, sin presión de venta."
+    },
+    "faq": {
+      "eyebrow": "Preguntas",
+      "h2_before": "¿Es realmente",
+      "h2_accent": "gratis?",
+      "items": [
+        { "q": "¿Es realmente gratis?", "a": "Sí. Sin tarjeta, sin trampa escondida. Revisamos tu web y te enviamos feedback honesto. Lo que hagas con él depende de ti." },
+        { "q": "¿Qué miráis exactamente?", "a": "Revisamos tu web como lo haría un cliente potencial — la primera impresión, si queda claro qué haces, si generas confianza y si hay un camino claro para contactarte." },
+        { "q": "¿Cuánto tarda la revisión?", "a": "Intentamos enviarte el feedback en 24 horas desde que recibimos tu formulario." },
+        { "q": "¿Y si todavía no tengo web?", "a": "Cuéntanoslo en el formulario. Igualmente podemos darte orientación útil basada en tu presencia online actual y lo que quieres conseguir." },
+        { "q": "¿Qué hacéis con mi email?", "a": "Lo usamos para enviarte tu feedback y, si es relevante, un seguimiento breve. Puedes pedirnos que paremos cuando quieras." },
+        { "q": "¿Puedo pedir una revisión para la web de un cliente?", "a": "Por supuesto. Muchos consultores lo usan como herramienta de prospección — revisa la web de un cliente potencial y comparte el análisis para abrir la conversación." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Empieza ahora",
+      "h2_before": "Descubre dónde",
+      "h2_accent": "estás.",
+      "lede": "Dos minutos para completarlo. Gratis. Una mirada real y personal a lo que está frenando tu web.",
+      "cta": "Solicita tu auditoría gratuita →",
+      "microcopy": "Sin tarjeta · Sin spam · Respondemos en 24 horas"
+    }
   }
 }

@@ -32,7 +32,7 @@ export default async function Services({ locale }: { locale: string }) {
         title: FALLBACK_TITLES[i] ?? { plain: "", italic: item.title },
         description: item.description,
         tags: item.tags?.length ? item.tags : (FALLBACK_TAGS[i] ?? []),
-        dark: i === 1,
+        dark: true,
       }))
     : FALLBACK_TITLES.map((title, i) => ({
         num: `0${i + 1}`,
@@ -40,7 +40,7 @@ export default async function Services({ locale }: { locale: string }) {
         title,
         description: FALLBACK_DESCRIPTIONS[i],
         tags: FALLBACK_TAGS[i],
-        dark: i === 1,
+        dark: true,
       }));
 
   return (

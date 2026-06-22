@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Expletus_Sans, Montserrat, Instrument_Serif, JetBrains_Mono, Inter } from "next/font/google";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getHeaderContent, getFooterContent } from "@/sanity/lib/queries";
+import { ModalProvider } from "@/context/ModalContext";
+import { AuditModal } from "@/components/AuditModal";
 import "../globals.css";
 
 const BASE_URL = "https://lumiqstudios.com";
@@ -101,9 +104,10 @@ export default async function LocaleLayout({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [headerContent, footerContent] = await Promise.all([
+  const [headerContent, footerContent, messages] = await Promise.all([
     getHeaderContent(locale),
     getFooterContent(locale),
+    getMessages(),
   ]);
 
   return (
@@ -114,9 +118,14 @@ export default async function LocaleLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       </head>
       <body className={`${expletusSans.variable} ${montserrat.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} ${inter.variable} antialiased`}>
-        <Header content={headerContent} locale={locale} />
-        {children}
-        <Footer locale={locale} content={footerContent} />
+        <NextIntlClientProvider messages={messages}>
+          <ModalProvider>
+            <Header content={headerContent} locale={locale} />
+            {children}
+            <Footer locale={locale} content={footerContent} />
+            <AuditModal />
+          </ModalProvider>
+        </NextIntlClientProvider>
         <Script
           id="vtag-ai-js"
           src="https://r2.leadsy.ai/tag.js"

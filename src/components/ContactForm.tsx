@@ -3,21 +3,20 @@
 import { useState } from "react";
 
 export type ContactLabels = {
-  fieldName: string; fieldEmail: string; fieldCompany: string;
-  fieldService: string; fieldBudget: string; fieldMessage: string;
-  phName: string; phEmail: string; phCompany: string; phMessage: string;
+  fieldName: string; fieldEmail: string; fieldPhone: string; fieldCompany: string;
+  fieldService: string;
+  phName: string; phEmail: string; phPhone: string; phCompany: string;
   selectDefault: string; optBranding: string; optWeb: string;
   optMarketing: string; optUnsure: string;
-  budgetOptions: string[];
   submitNote: string; submitButton: string; sending: string;
   successTitle: string; successText: string; errorText: string;
 };
 
-type FormState = { name: string; email: string; company: string; service: string; budget: string; message: string };
+type FormState = { name: string; email: string; phone: string; company: string; service: string };
 
 export default function ContactForm({ labels, locale }: { labels: ContactLabels; locale?: string }) {
   const [form, setForm] = useState<FormState>({
-    name: "", email: "", company: "", service: "", budget: labels.budgetOptions[1] ?? "", message: "",
+    name: "", email: "", phone: "", company: "", service: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -41,7 +40,7 @@ export default function ContactForm({ labels, locale }: { labels: ContactLabels;
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, locale }),
       });
-      if (res.ok) { setStatus("success"); setForm({ name: "", email: "", company: "", service: "", budget: labels.budgetOptions[1] ?? "", message: "" }); setErrors({}); }
+      if (res.ok) { setStatus("success"); setForm({ name: "", email: "", phone: "", company: "", service: "" }); setErrors({}); }
       else { setStatus("error"); }
     } catch { setStatus("error"); }
   }
@@ -79,7 +78,13 @@ export default function ContactForm({ labels, locale }: { labels: ContactLabels;
           style={errors.email ? { borderColor: "#dc2626" } : undefined} />
       </div>
 
-      <div className="ct-field full">
+      <div className="ct-field">
+        <label htmlFor="ct-phone">{labels.fieldPhone}</label>
+        <input id="ct-phone" name="phone" type="tel" placeholder={labels.phPhone}
+          value={form.phone} onChange={handleChange} />
+      </div>
+
+      <div className="ct-field">
         <label htmlFor="ct-company">{labels.fieldCompany}</label>
         <input id="ct-company" name="company" type="text" placeholder={labels.phCompany}
           value={form.company} onChange={handleChange} />
@@ -94,25 +99,6 @@ export default function ContactForm({ labels, locale }: { labels: ContactLabels;
           <option value="marketing">{labels.optMarketing}</option>
           <option value="unsure">{labels.optUnsure}</option>
         </select>
-      </div>
-
-      <div className="ct-field full">
-        <label>{labels.fieldBudget}</label>
-        <div className="ct-chips">
-          {labels.budgetOptions.map((opt) => (
-            <span key={opt}>
-              <input className="ct-chip-input" type="radio" name="budget"
-                id={`budget-${opt}`} value={opt} checked={form.budget === opt} onChange={handleChange} />
-              <label className="ct-chip-label" htmlFor={`budget-${opt}`}>{opt}</label>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="ct-field full">
-        <label htmlFor="ct-msg">{labels.fieldMessage}</label>
-        <textarea id="ct-msg" name="message" placeholder={labels.phMessage}
-          value={form.message} onChange={handleChange} />
       </div>
 
       {status === "error" && <div className="ct-error">{labels.errorText}</div>}
