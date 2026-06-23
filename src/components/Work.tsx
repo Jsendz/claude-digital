@@ -30,7 +30,7 @@ const HEADERS: Record<string, WorkHeader> = {
 };
 
 const TILES = [
-  { tileClass: "pf-t1",       bgClass: "pf-a", image:"/images/tamy.png", label: "2026 · BRAND IDENTITY",  nameParts: ["Solenne ",  "candles"], slug: "work/solenne" },
+  { tileClass: "pf-t1",       bgClass: "pf-a", image:"/images/tamymc.webp", label: "2026 · BRAND IDENTITY",  nameParts: ["TAMY ",  "Arquitectura"], slug: "work/solenne" },
   { tileClass: "pf-t2 light", bgClass: "pf-c", image:"", label: "2025 · WEB DESIGN",       nameParts: ["Northwind ", "app"],     slug: "" },
   { tileClass: "pf-t3",       bgClass: "pf-b", image:"", label: "2025 · CAMPAIGN",          nameParts: ["Atelier ",  "Vermeer"], slug: "" },
   { tileClass: "pf-t4",       bgClass: "pf-d", image:"", label: "2024 · IDENTITY · WEB",    nameParts: ["Halo ",     "credit"],  slug: "" },
