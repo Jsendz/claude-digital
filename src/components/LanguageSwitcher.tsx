@@ -16,7 +16,7 @@ function getLocalizedPath(pathname: string, currentLocale: string, targetLocale:
   return targetLocale === DEFAULT_LOCALE ? bare || "/" : `/${targetLocale}${bare}`;
 }
 
-export default function LanguageSwitcher({ locale }: { locale: string }) {
+export default function LanguageSwitcher({ locale, transparent = false }: { locale: string; transparent?: boolean }) {
   const handleSwitch = (targetLocale: string) => {
     const newPath = getLocalizedPath(window.location.pathname, locale, targetLocale);
     window.location.href = newPath;
@@ -28,10 +28,14 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
         <button
           key={loc}
           onClick={() => handleSwitch(loc)}
-          className={`text-xs font-semibold px-1.5 md:px-2 py-1 rounded-md transition-colors ${
+          className={`text-xs font-semibold px-1.5 md:px-2 py-1 rounded-md transition-all duration-300 ${
             locale === loc
-              ? "bg-foreground text-white"
-              : "text-foreground/50 hover:text-foreground"
+              ? transparent
+                ? "bg-white/20 text-white"
+                : "bg-foreground text-white"
+              : transparent
+                ? "text-white/60 hover:text-white"
+                : "text-foreground/50 hover:text-foreground"
           }`}
           aria-label={`Switch to ${loc.toUpperCase()}`}
         >

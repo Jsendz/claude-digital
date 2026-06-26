@@ -77,6 +77,7 @@ export default function ProblemSection() {
         <div className="prob-grid">
           {CARDS.map((card, i) => (
             <article key={i} className="prob-card">
+              <div className="prob-card-img" aria-hidden="true" />
               <span className="prob-card-num" aria-hidden="true">{card.num}</span>
 
               <div className="prob-icon">{card.icon}</div>
