@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Disponible pour des Projets",
-    "heading1": "Branding, Sites Web",
-    "heading2": "et Marketing conçus pour transformer les visiteurs en",
-    "headingAccent": "Clients",
+    "heading1": "Des marques portées",
+    "heading2": "de l'ombre",
+    "headingAccent": "vers la lumière.",
     "paragraph": "Nous aidons les entreprises à gagner en confiance, à se démarquer et à générer des leads qualifiés grâce à une marque percutante, un site performant et un marketing axé sur la conversion.",
     "cta1": "Audit de Croissance gratuit",
     "cta2": "Voir les études de cas",
@@ -209,15 +209,13 @@
       ]
     },
     "solution": {
-      "badge": "Notre Approche",
-      "heading": "Nous prenons le temps de bien faire les choses.",
-      "p1": "Pas de modèles. Pas de délais précipités. Nous prenons le temps de comprendre votre entreprise, vos clients et vos objectifs — puis nous construisons quelque chose qui sert vraiment les trois.",
-      "p2": "Vous avez un partenaire avec vous de la première conversation jusqu'au lancement et au-delà. Pas de transferts. Pas de confusion.",
-      "pillars": [
-        { "title": "Personnalisé", "body": "Chaque site est construit autour de votre entreprise spécifique — votre marque, votre audience, vos objectifs. Nous ne recyclons jamais le travail." },
-        { "title": "De bout en bout", "body": "Du premier appel jusqu'au lancement et au-delà, nous gérons tout et vous tenons informé à chaque étape." },
-        { "title": "La qualité d'abord", "body": "Nous préférons prendre un jour de plus que livrer quelque chose qui ne répond pas aux standards. Pas de raccourcis." }
-      ]
+      "badge": "GRATUIT · AUDIT EN 60 SECONDES",
+      "heading": "Voyez ce qui vous coûte des clients.",
+      "paragraph": "Entrez votre URL et nous analyserons votre site pour détecter les problèmes qui freinent votre croissance — puis nous vous dirons exactement comment les résoudre.",
+      "inputPlaceholder": "https://  votresite.com",
+      "ctaButton": "Audit gratuit",
+      "trust": ["Sans inscription", "Résultats en 60s", "Révision humaine en 48h"],
+      "mockLabel": "Lancez l'analyse pour révéler le score de croissance de votre site."
     },
     "deliverables": {
       "badge": "Ce Que Vous Obtenez",
@@ -417,5 +415,56 @@
       "cta": "Demandez votre audit gratuit →",
       "microcopy": "Pas de carte · Pas de spam · Réponse sous 24 heures"
     }
+  },
+  "Problem": {
+    "eyebrow": "Le Problème",
+    "eyebrow_sub": "Où se trouvent la plupart des marques aujourd'hui",
+    "title_before": "Vous faites le travail.",
+    "title_em": "Personne",
+    "title_after": "ne regarde.",
+    "lede": "Vous avez lancé le produit. Vous avez écrit les posts. Vous avez été présent de façon constante pendant des mois. Et pourtant la boîte de réception reste silencieuse, les lancements tombent à plat, et les bonnes personnes ne semblent jamais vous trouver.",
+    "lede_em": "Ce n'est pas le travail — c'est le signal.",
+    "cards": [
+      {
+        "num": "01 / 03",
+        "headline_before": "Vous êtes ",
+        "headline_italic": "invisible",
+        "headline_after": " aux personnes que vous servez.",
+        "body": "Les bons acheteurs existent. Ils cherchent. Ils font défiler. Mais votre nom n'entre jamais dans la conversation — et « faire plus d'efforts » n'a pas changé la donne depuis des mois.",
+        "tag": "SYMPTÔME · FAIBLE PORTÉE QUALIFIÉE"
+      },
+      {
+        "num": "02 / 03",
+        "headline_before": "Votre ",
+        "headline_italic": "histoire",
+        "headline_after": " ne passe pas.",
+        "body": "Ce que vous faites réellement est bon — parfois excellent. Mais la façon dont c'est raconté en ligne enterre l'essentiel. Les visiteurs partent sans jamais comprendre pourquoi vous, et pourquoi maintenant.",
+        "tag": "SYMPTÔME · POSITIONNEMENT FAIBLE"
+      },
+      {
+        "num": "03 / 03",
+        "headline_before": "",
+        "headline_italic": "Silence",
+        "headline_after": " là où il devrait y avoir du signal.",
+        "body": "Pas de réponses. Pas de sauvegardes. Pas de DMs. Pas de présentations « d'où venez-vous ? ». Sans visibilité mesurable, chaque prochain mouvement est une supposition — et supposer coûte cher.",
+        "tag": "SYMPTÔME · PAS DE BOUCLE DE RETOUR ENTRANT"
+      }
+    ]
+  },
+  "VisibilityScore": {
+    "eyebrow": "La Solution — Score de Visibilité",
+    "badge": "Gratuit · ~58 sec · Sans email pour commencer",
+    "title_before": "Découvrez exactement à quel point vous êtes",
+    "title_em": "visible",
+    "title_after": ".",
+    "lede": "Votre Score de Visibilité évalue votre marque sur les quatre piliers que les acheteurs utilisent réellement pour vous trouver, vous faire confiance et se souvenir de vous — puis indique le seul mouvement qui améliorerait le plus votre score.",
+    "form_aria": "Obtenez votre Score de Visibilité",
+    "form_placeholder": "votremarque.com",
+    "form_btn": "Obtenir mon score",
+    "checks": ["Sans email pour commencer", "Rapport PDF gratuit", "2 481 scores émis"],
+    "sample_badge": "Exemple de rapport",
+    "img_alt": "Téléphone affichant un exemple de rapport de Score de Visibilité",
+    "caption_before": "C'est le rapport gratuit que vous recevrez. Lancez une analyse pour voir le",
+    "caption_em": "vôtre"
   }
 }

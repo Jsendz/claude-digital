@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Disponible para Proyectos",
-    "heading1": "Marca, Webs",
-    "heading2": "y Marketing diseñados para convertir visitantes en",
-    "headingAccent": "Clientes",
+    "heading1": "Llevando marcas",
+    "heading2": "desde la oscuridad",
+    "headingAccent": "hacia la luz.",
     "paragraph": "Ayudamos a empresas a generar confianza, destacar y captar clientes potenciales con una marca sólida, una web de alto rendimiento y un marketing orientado a la conversión.",
     "cta1": "Auditoría de Crecimiento gratuita",
     "cta2": "Ver casos de estudio",
@@ -209,15 +209,13 @@
       ]
     },
     "solution": {
-      "badge": "Nuestro Enfoque",
-      "heading": "Nos tomamos el tiempo de hacerlo bien.",
-      "p1": "Sin plantillas. Sin plazos apresurados. Nos tomamos el tiempo de entender tu negocio, tus clientes y tus objetivos — y construimos algo que sirve realmente a los tres.",
-      "p2": "Tienes un socio contigo desde la primera conversación hasta el lanzamiento y más allá. Sin traspasos. Sin confusión.",
-      "pillars": [
-        { "title": "Personalizado", "body": "Cada web se construye en torno a tu negocio específico — tu marca, tu audiencia, tus objetivos. Nunca reciclamos trabajo." },
-        { "title": "De principio a fin", "body": "Desde la primera llamada hasta el lanzamiento y más allá, gestionamos todo y te mantenemos informado en cada paso." },
-        { "title": "Calidad primero", "body": "Preferimos tomarnos un día extra que entregar algo que no cumpla el nivel. Sin atajos." }
-      ]
+      "badge": "GRATIS · AUDITORÍA EN 60 SEGUNDOS",
+      "heading": "Descubre qué te está costando clientes.",
+      "paragraph": "Introduce tu URL y analizaremos tu web para detectar los problemas que frenan tu crecimiento — y te diremos exactamente cómo solucionarlos.",
+      "inputPlaceholder": "https://  tumarca.com",
+      "ctaButton": "Auditoría gratuita",
+      "trust": ["Sin registro", "Resultados en 60s", "Revisión humana en 48h"],
+      "mockLabel": "Ejecuta el análisis para ver la puntuación de crecimiento de tu web."
     },
     "deliverables": {
       "badge": "Qué Obtienes",
@@ -417,5 +415,56 @@
       "cta": "Solicita tu auditoría gratuita →",
       "microcopy": "Sin tarjeta · Sin spam · Respondemos en 24 horas"
     }
+  },
+  "Problem": {
+    "eyebrow": "El Problema",
+    "eyebrow_sub": "Donde se encuentran la mayoría de marcas hoy",
+    "title_before": "Estás haciendo el trabajo.",
+    "title_em": "Nadie",
+    "title_after": "te está mirando.",
+    "lede": "Has lanzado el producto. Has escrito los posts. Has aparecido de forma constante durante meses. Y sin embargo la bandeja de entrada sigue vacía, los lanzamientos caen sin ruido, y las personas correctas nunca parecen encontrarte.",
+    "lede_em": "No es el trabajo — es la señal.",
+    "cards": [
+      {
+        "num": "01 / 03",
+        "headline_before": "Eres ",
+        "headline_italic": "invisible",
+        "headline_after": " para las personas a las que sirves.",
+        "body": "Los compradores correctos existen. Están buscando. Están navegando. Pero tu nombre nunca entra en la sala — y \"esforzarse más\" no ha movido la aguja en meses.",
+        "tag": "SÍNTOMA · ALCANCE CUALIFICADO BAJO"
+      },
+      {
+        "num": "02 / 03",
+        "headline_before": "Tu ",
+        "headline_italic": "historia",
+        "headline_after": " no está aterrizando.",
+        "body": "Lo que realmente haces es bueno — a veces excelente. Pero la forma en que se cuenta online entierra lo esencial. Los visitantes se van sin entender nunca por qué tú, y por qué ahora.",
+        "tag": "SÍNTOMA · POSICIONAMIENTO DÉBIL"
+      },
+      {
+        "num": "03 / 03",
+        "headline_before": "",
+        "headline_italic": "Silencio",
+        "headline_after": " donde debería haber señal.",
+        "body": "Sin respuestas. Sin guardados. Sin DMs. Sin presentaciones de «¿de dónde has salido?». Sin visibilidad medible, cada próximo movimiento es una suposición — y adivinar es caro.",
+        "tag": "SÍNTOMA · SIN BUCLE DE FEEDBACK ENTRANTE"
+      }
+    ]
+  },
+  "VisibilityScore": {
+    "eyebrow": "La Solución — Puntuación de Visibilidad",
+    "badge": "Gratis · ~58 seg · Sin email para empezar",
+    "title_before": "Descubre exactamente qué tan",
+    "title_em": "visible",
+    "title_after": "eres.",
+    "lede": "Tu Puntuación de Visibilidad evalúa tu marca en los cuatro pilares que los compradores realmente usan para encontrarte, confiar en ti y recordarte — y luego señala el único movimiento que más mejoraría tu puntuación.",
+    "form_aria": "Obtén tu Puntuación de Visibilidad",
+    "form_placeholder": "tumarca.com",
+    "form_btn": "Obtener mi puntuación",
+    "checks": ["Sin email para empezar", "Informe PDF gratuito", "2.481 puntuaciones emitidas"],
+    "sample_badge": "Informe de muestra",
+    "img_alt": "Teléfono mostrando un informe de muestra de Puntuación de Visibilidad",
+    "caption_before": "Este es el informe gratuito que recibirás. Ejecuta un análisis para ver el",
+    "caption_em": "tuyo"
   }
 }

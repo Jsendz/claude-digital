@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Available for Projects",
-    "heading1": "Branding, Websites",
-    "heading2": "and Marketing built to turn visitors into",
-    "headingAccent": "Customers",
+    "heading1": "Bringing brands",
+    "heading2": "from dark",
+    "headingAccent": "into light.",
     "paragraph": "We help businesses increase trust, stand out, and generate qualified leads with a sharp brand, a high-performance website, and conversion-focused marketing.",
     "cta1": "Get a free Growth Audit",
     "cta2": "See case studies",
@@ -209,15 +209,13 @@
       ]
     },
     "solution": {
-      "badge": "Our Approach",
-      "heading": "We take the time to do it right.",
-      "p1": "Not templates. Not rushed timelines. We take the time to understand your business, your customers, and your goals — then build something that actually serves all three.",
-      "p2": "You get a partner who's with you from the first conversation to launch day and beyond. No hand-offs. No confusion.",
-      "pillars": [
-        { "title": "Personalized", "body": "Every site is built around your specific business — your brand, your audience, your goals. We never recycle work." },
-        { "title": "End-to-end", "body": "From the first call to launch and beyond, we handle everything and keep you informed at every step." },
-        { "title": "Quality-first", "body": "We would rather take an extra day than deliver something that doesn't meet the bar. No shortcuts." }
-      ]
+      "badge": "FREE · 60-SECOND AUDIT",
+      "heading": "See what's costing you customers.",
+      "paragraph": "Drop in your URL and we'll scan your site for the leaks killing your growth — then show you exactly how to fix them.",
+      "inputPlaceholder": "https://  yourbrand.com",
+      "ctaButton": "Run free audit",
+      "trust": ["No signup", "Results in 60s", "Human review in 48h"],
+      "mockLabel": "Run the scan to reveal your site's growth score."
     },
     "deliverables": {
       "badge": "What You Get",
@@ -417,5 +415,56 @@
       "cta": "Request your free audit →",
       "microcopy": "No card · No spam · We reply within 24 hours"
     }
+  },
+  "Problem": {
+    "eyebrow": "The Problem",
+    "eyebrow_sub": "Where most brands sit today",
+    "title_before": "You're doing the work.",
+    "title_em": "Nobody's",
+    "title_after": "watching.",
+    "lede": "You've shipped the product. You've written the posts. You've shown up consistently for months. And yet the inbox stays quiet, the launches land soft, and the right people never seem to find you.",
+    "lede_em": "It isn't the work — it's the signal.",
+    "cards": [
+      {
+        "num": "01 / 03",
+        "headline_before": "You're ",
+        "headline_italic": "invisible",
+        "headline_after": " to the people you serve.",
+        "body": "The right buyers exist. They're searching. They're scrolling. But your name never enters the room — and \"trying harder\" hasn't moved the needle in months.",
+        "tag": "SYMPTOM · LOW QUALIFIED REACH"
+      },
+      {
+        "num": "02 / 03",
+        "headline_before": "Your ",
+        "headline_italic": "story",
+        "headline_after": " isn't landing.",
+        "body": "What you actually do is good — sometimes great. But the way it's told online buries the lead. Visitors leave without ever understanding why you, and why now.",
+        "tag": "SYMPTOM · SOFT POSITIONING"
+      },
+      {
+        "num": "03 / 03",
+        "headline_before": "",
+        "headline_italic": "Silence",
+        "headline_after": " where there should be signal.",
+        "body": "No replies. No saves. No DMs. No \"where did you come from?\" intros. Without measurable visibility, every next move is a guess — and guessing is expensive.",
+        "tag": "SYMPTOM · NO INBOUND FEEDBACK LOOP"
+      }
+    ]
+  },
+  "VisibilityScore": {
+    "eyebrow": "The Solution — Visibility Score",
+    "badge": "Free · ~58 sec · No email gate to start",
+    "title_before": "Find out exactly how",
+    "title_em": "visible",
+    "title_after": "you are.",
+    "lede": "Your Visibility Score grades your brand across the four pillars buyers actually use to find, trust, and remember you — then names the single move that would move your number the most.",
+    "form_aria": "Get your Visibility Score",
+    "form_placeholder": "yourbrand.com",
+    "form_btn": "Get my score",
+    "checks": ["No email to start", "Free PDF report", "2,481 scores issued"],
+    "sample_badge": "Sample report",
+    "img_alt": "Phone showing a sample Visibility Score report",
+    "caption_before": "This is the free report you'll get. Run a scan to see",
+    "caption_em": "yours"
   }
 }

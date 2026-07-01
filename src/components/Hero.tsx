@@ -1,4 +1,4 @@
-import { getHeroContent } from "@/sanity/lib/queries";
+import { getTranslations } from "next-intl/server";
 
 const TICKER_ITEMS = [
   "Brand Identity", "Web Design", "Art Direction", "Motion",
@@ -19,16 +19,8 @@ const MOTES = [
   { left: 67, top: 38, dur: 9.7,  delay: -3.8,  size: 1.7 },
 ];
 
-export default async function Hero({ locale }: { locale: string }) {
-  const content = await getHeroContent(locale);
-
-  const badge         = content?.badge         ?? "Branding & Web Design";
-  const heading1      = content?.heading1      ?? "Bringing brands";
-  const heading2      = content?.heading2      ?? "from dark";
-  const headingAccent = content?.headingAccent ?? "into light.";
-  const paragraph     = content?.paragraph     ?? "An independent studio building identities and digital experiences for ambitious teams — bringing brands out of the shadow and into the spotlight.";
-  const cta1          = content?.cta1          ?? "Start a project";
-  const cta2          = content?.cta2          ?? "See our work";
+export default async function Hero() {
+  const t = await getTranslations("Hero");
 
   return (
     <section className="hs">
@@ -39,7 +31,6 @@ export default async function Hero({ locale }: { locale: string }) {
       <div className="hs-floor"  aria-hidden="true" />
       <div className="hs-horizon" aria-hidden="true" />
 
-     
       {/* ── Dust motes ───────────────────────────────── */}
       <div className="hs-motes" aria-hidden="true">
         {MOTES.map((m, i) => (
@@ -68,30 +59,30 @@ export default async function Hero({ locale }: { locale: string }) {
             {/* Kicker */}
             <div className="hs-kicker" role="doc-subtitle">
               <span className="hs-kicker-led" aria-hidden="true" />
-              <span>{badge}</span>
+              <span>{t("badge")}</span>
             </div>
 
             {/* Headline */}
             <h1 className="hs-display">
-              {heading1}
+              {t("heading1")}
               <br />
-              <span className="hs-dim">{heading2}</span>
+              <span className="hs-dim">{t("heading2")}</span>
               <br />
-              <span className="hs-em">{headingAccent}</span>
+              <span className="hs-em">{t("headingAccent")}</span>
             </h1>
 
             {/* Sub */}
-            <p className="hs-sub">{paragraph}</p>
+            <p className="hs-sub">{t("paragraph")}</p>
 
             {/* CTAs */}
             <div className="hs-cta-row">
               <a href="#contact" className="hs-btn-primary">
-                {cta1}
+                {t("cta1")}
                 <span className="hs-btn-arr" aria-hidden="true">→</span>
               </a>
               <a href="#work" className="hs-btn-ghost">
                 <span className="hs-btn-play" aria-hidden="true">▶</span>
-                {cta2}
+                {t("cta2")}
               </a>
             </div>
 
@@ -115,7 +106,6 @@ export default async function Hero({ locale }: { locale: string }) {
             </div>
           </div>
           <div className="hs-meta">
-            
             <div className="hs-meta-scroll" aria-hidden="true">
               <span>SCROLL</span>
               <span className="hs-meta-scroll-line" />

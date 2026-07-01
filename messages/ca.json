@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Disponible per a Projectes",
-    "heading1": "Marca, Webs",
-    "heading2": "i Màrqueting dissenyats per convertir visitants en",
-    "headingAccent": "Clients",
+    "heading1": "Portant marques",
+    "heading2": "de la foscor",
+    "headingAccent": "cap a la llum.",
     "paragraph": "Ajudem empreses a generar confiança, destacar i captar clients potencials amb una marca sòlida, una web d'alt rendiment i un màrqueting orientat a la conversió.",
     "cta1": "Auditoria de Creixement gratuïta",
     "cta2": "Veure casos d'estudi",
@@ -209,15 +209,13 @@
       ]
     },
     "solution": {
-      "badge": "El Nostre Enfocament",
-      "heading": "Ens prenem el temps per fer-ho bé.",
-      "p1": "Sense plantilles. Sense terminis precipitats. Ens prenem el temps per entendre el teu negoci, els teus clients i els teus objectius — i construïm alguna cosa que realment serveixi els tres.",
-      "p2": "Tens un soci amb tu des de la primera conversa fins al llançament i més enllà. Sense traspàs. Sense confusió.",
-      "pillars": [
-        { "title": "Personalitzat", "body": "Cada web es construeix al voltant del teu negoci específic — la teva marca, la teva audiència, els teus objectius. Mai reciclem la feina." },
-        { "title": "De principi a fi", "body": "Des de la primera trucada fins al llançament i més enllà, gestionem tot i et mantenim informat en cada pas." },
-        { "title": "Qualitat primer", "body": "Preferim prendre un dia més que lliurar alguna cosa que no compleixi el nivell. Sense dreceres." }
-      ]
+      "badge": "GRATIS · AUDITORIA EN 60 SEGONS",
+      "heading": "Descobreix què t'està costant clients.",
+      "paragraph": "Introdueix la teva URL i analitzarem el teu web per detectar els problemes que frenen el teu creixement — i t'explicarem exactament com solucionar-los.",
+      "inputPlaceholder": "https://  lamevamarca.com",
+      "ctaButton": "Auditoria gratuïta",
+      "trust": ["Sense registre", "Resultats en 60s", "Revisió humana en 48h"],
+      "mockLabel": "Executa l'anàlisi per veure la puntuació de creixement del teu web."
     },
     "deliverables": {
       "badge": "Què Obtens",
@@ -417,5 +415,56 @@
       "cta": "Sol·licita la teva auditoria gratuïta →",
       "microcopy": "Sense targeta · Sense correu brossa · Responem en 24 hores"
     }
+  },
+  "Problem": {
+    "eyebrow": "El Problema",
+    "eyebrow_sub": "On es troben la majoria de marques avui",
+    "title_before": "Estàs fent la feina.",
+    "title_em": "Ningú",
+    "title_after": "t'està mirant.",
+    "lede": "Has llançat el producte. Has escrit els posts. Has aparegut de forma consistent durant mesos. I malgrat tot la safata d'entrada segueix buida, els llançaments cauen sense soroll, i les persones correctes mai no semblen trobar-te.",
+    "lede_em": "No és la feina — és el senyal.",
+    "cards": [
+      {
+        "num": "01 / 03",
+        "headline_before": "Ets ",
+        "headline_italic": "invisible",
+        "headline_after": " per a les persones a qui serves.",
+        "body": "Els compradors correctes existeixen. Estan buscant. Estan fent scroll. Però el teu nom mai entra a la sala — i «esforçar-se més» no ha mogut l'agulla en mesos.",
+        "tag": "SÍMPTOMA · ABAST QUALIFICAT BAIX"
+      },
+      {
+        "num": "02 / 03",
+        "headline_before": "La teva ",
+        "headline_italic": "història",
+        "headline_after": " no està aterrant.",
+        "body": "El que realment fas és bo — de vegades excel·lent. Però la manera com es conta online enterra el principal. Els visitants marxen sense entendre mai per què tu, i per què ara.",
+        "tag": "SÍMPTOMA · POSICIONAMENT FEBLE"
+      },
+      {
+        "num": "03 / 03",
+        "headline_before": "",
+        "headline_italic": "Silenci",
+        "headline_after": " on hi hauria d'haver senyal.",
+        "body": "Sense respostes. Sense guardats. Sense DMs. Sense presentacions de «d'on has sortit?». Sense visibilitat mesurable, cada proper moviment és una suposició — i suposar és car.",
+        "tag": "SÍMPTOMA · SENSE BUCLE DE FEEDBACK ENTRANT"
+      }
+    ]
+  },
+  "VisibilityScore": {
+    "eyebrow": "La Solució — Puntuació de Visibilitat",
+    "badge": "Gratuït · ~58 seg · Sense email per començar",
+    "title_before": "Descobreix exactament com de",
+    "title_em": "visible",
+    "title_after": "ets.",
+    "lede": "La teva Puntuació de Visibilitat avalua la teva marca en els quatre pilars que els compradors realment fan servir per trobar-te, confiar en tu i recordar-te — i després indica el moviment únic que milloraria més el teu número.",
+    "form_aria": "Obtén la teva Puntuació de Visibilitat",
+    "form_placeholder": "lamevamarca.com",
+    "form_btn": "Obtenir la meva puntuació",
+    "checks": ["Sense email per començar", "Informe PDF gratuït", "2.481 puntuacions emeses"],
+    "sample_badge": "Informe de mostra",
+    "img_alt": "Telèfon mostrant un informe de mostra de Puntuació de Visibilitat",
+    "caption_before": "Aquest és l'informe gratuït que rebràs. Executa un anàlisi per veure el",
+    "caption_em": "teu"
   }
 }

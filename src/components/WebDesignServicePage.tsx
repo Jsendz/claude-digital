@@ -102,23 +102,51 @@ export default function WebDesignServicePage({ content }: { content: WDContent }
       {/* ── 3. SOLUTION ─────────────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-16 py-24">
         <div className="max-w-[1340px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="section-badge">{sol.badge}</span>
-              <h2 className="text-5xl md:text-6xl font-bold mt-6">{sol.heading}</h2>
-              <p className="mt-6 text-muted text-lg leading-relaxed">{sol.p1}</p>
-              <p className="mt-4 text-muted text-lg leading-relaxed">{sol.p2}</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              {sol.pillars.map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-foreground text-accent flex items-center justify-center text-lg shrink-0">{PILLAR_ICONS[i]}</div>
-                  <div>
-                    <h4 className="font-bold mb-1">{item.title}</h4>
-                    <p className="text-muted text-sm leading-relaxed">{item.body}</p>
+          <div className="relative overflow-hidden rounded-3xl px-10 md:px-16 py-14" style={{ backgroundColor: "#1c0f0b" }}>
+            {/* Decorative circle */}
+            <div className="absolute -top-16 -right-16 w-80 h-80 rounded-full pointer-events-none" style={{ backgroundColor: "#6b1c0f" }} />
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left: copy + form */}
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-1.5 mb-8" style={{ backgroundColor: "rgba(0,0,0,0.35)" }}>
+                  <span className="w-2 h-2 rounded-full bg-green-400" />
+                  <span className="text-white text-xs font-bold tracking-widest">{sol.badge}</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] mb-5">{sol.heading}</h2>
+                <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-md">{sol.paragraph}</p>
+                <div className="flex items-center rounded-full p-1.5 mb-5 border border-white/5 max-w-lg" style={{ backgroundColor: "#2a1410" }}>
+                  <input
+                    type="url"
+                    placeholder={sol.inputPlaceholder}
+                    className="flex-1 bg-transparent text-white text-sm px-4 placeholder:text-gray-500 focus:outline-none min-w-0"
+                  />
+                  <a href="#audit-form" className="bg-accent hover:bg-accent-hover text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors whitespace-nowrap shrink-0">
+                    {sol.ctaButton}
+                  </a>
+                </div>
+                <div className="flex flex-wrap gap-5">
+                  {sol.trust.map((item, i) => (
+                    <span key={i} className="text-gray-400 text-xs flex items-center gap-1.5">
+                      <span className="text-gray-500">✓</span> {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/* Right: browser mockup */}
+              <div className="hidden lg:block">
+                <div className="rounded-2xl overflow-hidden border border-white/5" style={{ backgroundColor: "#2a1410" }}>
+                  <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/5">
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#ff5f56" }} />
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#ffbd2e" }} />
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#27c93f" }} />
+                    <span className="ml-3 text-gray-500 text-xs">yourbrand.com</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center py-20 px-8 text-center">
+                    <span className="text-7xl font-light text-gray-600 mb-4">?</span>
+                    <p className="text-gray-500 text-sm leading-relaxed max-w-50">{sol.mockLabel}</p>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

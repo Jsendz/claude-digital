@@ -9,7 +9,7 @@ import Work from "@/components/Work";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
-import { getFAQContent, getMetaContent } from "@/sanity/lib/queries";
+import { getMetaContent } from "@/sanity/lib/queries";
 import { generateMeta } from "@/lib/generateMeta";
 import type { Locale } from "@/i18n/routing";
 
@@ -28,10 +28,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [faqContent, meta] = await Promise.all([
-    getFAQContent(locale),
-    getMetaContent("home", locale),
-  ]);
+  const meta = await getMetaContent("home", locale);
 
   const canonicalUrl = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
 
@@ -44,28 +41,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     isPartOf: { "@type": "WebSite", url: BASE_URL, name: "JH Digital" },
   };
 
-  const faqPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: (faqContent?.items ?? []).map((item: { question: string; answer: string }) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <main>
-        <Hero locale={locale} />
+        <Hero />
         <ProblemSection />
         <VisibilityScoreSection />
-        <Services locale={locale} />
+        <Services />
         <Benefits locale={locale} />
         <Work locale={locale} />
-        <FAQ content={faqContent} />
+        <FAQ />
         <CTA locale={locale} />
         <Contact locale={locale} />
       </main>

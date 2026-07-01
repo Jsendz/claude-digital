@@ -16,7 +16,7 @@ function getFallbackContent(locale: string) {
   return {
     hero: { badge: wd.hero.badge, heading1: wd.hero.heading1, headingAccent: wd.hero.headingAccent, paragraph: wd.hero.paragraph, cta1: wd.hero.cta1, cta2: wd.hero.cta2, noPressure: wd.hero.noPressure, trustCount: wd.hero.trustCount, trustSub: wd.hero.trustSub },
     problem: { badge: wd.problem.badge, heading: wd.problem.heading, items: wd.problem.items.map((i) => ({ title: i.title, body: i.body })) },
-    solution: { badge: wd.solution.badge, heading: wd.solution.heading, p1: wd.solution.p1, p2: wd.solution.p2, pillars: wd.solution.pillars.map((p) => ({ title: p.title, body: p.body })) },
+    solution: { badge: wd.solution.badge, heading: wd.solution.heading, paragraph: wd.solution.paragraph, inputPlaceholder: wd.solution.inputPlaceholder, ctaButton: wd.solution.ctaButton, trust: wd.solution.trust, mockLabel: wd.solution.mockLabel },
     deliverables: { badge: wd.deliverables.badge, heading: wd.deliverables.heading, subtext: wd.deliverables.subtext, items: wd.deliverables.items },
     outcomes: { badge: wd.outcomes.badge, heading: wd.outcomes.heading, items: wd.outcomes.items.map((i) => ({ title: i.title, body: i.body })), ctaTitle: wd.outcomes.ctaTitle, ctaDesc: wd.outcomes.ctaDesc, ctaButton: wd.outcomes.ctaButton, ctaNoCommitment: wd.outcomes.ctaNoCommitment },
     proof: { badge: wd.proof.badge, heading: wd.proof.heading, trustCount: wd.proof.trustCount, trustSub: wd.proof.trustSub, ctaButton: wd.proof.ctaButton, testimonials: wd.proof.testimonials.map((t) => ({ name: t.name, role: t.role, quote: t.quote })), caseStudyTitle: wd.proof.caseStudyTitle, caseStudyDesc: wd.proof.caseStudyDesc },

@@ -347,12 +347,11 @@ export function resolveWebDesignContent(d: Record<string, unknown>, locale: stri
     solution: {
       badge: lv(sol.badge as LS, locale),
       heading: lv(sol.heading as LS, locale),
-      p1: lv(sol.p1 as LS, locale),
-      p2: lv(sol.p2 as LS, locale),
-      pillars: ((sol.pillars as Array<Record<string, unknown>>) ?? []).map((p) => ({
-        title: lv(p.title as LS, locale),
-        body: lv(p.body as LS, locale),
-      })),
+      paragraph: lv(sol.paragraph as LS, locale),
+      inputPlaceholder: lv(sol.inputPlaceholder as LS, locale),
+      ctaButton: lv(sol.ctaButton as LS, locale),
+      trust: ((sol.trust as string[]) ?? []),
+      mockLabel: lv(sol.mockLabel as LS, locale),
     },
     deliverables: {
       badge: lv(del.badge as LS, locale),

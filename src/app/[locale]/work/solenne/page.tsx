@@ -37,10 +37,10 @@ export default async function SolennePage({
   const caseStudySchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    name: "Solenne candles — Brand Identity Case Study",
+    name: "Solenne Studio — Brand Identity Case Study",
     url: canonicalUrl,
     description:
-      "Brand identity, packaging, and web for Solenne, a new candle house out of Madrid.",
+      "Brand identity, digital presence, and editorial direction for Solenne, a new architecture studio from Barcelona.",
     creator: { "@type": "Organization", name: "JH Digital", url: BASE_URL },
     inLanguage: locale,
   };
@@ -52,7 +52,7 @@ export default async function SolennePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
       />
       <main>
-        <SolenneCaseStudy />
+        <SolenneCaseStudy locale={locale} />
         <CTA locale={locale} />
       </main>
     </>
