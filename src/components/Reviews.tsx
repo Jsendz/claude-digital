@@ -4,9 +4,9 @@ const logos = ["Amara", "Atica", "Aven", "CodeLab", "Hexa", "Ideaa", "Light AI"]
 
 const fallbackTestimonials = [
   { name: "Jared Kim", role: "Marketing Director", quote: "The quality was unmatched. We submitted our request on Monday and had polished designs by Wednesday." },
-  { name: "Maya Collins", role: "Head of Product", quote: "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+  { name: "Maya Collins", role: "Head of Product", quote: "Professional, reliable, and seriously creative. Lumiq Studios transformed our entire brand presence." },
   { name: "Jesse Leigh", role: "CEO & Founder", quote: "They understood our vision immediately. The turnaround speed is unlike anything we've experienced." },
-  { name: "Benjamin Daul", role: "Head of Engineering", quote: "Outstanding design subscription service. None compare to JH Digital for consistent quality." },
+  { name: "Benjamin Daul", role: "Head of Engineering", quote: "Outstanding design subscription service. None compare to Lumiq Studios for consistent quality." },
 ];
 
 export default async function Reviews({ locale }: { locale: string }) {

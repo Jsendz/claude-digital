@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
     // 2. Notify you
     await resend.emails.send({
       from: 'Lumiq <onboarding@resend.dev>',
-      to: 'TU_EMAIL@lumiq.com', // <-- replace with your real email
+      to: 'info@lumiqstudios.com', // <-- replace with your real email
       subject: `Nueva solicitud de auditoría — ${nombre}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

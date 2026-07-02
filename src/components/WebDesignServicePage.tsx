@@ -328,7 +328,7 @@ export default function WebDesignServicePage({ content }: { content: WDContent }
                   <span className="w-2 h-2 rounded-full bg-accent" />
                 </div>
                 <p className="text-xs text-muted uppercase tracking-wider mb-1">{form.contactLabel}</p>
-                <p className="font-semibold text-sm">info@jhdigitalservices.com</p>
+                <p className="font-semibold text-sm">hello@lumiq.studio</p>
               </div>
             </div>
 

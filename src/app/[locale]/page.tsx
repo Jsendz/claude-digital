@@ -13,7 +13,7 @@ import { getMetaContent } from "@/sanity/lib/queries";
 import { generateMeta } from "@/lib/generateMeta";
 import type { Locale } from "@/i18n/routing";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 
 export async function generateMetadata({
   params,
@@ -35,10 +35,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: meta?.title ?? "JH Digital — Branding, Web Design & Marketing",
+    name: meta?.title ?? "Lumiq Studios — Branding, Web Design & Marketing",
     url: canonicalUrl,
     inLanguage: locale,
-    isPartOf: { "@type": "WebSite", url: BASE_URL, name: "JH Digital" },
+    isPartOf: { "@type": "WebSite", url: BASE_URL, name: "Lumiq Studios" },
   };
 
   return (

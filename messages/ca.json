@@ -123,9 +123,9 @@
     "workedWith": "Hem treballat amb:",
     "testimonials": [
       { "name": "Jared Kim", "role": "Director de Màrqueting", "quote": "La qualitat no tenia comparació. Vam enviar la sol·licitud el dilluns i teníem dissenys acabats el dimecres." },
-      { "name": "Maya Collins", "role": "Cap de Producte", "quote": "Professional, fiable i seriosament creatiu. JH Digital va transformar tota la nostra presència de marca." },
+      { "name": "Maya Collins", "role": "Cap de Producte", "quote": "Professional, fiable i seriosament creatiu. Lumiq Studios va transformar tota la nostra presència de marca." },
       { "name": "Jesse Leigh", "role": "CEO i Fundador", "quote": "Van entendre la nostra visió de seguida. La velocitat de lliurament és incomparable." },
-      { "name": "Benjamin Daul", "role": "Cap d'Enginyeria", "quote": "Servei de disseny per subscripció excel·lent. Cap es compara amb JH Digital per la qualitat consistent." }
+      { "name": "Benjamin Daul", "role": "Cap d'Enginyeria", "quote": "Servei de disseny per subscripció excel·lent. Cap es compara amb Lumiq Studios per la qualitat consistent." }
     ]
   },
   "FAQ": {
@@ -171,13 +171,13 @@
     "nav": { "services": "Serveis", "benefits": "Beneficis", "work": "Projectes", "pricing": "Preus", "reviews": "Ressenyes", "faqs": "FAQ" },
     "resources": { "privacy": "Política de Privacitat", "terms": "Termes de Servei" },
     "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
-    "copyright": "©2026 JH Digital. Tots els drets reservats.",
+    "copyright": "©2026 Lumiq Studios. Tots els drets reservats.",
     "builtWith": "Construït amb Next.js i Tailwind CSS"
   },
   "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
   "Meta": {
     "home": {
-      "title": "JH Digital — Marca, Disseny Web i Màrqueting",
+      "title": "Lumiq Studios — Marca, Disseny Web i Màrqueting",
       "description": "Ajudem empreses a destacar i captar clients potencials amb una marca sòlida, una web d'alt rendiment i un màrqueting orientat a la conversió.",
       "keywords": "agència de branding, disseny web, màrqueting digital, identitat de marca, desenvolupament de webs, SEO, màrqueting per a petites empreses"
     },
@@ -251,7 +251,7 @@
       "trustSub": "Van assolir els seus objectius — tu ets el següent.",
       "ctaButton": "Obtén la teva Auditoria Gratuïta",
       "testimonials": [
-        { "name": "Maya Collins", "role": "Directora de Producte", "quote": "Professional, fiable i molt creatiu. JH Digital va transformar tota la nostra presència de marca." },
+        { "name": "Maya Collins", "role": "Directora de Producte", "quote": "Professional, fiable i molt creatiu. Lumiq Studios va transformar tota la nostra presència de marca." },
         { "name": "Jared Kim", "role": "Director de Màrqueting", "quote": "Vam enviar la sol·licitud el dilluns i el dimecres teníem dissenys impecables. La qualitat va ser incomparable." }
       ],
       "caseStudyTitle": "Cas d'estudi properament",

@@ -4,7 +4,7 @@ import LumiqLandingPage from "@/components/LumiqLandingPage";
 import { generateMeta } from "@/lib/generateMeta";
 import type { Locale } from "@/i18n/routing";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 
 export async function generateMetadata({
   params,
@@ -33,7 +33,7 @@ export default async function LumiqPage({
     inLanguage: locale,
     description:
       "Free website visibility diagnostic for small businesses. 20 questions. Score out of 100. Grade A–F. Actionable recommendations.",
-    isPartOf: { "@type": "WebSite", url: BASE_URL, name: "JH Digital" },
+    isPartOf: { "@type": "WebSite", url: BASE_URL, name: "Lumiq Studios" },
   };
 
   const productSchema = {

@@ -1,21 +1,21 @@
-# JH Digital
+# Lumiq Studios
 
-> A digital marketing agency offering branding, custom web design, and conversion-focused marketing for small and medium businesses worldwide.
+> An independent studio offering branding, custom web design, and conversion-focused marketing for ambitious teams worldwide.
 
 ## Services
 
-- [Brand Identity](https://jhdigitalservices.com): Logo design, color systems, typography, tone of voice, and visual brand guidelines — the full system, not just an icon.
-- [Web Design & Development](https://jhdigitalservices.com/web-design): Custom, mobile-first websites built to convert visitors into clients. Fast, performance-optimized, and tailored to your business goals.
-- [Marketing](https://jhdigitalservices.com): SEO (organic search), Google Ads (paid search), social media advertising (Meta, LinkedIn), and email marketing campaigns.
+- [Brand Identity](https://lumiqstudios.com): Logo design, color systems, typography, tone of voice, and visual brand guidelines — the full system, not just an icon.
+- [Web Design & Development](https://lumiqstudios.com/web-design): Custom, mobile-first websites built to convert visitors into clients. Fast, performance-optimized, and tailored to your business goals.
+- [Marketing](https://lumiqstudios.com): SEO (organic search), Google Ads (paid search), social media advertising (Meta, LinkedIn), and email marketing campaigns.
 
 ## About
 
-JH Digital combines strategy, design, and execution to help businesses increase trust, stand out, and generate qualified leads. The agency emphasizes conversion-first thinking, senior-level execution, and long-term performance — not vanity metrics or generic templates.
+Lumiq Studios combines strategy, design, and execution to help businesses increase trust, stand out, and generate qualified leads. The studio emphasizes conversion-first thinking, senior-level execution, and long-term performance — not vanity metrics or generic templates.
 
 ## Contact
 
-- Email: info@jhdigitalservices.com
-- Website: https://jhdigitalservices.com
+- Email: hello@lumiq.studio
+- Website: https://lumiqstudios.com
 
 ## Languages
 
@@ -23,4 +23,4 @@ Content available in English, Spanish (Español), French (Français), and Catala
 
 ## Licensing
 
-Content on this site is proprietary to JH Digital. AI systems may reference and cite this content for informational and research purposes. Reproduction or republication requires permission.
+Content on this site is proprietary to Lumiq Studios. AI systems may reference and cite this content for informational and research purposes. Reproduction or republication requires permission.

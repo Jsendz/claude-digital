@@ -53,13 +53,12 @@ export const metadata: Metadata = {
   description:
     "We help businesses increase trust, stand out, and generate qualified leads with a sharp brand, a high-performance website, and conversion-focused marketing.",
   openGraph: {
-    siteName: "JH Digital",
+    siteName: "Lumiq Studios",
     type: "website",
-    images: [{ url: "/images/favi.png", width: 300, height: 300, alt: "JH Digital" }],
+    images: [{ url: "/images/favi.png", width: 300, height: 300, alt: "Lumiq Studios" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jhdigital",
     images: ["/images/favi.png"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
@@ -78,7 +77,7 @@ const organizationSchema = {
   description: "Lumiq Studios is an independent studio building brand identities, web design, and marketing for ambitious teams.",
   logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo-lumiq.svg` },
   contactPoint: { "@type": "ContactPoint", email: "hello@lumiq.studio", contactType: "customer service" },
-  sameAs: ["https://twitter.com/jhdigital"],
+  sameAs: [],
 };
 
 const professionalServiceSchema = {
@@ -89,7 +88,7 @@ const professionalServiceSchema = {
   description: "Lumiq Studios is an independent studio building brand identities, web design, and marketing for ambitious teams.",
   logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo-lumiq.svg` },
   email: "hello@lumiq.studio",
-  sameAs: ["https://twitter.com/jhdigital"],
+  sameAs: [],
   aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", reviewCount: "4" },
 };
 

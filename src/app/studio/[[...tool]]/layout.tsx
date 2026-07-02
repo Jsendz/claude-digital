@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JH Digital — Studio",
+  title: "Lumiq Studios — Studio",
   robots: { index: false, follow: false },
 };
 

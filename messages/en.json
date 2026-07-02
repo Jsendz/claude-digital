@@ -123,9 +123,9 @@
     "workedWith": "Worked with:",
     "testimonials": [
       { "name": "Jared Kim", "role": "Marketing Director", "quote": "The quality was unmatched. We submitted our request on Monday and had polished designs by Wednesday." },
-      { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+      { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. Lumiq Studios transformed our entire brand presence." },
       { "name": "Jesse Leigh", "role": "CEO & Founder", "quote": "They understood our vision immediately. The turnaround speed is unlike anything we've experienced." },
-      { "name": "Benjamin Daul", "role": "Head of Engineering", "quote": "Outstanding design subscription service. None compare to JH Digital for consistent quality." }
+      { "name": "Benjamin Daul", "role": "Head of Engineering", "quote": "Outstanding design subscription service. None compare to Lumiq Studios for consistent quality." }
     ]
   },
   "FAQ": {
@@ -171,13 +171,13 @@
     "nav": { "services": "Services", "benefits": "Benefits", "work": "Work", "pricing": "Pricing", "reviews": "Reviews", "faqs": "FAQs" },
     "resources": { "privacy": "Privacy Policy", "terms": "Terms of Service" },
     "socials": { "twitter": "X/Twitter", "linkedin": "LinkedIn", "youtube": "YouTube" },
-    "copyright": "©2026 JH Digital. All rights reserved.",
+    "copyright": "©2026 Lumiq Studios. All rights reserved.",
     "builtWith": "Built with Next.js & Tailwind CSS"
   },
   "LanguageSwitcher": { "en": "EN", "es": "ES", "fr": "FR", "ca": "CA" },
   "Meta": {
     "home": {
-      "title": "JH Digital — Branding, Web Design & Marketing",
+      "title": "Lumiq Studios — Branding, Web Design & Marketing",
       "description": "We help businesses stand out, build trust, and generate leads with sharp branding, high-performance websites, and conversion-focused marketing.",
       "keywords": "branding agency, web design, digital marketing, brand identity, website development, SEO, small business marketing"
     },
@@ -251,7 +251,7 @@
       "trustSub": "They hit their targets — you're next.",
       "ctaButton": "Get Your Free Audit",
       "testimonials": [
-        { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. JH Digital transformed our entire brand presence." },
+        { "name": "Maya Collins", "role": "Head of Product", "quote": "Professional, reliable, and seriously creative. Lumiq Studios transformed our entire brand presence." },
         { "name": "Jared Kim", "role": "Marketing Director", "quote": "We submitted our request on Monday and had polished designs by Wednesday. The quality was unmatched." }
       ],
       "caseStudyTitle": "Case study coming soon",

@@ -5,7 +5,7 @@ import { getWebDesignContent, resolveWebDesignContent, getMetaContent } from "@/
 import { generateMeta } from "@/lib/generateMeta";
 import type { Locale } from "@/i18n/routing";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 
 // ─── Fallback content (used when Sanity is not yet configured) ────────────────
 import enMessages from "../../../../messages/en.json";
@@ -53,7 +53,7 @@ export default async function WebDesignPage({ params }: { params: Promise<{ loca
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Web Design & Development",
-    provider: { "@type": "Organization", name: "JH Digital", url: BASE_URL },
+    provider: { "@type": "Organization", name: "Lumiq Studios", url: BASE_URL },
     description: meta?.description ?? "",
     url: canonicalUrl,
     areaServed: "Worldwide",

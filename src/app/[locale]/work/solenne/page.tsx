@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 import { generateMeta } from "@/lib/generateMeta";
 import type { Locale } from "@/i18n/routing";
 
-const BASE_URL = "https://jhdigitalservices.com";
+const BASE_URL = "https://lumiqstudios.com";
 const locales = ["en", "es", "fr", "ca"] as const;
 
 export async function generateMetadata({
@@ -41,7 +41,7 @@ export default async function SolennePage({
     url: canonicalUrl,
     description:
       "Brand identity, digital presence, and editorial direction for Solenne, a new architecture studio from Barcelona.",
-    creator: { "@type": "Organization", name: "JH Digital", url: BASE_URL },
+    creator: { "@type": "Organization", name: "Lumiq Studios", url: BASE_URL },
     inLanguage: locale,
   };
 

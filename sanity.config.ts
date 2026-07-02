@@ -8,7 +8,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 export default defineConfig({
   name: "jh-digital",
-  title: "JH Digital CMS",
+  title: "Lumiq Studios CMS",
   projectId,
   dataset,
   basePath: "/studio",
