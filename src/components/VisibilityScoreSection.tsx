@@ -32,7 +32,7 @@ export default function VisibilityScoreSection() {
           <div className="vs-grid">
 
             {/* ── Left column: copy ─────────────────────── */}
-            <div className="vs-left">
+            <div className="vs-left" data-reveal>
               <div className="vs-eyebrow" role="doc-subtitle">
                 {t("eyebrow")}
               </div>
@@ -82,7 +82,7 @@ export default function VisibilityScoreSection() {
             </div>
 
             {/* ── Right column: report mockup ───────────── */}
-            <div className="vs-right">
+            <div className="vs-right" data-reveal data-delay="2">
               <div className="vs-right-panel">
                 <span className="vs-sample-badge">
                   <span className="vs-sample-dot" aria-hidden="true" />

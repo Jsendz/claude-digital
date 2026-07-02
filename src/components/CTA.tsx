@@ -36,7 +36,7 @@ export default function CTA({ locale }: { locale: string }) {
 
   return (
     <section className="cta-section">
-      <div className="cta-block">
+      <div className="cta-block" data-reveal>
         <div className="cta-inner">
           <div className="cta-left">
             <div className="eyebrow orange-inv">
@@ -52,7 +52,7 @@ export default function CTA({ locale }: { locale: string }) {
             <p className="cta-sub">{t.sub}</p>
           </div>
 
-          <div className="cta-actions">
+          <div className="cta-actions" data-reveal data-delay="2">
             <a href="#contact" className="btn-light">
               {t.button}
               <span className="btn-arr">→</span>

@@ -200,7 +200,7 @@ export default function LumiqLandingPage() {
         {/* ── Right: hero image ──────────────────────── */}
         <div className="lp-hero-right">
           <img
-            src="/images/hero-lumiq.png"
+            src="/images/hero-lumiq.webp"
             alt="Lumiq free website audit"
             className="lp-hero-img"
           />

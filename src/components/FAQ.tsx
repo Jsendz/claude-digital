@@ -10,7 +10,7 @@ export default async function FAQ() {
     <section className="faq-section">
       <div className="glow br very-faint" />
       <div className="faq-inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <div className="sec-head-left">
             <div className="eyebrow">
               <span className="led" />
@@ -26,7 +26,7 @@ export default async function FAQ() {
 
         <div className="faq-wrap">
           {items.map((item, i) => (
-            <details key={i} className="faq-item" open={i === 0 || undefined}>
+            <details key={i} className="faq-item" data-reveal data-delay={String(Math.min(i + 1, 9))} open={i === 0 || undefined}>
               <summary>
                 <span className="faq-num">{String(i + 1).padStart(2, "0")}</span>
                 <span className="faq-q">{item.question}</span>

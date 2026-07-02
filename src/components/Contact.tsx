@@ -99,7 +99,7 @@ export default function Contact({ locale }: { locale: string }) {
     <section id="contact" className="ct-section">
       <div className="glow bl very-faint" />
       <div className="ct-inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <div className="sec-head-left">
             <div className="eyebrow">
               <span className="led" />
@@ -117,7 +117,7 @@ export default function Contact({ locale }: { locale: string }) {
           </p>
         </header>
 
-        <div className="ct-grid">
+        <div className="ct-grid" data-reveal data-delay="1">
           <div className="ct-info">
             <div className="ct-line">
               <span className="lbl">{t.labelEmail}</span>

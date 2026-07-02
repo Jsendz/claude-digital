@@ -44,7 +44,7 @@ export default async function Work({ locale }: { locale: string }) {
     <section className="pf-section">
       <div className="glow tl very-faint" />
       <div className="pf-inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <div className="sec-head-left">
             <div className="eyebrow">
               <span className="led" />
@@ -68,7 +68,7 @@ export default async function Work({ locale }: { locale: string }) {
               ? (locale === "en" ? `/${tile.slug}` : `/${locale}/${tile.slug}`)
               : "#";
             return (
-              <a key={i} href={href} className={`pf-tile ${tile.tileClass}`}>
+              <a key={i} href={href} className={`pf-tile ${tile.tileClass}`} data-reveal data-delay={String(i + 1)}>
                 <div className={`pf-bg ${tile.bgClass}`}>
                   {tile.image && (
                     <Image

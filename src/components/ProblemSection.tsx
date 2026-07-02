@@ -48,7 +48,7 @@ export default async function ProblemSection() {
       <div className="prob-hairline" aria-hidden="true" />
 
       <section className="prob-section">
-        <header className="prob-head">
+        <header className="prob-head" data-reveal>
           <div className="prob-eyebrow" role="doc-subtitle">
             <span className="prob-led" aria-hidden="true" />
             <span>{t("eyebrow")}</span>
@@ -70,7 +70,7 @@ export default async function ProblemSection() {
 
         <div className="prob-grid">
           {cards.map((card, i) => (
-            <article key={i} className="prob-card">
+            <article key={i} className="prob-card" data-reveal data-delay={String(i + 1)}>
               <div className="prob-card-img" aria-hidden="true" />
               <span className="prob-card-num" aria-hidden="true">{card.num}</span>
 

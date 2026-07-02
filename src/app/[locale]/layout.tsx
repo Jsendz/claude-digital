@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { getHeaderContent, getFooterContent } from "@/sanity/lib/queries";
 import { ModalProvider } from "@/context/ModalContext";
 import { AuditModal } from "@/components/AuditModal";
+import ScrollReveal from "@/components/ScrollReveal";
 import "../globals.css";
 
 const BASE_URL = "https://lumiqstudios.com";
@@ -124,6 +125,7 @@ export default async function LocaleLayout({
             {children}
             <Footer locale={locale} content={footerContent} />
             <AuditModal />
+            <ScrollReveal />
           </ModalProvider>
         </NextIntlClientProvider>
         <Script

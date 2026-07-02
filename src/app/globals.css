@@ -3565,3 +3565,75 @@ body:has(.brand-v2) {
   .cs-mosaic .cs-ph.c { grid-area: c; }
   .cs-mosaic .cs-ph.d { grid-area: d; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL MICRO-ANIMATIONS
+   ═══════════════════════════════════════════════════════ */
+
+/* Pulse all LED indicator dots */
+.svc-led,
+.prob-led,
+.eyebrow .led,
+.vs-badge-led,
+.cta-stat .led,
+.hs-kicker-led {
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+/* Gentle float for the VS mockup panel */
+.vs-right-panel {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+/* Subtle drift for the CTA ghost text */
+.cta-ghost {
+  animation: ghost-drift 18s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes ghost-drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  33%       { transform: translateX(-8px) translateY(-4px); }
+  66%       { transform: translateX(4px) translateY(2px); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL SCROLL REVEAL  ([data-reveal])
+   Used across all sections — observer adds .revealed
+   ═══════════════════════════════════════════════════════ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity  .72s cubic-bezier(.25,.8,.25,1),
+    transform .72s cubic-bezier(.25,.8,.25,1);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+[data-reveal][data-delay="1"] { transition-delay: 0.08s; }
+[data-reveal][data-delay="2"] { transition-delay: 0.16s; }
+[data-reveal][data-delay="3"] { transition-delay: 0.24s; }
+[data-reveal][data-delay="4"] { transition-delay: 0.32s; }
+[data-reveal][data-delay="5"] { transition-delay: 0.40s; }
+[data-reveal][data-delay="6"] { transition-delay: 0.48s; }
+[data-reveal][data-delay="7"] { transition-delay: 0.56s; }
+[data-reveal][data-delay="8"] { transition-delay: 0.64s; }
+[data-reveal][data-delay="9"] { transition-delay: 0.72s; }
+
+/* Respect user motion preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

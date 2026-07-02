@@ -17,7 +17,7 @@ export default async function Services() {
       <section className="svc-section">
 
         {/* ── Header ─────────────────────────────────────── */}
-        <header className="svc-head">
+        <header className="svc-head" data-reveal>
           <div className="svc-head-left">
 
             {/* Eyebrow pill */}
@@ -41,7 +41,7 @@ export default async function Services() {
         {/* ── Cards grid ─────────────────────────────────── */}
         <div className="svc-grid">
           {items.map((item, i) => (
-            <article key={i} className="svc-card svc-card--green">
+            <article key={i} className="svc-card svc-card--green" data-reveal data-delay={String(i + 1)}>
               {/* Corner warm-light beam */}
               <span className="svc-beam" aria-hidden="true" />
 

@@ -80,7 +80,7 @@ export default async function Benefits({ locale }: { locale: string }) {
     <section className="why-section">
       <div className="glow tr faint" />
       <div className="why-inner">
-        <header className="sec-head">
+        <header className="sec-head" data-reveal>
           <div className="sec-head-left">
             <div className="eyebrow">
               <span className="led" />
@@ -98,8 +98,8 @@ export default async function Benefits({ locale }: { locale: string }) {
         </header>
 
         <div className="why-grid">
-          {t.cards.map((card) => (
-            <article key={card.mark} className="why-card">
+          {t.cards.map((card, i) => (
+            <article key={card.mark} className="why-card" data-reveal data-delay={String((i % 3) + 1)}>
               <span className="why-mark">{card.mark}</span>
               <span className="why-num">{card.num}</span>
               <h3>{card.heading}<span className="it">{card.em}</span></h3>
